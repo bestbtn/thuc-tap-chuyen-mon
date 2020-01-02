@@ -1,0 +1,30 @@
+.error-text{
+    color: red;
+    font-style: italic;
+    margin-top: 10px;
+}
+.default1{
+    color: white;
+    width: 55px;
+    padding: 5px;
+    background-color: #d9534f;
+    font-weight: bold;
+    border-radius: 7px;
+}
+.default1:hover{
+    background-color: #c9302c;
+    color: white;
+}
+.default2{
+    width: 55px;
+    background-color: #777;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 5px;
+}
+.default2:hover{
+    background-color: #5e5e5e;
+    color: white;
+
+}
