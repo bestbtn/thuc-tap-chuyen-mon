@@ -55,8 +55,14 @@ class AdminProductController extends Controller
         $product->pro_category_id = $requestProduct->pro_category_id;
         $product->pro_price = $requestProduct->pro_price;
         $product->pro_sale = $requestProduct->pro_sale;
-        $product->pro_avatar = $requestProduct->avatar;
 
+        //dd($requestProduct->all());
+        if($requestProduct->hasFile('avatar')){
+            $file = upload_image('avatar');
+            if (isset($file['name'])){
+                $product->pro_avatar = $file['name'];
+            }
+        }
 
         $product->save();
     }

@@ -9,13 +9,13 @@ Created by: Jyostna Designs
 4.  BG COOLORS
 5.  TEXT color
 6.  BUTTON colors
-7.  HEADER LEFT 
+7.  HEADER LEFT
 8.  HEADER RIGHT SIDE BAR
 9.  HEADER RIGHT SIDE DROPDOWNS
-10. LEFT SIDE BAR    
+10. LEFT SIDE BAR
 11. MAIN WRAPPER STYLES
-12. LEFT MENU COLLAPSE STYLES    
-13. CUSTOM STYLES 
+12. LEFT MENU COLLAPSE STYLES
+13. CUSTOM STYLES
 14. MEDIA QUERIES */
 
 
@@ -555,7 +555,6 @@ a.text-primary:hover {
     font-size: 14px;
     line-height: 18px;
     border: 1px solid #dddddd;
-    padding: 10px;
 }
 
 .has-error .help-block,

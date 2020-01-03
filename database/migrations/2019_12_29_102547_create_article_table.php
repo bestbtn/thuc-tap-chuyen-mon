@@ -18,13 +18,6 @@ class CreateArticleTable extends Migration
             $table->string('a_name')->nullable()->unique();
             $table->string('a_slug')->index();
             $table->string('a_description')->nullable();
-            $table->string('a_content')->nullable();
-            $table->string('a_active')->index()->default(1);
-            $table->string('a_author_id')->index()->default(0);
-            $table->string('a_description_seo')->nullable();
-            $table->string('a_title_Seo')->nullable();
-            $table->string('a_avatar')->nullable();
-            $table->string('a_view')->default(0);
             $table->timestamps();
         });
     }

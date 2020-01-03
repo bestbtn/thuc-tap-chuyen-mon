@@ -64,7 +64,7 @@
                                             </label>
                                             <div class="col-md-7">
                                                 <div class="input-group">
-                                                    <textarea  class="summernote edi-css form-control" name="pro_content"  id="pro_content">
+                                                    <textarea  class="ckeditor" name="pro_content"  id="pro_content" >
                                                         {{old('pro_content',isset($product->pro_content) ? $product->pro_content : '' )}}
                                                     </textarea>
 
@@ -214,10 +214,5 @@
     </div>
 </div>
 
-@section('script')
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-    <script>
-        CKEDITOR.replace('pro_content');
-    </script>
-@stop
+
 

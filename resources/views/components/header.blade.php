@@ -190,7 +190,7 @@
                             <input class="search__input" name="search" placeholder="Search over 10,000 products" aria-label="Site search" type="text" autocomplete="off">
                             <button class="search__button search__button--type--submit" type="submit">
                                 <svg width="20px" height="20px">
-                                    <use xlink:href="images/sprite.svg#search-20"></use>
+                                    <use xlink:href="{{asset('images/sprite.svg#search-20')}}"></use>
                                 </svg>
                             </button>
                             <div class="search__border"></div>
@@ -210,109 +210,14 @@
                 <div class="nav-panel__container container">
                     <div class="nav-panel__row">
                         {{--shop by category--}}
-                        <div class="nav-panel__departments">
-                            <!-- .departments -->
-                            <div class="departments departments--open departments--fixed" data-departments-fixed-by=".block-slideshow">
-                                <div class="departments__body">
-                                    <div class="departments__links-wrapper">
-                                        <div class="departments__submenus-container"></div>
-                                        <ul class="departments__links">
-                                            <li class="departments__item"><a class="departments__item-link" href="#">Power Tools <svg class="departments__item-arrow" width="6px" height="9px"><use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use></svg></a>
-                                                <div class="departments__submenu departments__submenu--type--megamenu departments__submenu--size--xl">
-                                                    <!-- .megamenu -->
-                                                    <div class="megamenu megamenu--departments">
-                                                        <div class="megamenu__body" style="background-image: url('{{asset('images/megamenu/megamenu-1.jpg')}}');">
-                                                            <div class="row">
-                                                                <div class="col-3">
-                                                                    <ul class="megamenu__links megamenu__links--level--0">
-                                                                        <li class="megamenu__item megamenu__item--with-submenu"><a href="#">Power Tools</a>
-                                                                            <ul class="megamenu__links megamenu__links--level--1">
-                                                                                <li class="megamenu__item"><a href="#">Engravers</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Drills</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Wrenches</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Plumbing</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Wall Chaser</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Pneumatic Tools</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Milling Cutters</a></li>
-                                                                            </ul>
-                                                                        </li>
-                                                                        <li class="megamenu__item"><a href="#">Workbenches</a></li>
-                                                                        <li class="megamenu__item"><a href="#">Presses</a></li>
-                                                                        <li class="megamenu__item"><a href="#">Spray Guns</a></li>
-                                                                        <li class="megamenu__item"><a href="#">Riveters</a></li>
-                                                                    </ul>
-                                                                </div>
 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- .megamenu / end -->
-                                                </div>
-                                            </li>
-                                            <li class="departments__item"><a class="departments__item-link" href="#">Machine Tools <svg class="departments__item-arrow" width="6px" height="9px"><use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use></svg></a>
-                                                <div class="departments__submenu departments__submenu--type--megamenu departments__submenu--size--nl">
-                                                    <!-- .megamenu -->
-                                                    <div class="megamenu megamenu--departments">
-                                                        <div class="megamenu__body" style="background-image: url('{{asset('images/megamenu/megamenu-3.jpg')}}');">
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    <ul class="megamenu__links megamenu__links--level--0">
-                                                                        <li class="megamenu__item megamenu__item--with-submenu"><a href="#">Hand Tools</a>
-                                                                            <ul class="megamenu__links megamenu__links--level--1">
-                                                                                <li class="megamenu__item"><a href="#">Screwdrivers</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Handsaws</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Knives</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Axes</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Multitools</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Paint Tools</a></li>
-                                                                            </ul>
-                                                                        </li>
-                                                                        <li class="megamenu__item megamenu__item--with-submenu"><a href="#">Garden Equipment</a>
-                                                                            <ul class="megamenu__links megamenu__links--level--1">
-                                                                                <li class="megamenu__item"><a href="#">Motor Pumps</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Chainsaws</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Electric Saws</a></li>
-                                                                                <li class="megamenu__item"><a href="#">Brush Cutters</a></li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- .megamenu / end -->
-                                                </div>
-                                            </li>
-                                            <li class="departments__item"><a class="departments__item-link" href="#">Power Machinery</a></li>
-                                            <li class="departments__item"><a class="departments__item-link" href="#">Measurement</a></li>
-                                            <li class="departments__item"><a class="departments__item-link" href="#">Clothes & PPE</a></li>
-                                            <li class="departments__item"><a class="departments__item-link" href="#">Plumbing</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <button class="departments__button">
-                                    <svg class="departments__button-icon" width="18px" height="14px">
-                                        <use xlink:href="images/sprite.svg#menu-18x14"></use>
-                                    </svg> Shop By Category
-                                    <svg class="departments__button-arrow" width="9px" height="6px">
-                                        <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <!-- .departments / end -->
-                            {{--end - shop by category--}}
-                        </div>
                         <!-- .nav-links -->
                         {{--menu--}}
                         <div class="nav-panel__nav-links nav-links">
                             <ul class="nav-links__list">
                                 <li class="nav-links__item nav-links__item--has-submenu">
                                     <a class="nav-links__item-link" href="index.html">
-                                        <div class="nav-links__item-body">Home
-                                            <svg class="nav-links__item-arrow" width="9px" height="6px">
-                                                <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
-                                            </svg>
+                                        <div class="nav-links__item-body">Trang chủ
                                         </div>
                                     </a>
 
@@ -320,108 +225,70 @@
 
                                 <li class="nav-links__item nav-links__item--has-submenu">
                                     <a class="nav-links__item-link" href="shop-grid-3-columns-sidebar.html">
-                                        <div class="nav-links__item-body">Shop
-                                            <svg class="nav-links__item-arrow" width="9px" height="6px">
-                                                <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <div class="nav-links__submenu nav-links__submenu--type--menu">
-                                        <!-- .menu -->
-                                        <div class="menu menu--layout--classic">
-                                            <div class="menu__submenus-container"></div>
-                                            <ul class="menu__list">
-
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="shop-list.html">Shop List</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="cart.html">Cart</a></li>
-                                                <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                <li class="menu__item">
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="wishlist.html">Wishlist</a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- .menu / end -->
-                                    </div>
-                                </li>
-                                <li class="nav-links__item nav-links__item--has-submenu">
-                                    <a class="nav-links__item-link" href="account-login.html">
-                                        <div class="nav-links__item-body">Account
-                                            <svg class="nav-links__item-arrow" width="9px" height="6px">
-                                                <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <div class="nav-links__submenu nav-links__submenu--type--menu">
-                                        <!-- .menu -->
-                                        <div class="menu menu--layout--classic">
-                                            <div class="menu__submenus-container"></div>
-                                            <ul class="menu__list">
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="account-login.html">Login</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="account-dashboard.html">Dashboard</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="account-profile.html">Edit Profile</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="account-orders.html">Order History</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="account-addresses.html">Address Book</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="account-password.html">Change Password</a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- .menu / end -->
-                                    </div>
-                                </li>
-                                <li class="nav-links__item nav-links__item--has-submenu">
-                                    <a class="nav-links__item-link" href="blog-classic.html">
                                         <div class="nav-links__item-body">
-                                            Blog
+                                            Cửa hàng
                                         </div>
                                     </a>
                                 </li>
                                 <li class="nav-links__item nav-links__item--has-submenu">
                                     <a class="nav-links__item-link" href="#">
-                                        <div class="nav-links__item-body">Pages
+                                        <div class="nav-links__item-body">Danh mục
                                             <svg class="nav-links__item-arrow" width="9px" height="6px">
-                                                <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
+                                                <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-down-9x6')}}"></use>
                                             </svg>
                                         </div>
                                     </a>
+                                    @if(isset($categories))
                                     <div class="nav-links__submenu nav-links__submenu--type--menu">
                                         <!-- .menu -->
                                         <div class="menu menu--layout--classic">
                                             <div class="menu__submenus-container"></div>
                                             <ul class="menu__list">
+                                                @foreach($categories as $cate)
                                                 <li class="menu__item">
                                                     <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="about-us.html">About Us</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="contact-us-alt.html">Contact Us Alt</a></li>
-                                                <li class="menu__item">
-                                                    <!-- This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. -->
-                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="terms-and-conditions.html">Terms And Conditions</a></li>>
+                                                    <div class="menu__item-submenu-offset"></div><a class="menu__item-link" href="{{route('get.list.product',[$cate->c_slug,$cate->id])}}">{{$cate->c_name}}</a></li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <!-- .menu / end -->
                                     </div>
+                                        @endif
+                                </li>
+                                <li class="nav-links__item nav-links__item--has-submenu">
+                                    <a class="nav-links__item-link" href="blog-classic.html">
+                                        <div class="nav-links__item-body">
+                                            Tin tức
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-links__item nav-links__item--has-submenu">
+                                    <a class="nav-links__item-link" href="blog-classic.html">
+                                        <div class="nav-links__item-body">
+                                            About us
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-links__item nav-links__item--has-submenu">
+                                    <a class="nav-links__item-link" href="blog-classic.html">
+                                        <div class="nav-links__item-body">
+                                            Contact us
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-links__item nav-links__item--has-submenu">
+                                    <a class="nav-links__item-link" href="blog-classic.html">
+                                        <div class="nav-links__item-body">
+                                            Điều khoản và điều kiện
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <!-- .nav-links / end -->
                         <div class="nav-panel__indicators">
-                            <div class="indicator"><a href="wishlist.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#heart-20"></use></svg> <span class="indicator__value">0</span></span></a></div>
-                            <div class="indicator indicator--trigger--click"><a href="cart.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#cart-20"></use></svg> <span class="indicator__value">3</span></span></a>
+                            <div class="indicator"><a href="wishlist.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="{{asset('images/sprite.svg#heart-20')}}"></use></svg> <span class="indicator__value">0</span></span></a></div>
+                            <div class="indicator indicator--trigger--click"><a href="cart.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="{{asset('images/sprite.svg#cart-20')}}"></use></svg> <span class="indicator__value">3</span></span></a>
                                 <div class="indicator__dropdown">
                                     <!-- .dropcart -->
                                     <div class="dropcart dropcart--style--dropdown">
@@ -441,7 +308,7 @@
                                                     </div>
                                                     <button type="button" class="dropcart__product-remove btn btn-light btn-sm btn-svg-icon">
                                                         <svg width="10px" height="10px">
-                                                            <use xlink:href="images/sprite.svg#cross-10"></use>
+                                                            <use xlink:href="{{asset('images/sprite.svg#cross-10')}}"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -472,7 +339,7 @@
                                     <!-- .dropcart / end -->
                                 </div>
                             </div>
-                            <div class="indicator indicator--trigger--click"><a href="account-login.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#person-20"></use></svg></span></a>
+                            <div class="indicator indicator--trigger--click"><a href="account-login.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="{{asset('images/sprite.svg#person-20')}}"></use></svg></span></a>
                                 <div class="indicator__dropdown">
                                     <div class="account-menu">
                                         <form class="account-menu__form">

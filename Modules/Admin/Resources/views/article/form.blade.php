@@ -64,7 +64,7 @@
                                             </label>
                                             <div class="col-md-8">
                                                 <div class="input-group">
-                                                    <textarea  class="summernote edi-css form-control" name="a_content"  id="a_content">
+                                                    <textarea  class="ckeditor" class="summernote edi-css form-control" name="a_content"  id="a_content">
                                                         {{old('a_content',isset($article->a_content) ? $article->a_content : '' )}}
                                                     </textarea>
 

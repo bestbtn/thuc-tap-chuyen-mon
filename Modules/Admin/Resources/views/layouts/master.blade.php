@@ -501,7 +501,7 @@
         readURL(this);
     });
 </script>
-@yield('script')
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
 </body>
 
