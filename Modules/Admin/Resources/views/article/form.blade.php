@@ -38,8 +38,9 @@
                                                     </div>
                                                 @endif
                                             </div>
-
                                         </div>
+
+
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">
                                                 Mô tả bài viết

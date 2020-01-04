@@ -76,7 +76,7 @@
                 <div class="totop__end">
                     <button type="button" class="totop__button">
                         <svg width="13px" height="8px">
-                            <use xlink:href="images/sprite.svg#arrow-rounded-up-13x8"></use>
+                            <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-up-13x8')}}"></use>
                         </svg>
                     </button>
                 </div>

@@ -10,30 +10,30 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $guarded =  ['*'];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    const STATUS_PUBLIC = 1;
+    const STATUS_PRIVATE = 0;
+    protected $status = [
+        1 => [
+            'name' => 'Public',
+            'class'=> 'default1'
+        ],
+        0 => [
+            'name' => 'Private',
+            'class'=> 'default2'
+        ]
+    ];
+    public function getStatus(){
+        return array_get($this->status,$this->active,['N\A']);
+    }
 }

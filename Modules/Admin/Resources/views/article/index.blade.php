@@ -57,8 +57,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Tên bài viết</th>
+                                        <th>Hình ảnh</th>
                                         <th>Mô tả</th>
-
                                         <th>Trạng thái</th>
                                         <th>Ngày tạo</th>
                                         <th>Edit</th>
@@ -71,6 +71,7 @@
                                         <tr>
                                         <td>{{$article->id}}</td>
                                         <td>{{$article->a_name}}</td>
+                                        <td><img  src="{{pare_url_file($article->a_avatar)}}" alt="" width="100px" height="100px"></td>
                                         <td>{{$article->a_description}} </td>
                                         <td>
                                             <a href="{{route('admin.get.action.article',['status',$article->id])}}" class=" {{$article->getStatus($article->a_active)['class'] }}"  >

@@ -389,14 +389,14 @@
 
                     {{--đơn hàng--}}
                     <li class="menu-dropdown">
-                        <a href="#">
+                        <a href="{{route('admin.get.list.transaction')}}">
                             <i class="text-info menu-icon fa fa-fw fa-newspaper-o"></i>
                             <span class="mm-text">Đơn hàng</span>
                             <span class="fa fa-angle-down pull-right"></span>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="news.html">
+                                <a href="{{route('admin.get.list.transaction')}}">
                                     <i class="text-primary menu-icon fa fa-inbox"></i> Danh sách đơn hàng
                                 </a>
                             </li>
@@ -405,14 +405,14 @@
                     </li>
                     {{--user--}}
                     <li class="menu-dropdown">
-                        <a href="#">
+                        <a href="{{route('admin.get.list.user')}}">
                             <i class="text-default menu-icon fa fa-fw fa-users"></i>
                             <span class="mm-text">Users</span>
                             <span class="fa fa-angle-down pull-right"></span>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="admin_userlist.html">
+                                <a href="{{route('admin.get.list.user')}}">
                                     <i class="text-primary fa fa-fw fa-users"></i> Danh sách Users
                                 </a>
                             </li>

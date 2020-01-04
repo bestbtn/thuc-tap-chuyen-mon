@@ -52,7 +52,7 @@ class AdminArticleController extends Controller
         $article->a_name = $requestArticle->a_name;
         $article->a_slug = str_slug($requestArticle->a_name);
         $article->a_description = $requestArticle->a_description;
-        $article->a_content = $requestArticle->a_content;
+        $article->a_content = $requestArticle->a_content ;
         $article->a_title_seo = $requestArticle->a_title_seo;
         $article->a_description_seo = $requestArticle->a_description_seo;
         if($requestArticle->hasFile('avatar')){
