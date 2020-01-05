@@ -58,7 +58,6 @@ class ShoppingCartController extends FrontendController
         ]);
         if ($transactionId){
             $products = \Cart::content();
-            dd($products);
             foreach ($products as $product)
             {
 

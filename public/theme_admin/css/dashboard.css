@@ -28,3 +28,16 @@
     color: white;
 
 }
+.default3{
+    width: 55px;
+    background-color: forestgreen;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 5px;
+}
+.default3:hover{
+    background-color: #5e5e5e;
+    color: white;
+
+}

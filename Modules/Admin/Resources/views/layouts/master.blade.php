@@ -20,7 +20,7 @@
     <link type="text/css" href="{{asset('theme_admin/css/custom_css/admin_dashboard.css')}}" rel="stylesheet">
     <!-- end of page level css -->
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -502,6 +502,8 @@
     });
 </script>
 <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+@yield('script')
+
 
 </body>
 
