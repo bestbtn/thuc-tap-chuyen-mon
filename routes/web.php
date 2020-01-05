@@ -7,6 +7,8 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('danh-muc/{slug}-{id}','CategoryController@getListProduct')->name('get.list.product');
 Route::get('san-pham/{slug}-{id}','ProductDetailController@getDetailProduct')->name('get.detail.product');
+Route::post('san-pham/{slug}-{id}','ProductDetailController@saveRating')->middleware('CheckLogin');
+
 Route::get('tin-tuc','ArticleController@getListArticle')->name('get.list.article');
 Route::get('bai-viet/{slug}-{id}','ArticleDetailController@getDetailArticle')->name('get.detail.article');
 
@@ -29,6 +31,13 @@ Route::group(['prefix'=>'gio-hang','middleware' => 'CheckLogin'],function (){
     Route::get('/thanh-toan','ShoppingCartController@getFormPay')->name('get.form.pay');
     Route::post('/thanh-toan','ShoppingCartController@saveInfoShoppingCart');
 });
+
+Route::group(['prefix'=> 'danh-gia','middleware' => 'CheckLoginUser'],function(){
+    Route::get('danh-sach/{id}','RatingController@getRating')->name('get.list.rating.product');
+
+
+});
+
 
 Route::get('lien-he','ContactController@getContact')->name('get.contact');
 Route::post('lien-he','ContactController@saveContact');

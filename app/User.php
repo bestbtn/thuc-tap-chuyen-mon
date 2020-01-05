@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Rating;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -35,5 +36,8 @@ class User extends Authenticatable
     ];
     public function getStatus(){
         return array_get($this->status,$this->active,['N\A']);
+    }
+    public function user(){
+        return $this->hasMany(Rating::class);
     }
 }

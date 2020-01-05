@@ -31,6 +31,13 @@ Route::prefix('admin')->group(function() {
         Route::get('/{action}/{id}','AdminProductController@action')->name('admin.get.action.product');
 
     });
+    //Quản lí đánh giá
+    Route::group(['prefix' => 'rating'],function (){
+        Route::get('/','AdminRatingController@index')->name('admin.get.list.rating');
+        Route::get('/{action}/{id}','AdminRatingController@action')->name('admin.get.action.rating');
+
+    });
+
     Route::group(['prefix' => 'article'],function (){
         Route::get('/','AdminArticleController@index')->name('admin.get.list.article');
         Route::get('/create','AdminArticleController@create')->name('admin.get.create.article');

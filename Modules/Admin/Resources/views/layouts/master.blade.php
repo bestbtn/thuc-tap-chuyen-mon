@@ -329,7 +329,7 @@
 {{--                    danh muc--}}
                     <li class="menu-dropdown">
                         <a href="">
-                            <i class="text-info menu-icon fa fa-fw fa-newspaper-o"></i>
+                            <i class="text-info menu-icon fa fa-fw fas fa-align-justify"></i>
                             <span class="mm-text">Danh mục</span>
                             <span class="fa fa-angle-down pull-right"></span>
                         </a>
@@ -341,7 +341,7 @@
                             </li>
                             <li>
                                 <a href="{{route('admin.get.create.category')}}">
-                                    <i class="menu-icon text-success fa fa-pencil"></i> Thêm danh mục
+                                    <i class="menu-icon text-success fa fa-plus-circle"></i> Thêm danh mục
                                 </a>
                             </li>
                         </ul>
@@ -361,11 +361,28 @@
                             </li>
                             <li>
                                 <a href="{{route('admin.get.create.product')}}">
-                                    <i class="text-danger fa fa-fw fa-paw"></i> Thêm sản phẩm
+                                    <i class="text-danger fa fa-fw fas fa-plus-circle"></i> Thêm sản phẩm
                                 </a>
                             </li>
                         </ul>
                     </li>
+                    {{-- đánh giá --}}
+                    <li class="menu-dropdown">
+                        <a href="#">
+                            <i class="text-info menu-icon fa fa-fw fa fa-star"></i>
+                            <span class="mm-text">Đánh giá</span>
+                            <span class="fa fa-angle-down pull-right"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{route('admin.get.list.rating')}}">
+                                    <i class="text-primary menu-icon fa fa-star"></i> Quản lí đánh giá
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
                     {{--tin tức--}}
                     <li class="menu-dropdown">
                         <a href="#">
@@ -381,7 +398,7 @@
                             </li>
                             <li>
                                 <a href="{{route('admin.get.create.article')}}">
-                                    <i class="menu-icon text-success fa fa-pencil"></i> Thêm tin tức
+                                    <i class="menu-icon text-success fa fa-plus-circle"></i> Thêm tin tức
                                 </a>
                             </li>
                         </ul>
@@ -423,7 +440,7 @@
                             </li>
                             <li>
                                 <a href="add_users.html">
-                                    <i class="text-info fa fa-fw fa-user"></i> Thêm Users
+                                    <i class="text-info fa fa-fw fas fa-plus-circle"></i> Thêm Users
                                 </a>
                             </li>
                             <li>
