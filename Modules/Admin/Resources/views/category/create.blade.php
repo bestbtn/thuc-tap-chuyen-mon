@@ -3,7 +3,7 @@
     <section class="content-header">
         <!--section starts-->
         <h2>Thêm danh mục</h2>
-        <ol class="breadcrumb">
+        <ol class="breadcrumb" >
             <li>
                 <a href="{{route('admin.get.dashboard')}}">
                     <i class="fa fa-fw fa-home"></i> Trang chủ

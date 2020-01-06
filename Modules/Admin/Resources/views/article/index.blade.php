@@ -85,8 +85,8 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <a class="delete btn btn-danger mar-bm" href="{{route('admin.get.action.article',['delete',$article->id])}}">
-                                                <i class="fa fa-trash-o"></i> Delete
+                                            <a class="delete btn btn-danger mar-bm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" href="{{route('admin.get.action.article',['delete',$article->id])}}">
+                                                <i class="fa fa-trash-o"></i> Xóa
                                             </a>
                                         </td>
 

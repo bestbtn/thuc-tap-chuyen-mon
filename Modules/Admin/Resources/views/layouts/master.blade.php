@@ -489,6 +489,18 @@
         <!-- /.sidebar -->
     </aside>
     <aside class="right-side right-padding">
+        @if(Session::has('success'))
+            <div class="alert alert-success" style="margin-top: 5%;float: right;margin-right: 2%">
+                <strong>Thành công!</strong> {{ Session::get('success') }}
+            </div>
+        @endif
+        @if(Session::has('wrong'))
+            <div class="alert alert-danger " style="margin-top: 5%;float: right;margin-right: 2%">
+                <strong>Thất bại!</strong> {!! Session::get('wrong') !!}
+            </div>
+        @endif
+
+
     @yield('content')
     </aside>
 </div>

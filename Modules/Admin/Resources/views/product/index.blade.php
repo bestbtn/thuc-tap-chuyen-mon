@@ -85,11 +85,12 @@
                                                 <tr>
                                                     <td>{{$product->id}}</td>
                                                     <td>{{$product->pro_name}}
-                                                        <ul>
+                                                        <ul style="margin-left: 7%;" >
                                                             <li><span><i
-                                                                        class="fas fa-dollar"></i></span><span>{{number_format($product->pro_price,0,'.',',')}}</span>
+                                                                        class="fa fa-dollar"></i></span><span> {{number_format($product->pro_price,0,',','.')}} </span>
                                                             </li>
                                                             <li><span>{{$product->pro_sale}}%</span></li>
+                                                            <li>Số lượng: <span>{{$product->pro_number}}</span></li>
                                                         </ul>
                                                     </td>
                                                     <td>{{isset($product->category->c_name)? $product->category->c_name :''}}</td>
@@ -115,7 +116,7 @@
                                                     <td>
                                                         <a class="delete btn btn-danger mar-bm"
                                                            href="{{route('admin.get.action.product',['delete',$product->id])}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">
-                                                            <i class="fa fa-trash-o"></i> Delete
+                                                            <i class="fa fa-trash-o"></i> Xóa
                                                         </a>
                                                     </td>
 

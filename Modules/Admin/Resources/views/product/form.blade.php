@@ -161,6 +161,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         {{--số lượng sản phẩm--}}
                                         <div class="form-group">
                                             <label for="pro_number" class="col-md-3 control-label">
@@ -171,7 +172,7 @@
                                                                 <span class="input-group-addon">
                                                                     <i class="fa fa-usd" aria-hidden="true"></i>
                                                                 </span>
-                                                    <input id="pro_number" type="number" name="pro_number" class="form-control" placeholder="số lượng sản phẩm">
+                                                    <input id="pro_number" type="number" value="{{old('pro_number',isset($product->pro_number) ? $product->pro_number : '' )}}" name="pro_number" class="form-control" placeholder="số lượng sản phẩm" >
                                                 </div>
                                             </div>
                                         </div>

@@ -25,7 +25,7 @@ class AdminRatingController extends Controller
                     break;
             }
         }
-        return redirect()->back();
+        return redirect()->back()->with('success',"Đã xóa thành công đánh giá trên");
     }
 
 

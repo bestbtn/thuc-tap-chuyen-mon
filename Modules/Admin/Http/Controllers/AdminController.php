@@ -64,59 +64,20 @@ class AdminController extends Controller
             'ratings'           => $ratings,
             'moneyDay'          =>$moneyDay,
             'moneyMonth'        =>$moneyMonth,
-            'viewMoney'         => json_encode( $viewMoney),
-            'memberThisDay'=>$memberThisDay,
-            'memberThisMonth'=>$memberThisMonth,
+            'viewMoney'         =>json_encode( $viewMoney),
+            'memberThisDay'     =>$memberThisDay,
+            'memberThisMonth'   =>$memberThisMonth,
             'transactionNews'   =>$transactionNews,
             'totalMember'       =>$totalMember,
             'totalProduct'      =>$totalProduct,
-            'totalArticle'     =>$totalArticle,
-            'totalRating'      =>$totalRating,
-            'users'              => $users,
+            'totalArticle'      =>$totalArticle,
+            'totalRating'       =>$totalRating,
+            'users'             => $users,
 
         ];
 
 
         return view('admin::index',$viewData);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     * @return Response
-     */
-    public function create()
-    {
-        return view('admin::create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        return view('admin::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        return view('admin::edit');
     }
 
 

@@ -3,7 +3,7 @@
         <section class="content-header">
             <!--section starts-->
             <h2>QUẢN LÍ DANH MỤC</h2>
-            <ol class="breadcrumb">
+            <ol class="breadcrumb" >
                 <li>
                     <a href="{{route('admin.get.dashboard')}}">
                         <i class="fa fa-fw fa-home"></i> Trang chủ
@@ -17,6 +17,8 @@
                 </li>
             </ol>
         </section>
+
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -62,7 +64,7 @@
                                             <i class="fa fa-fw fa-edit"></i> Sửa
                                         </a>
 
-                                        <a class="delete btn btn-danger" href="{{route('admin.get.action.category',['delete',$category->id])}}">
+                                        <a class="delete btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" href="{{route('admin.get.action.category',['delete',$category->id])}}">
                                             <i class="fa fa-trash-o"></i> Xóa
                                         </a>
                                     </td>

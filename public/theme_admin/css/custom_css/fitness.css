@@ -1914,6 +1914,7 @@ thead {
     background-color: #ffffff !important;
     border-radius: 0;
     line-height: 24px;
+    float: left;
 }
 
 .right-side > .content-header > .breadcrumb > li > a,

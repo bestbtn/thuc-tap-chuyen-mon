@@ -11,12 +11,15 @@ use Illuminate\Http\Request;
 class ShoppingCartController extends FrontendController
 {
     public function addProduct(Request $request,$id){
-        $product = Product::select('pro_name','id','pro_price','pro_sale','pro_avatar')->find($id);
+        $product = Product::select('pro_name','id','pro_price','pro_sale','pro_avatar','pro_number')->find($id);
         if(!$product) return redirect()->route('home');
         $price = $product->pro_price;
 
         if (isset($product->pro_sale)){
             $price = $price - $price*$product->pro_sale/100;
+        }
+        if ($product->pro_number==0){
+            return redirect()->back()->with('wrong',"Sản phẩm đã hết hàng");
         }
 
         \Cart::add([
@@ -30,7 +33,7 @@ class ShoppingCartController extends FrontendController
                 'old_price'=> $product->pro_price
             ]
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success',"Đã thêm vào giỏ hàng");
     }
     public function deleteProduct($key){
         \Cart::remove($key);

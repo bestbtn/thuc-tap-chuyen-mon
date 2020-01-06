@@ -35,13 +35,13 @@ class AdminArticleController extends Controller
     public function update(RequestArticle $requestArticle,$id){
         $this->insertOrUpdate($requestArticle,$id);
 
-        return redirect()->back();
+        return redirect()->back()->with('success',"Cập nhật thông tin bài viết thành công");
     }
     public function store(RequestArticle $requestArticle){
 
         $this->insertOrUpdate($requestArticle);
 
-        return redirect()->back();
+        return redirect()->back()->with('success',"Lưu thông tin bài viết thành công");
     }
     public function insertOrUpdate($requestArticle,$id=''){
         $article = new Article();
@@ -77,7 +77,7 @@ class AdminArticleController extends Controller
                 case 'status':
                     $article->a_active = $article->a_active==1 ? 0 : 1;
                     $article->save();
-                    $messenge = "Cập nhật thành công";
+                    $messenge = "Cập nhật trạng thái bài viết thành công";
                     break;
             }
         }

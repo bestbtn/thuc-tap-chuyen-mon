@@ -40,6 +40,16 @@
 @include('components.header')
 {{--end-header--}}
 <!-- site__body -->
+    @if(Session::has('warning'))
+        <div class="alert alert-warning" style="margin-right: 2%;position: absolute;right: 0;top: 25%;z-index: 25;">
+            <strong>Cảnh báo!</strong> {{ Session::get('warning') }}
+        </div>
+    @endif
+    @if(Session::has('success'))
+        <div class="alert alert-success" style="margin-right: 2%;position: absolute;right: 0;top: 25%;z-index: 25;">
+            <strong>Thành công!</strong> {{ Session::get('success') }}
+        </div>
+    @endif
     @yield('content')
     <!-- site__body / end -->
     <!-- site__footer -->

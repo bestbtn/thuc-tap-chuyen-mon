@@ -35,7 +35,7 @@ class AdminProductController extends Controller
     public function store(RequestProduct $requestProduct)
     {
         $this->insertOrUpdate($requestProduct);
-        return redirect()->back();
+        return redirect()->back()->with('success',"Lưu sản phẩm thành công");
     }
     public function getCategories(){
         return Category::all();
@@ -55,6 +55,7 @@ class AdminProductController extends Controller
         $product->pro_category_id = $requestProduct->pro_category_id;
         $product->pro_price = $requestProduct->pro_price;
         $product->pro_sale = $requestProduct->pro_sale;
+        $product->pro_number = $requestProduct->pro_number;
 
         //dd($requestProduct->all());
         if($requestProduct->hasFile('avatar')){
@@ -74,30 +75,30 @@ class AdminProductController extends Controller
     }
     public function update(RequestProduct $requestProduct,$id){
         $this->insertOrUpdate($requestProduct,$id);
-        return redirect()->back();
+        return redirect()->back()->with('success',"Cập nhật sản phẩm thành công");
     }
     public function action($action,$id){
-        $messenge='';
+        $message='';
         if($action){
             $product = Product::find($id);
             switch ($action)
             {
                 case 'delete':
                     $product->delete();
-                    $messenge = "Xóa thành công";
+                    $message = "Xóa sản phẩm thành công";
                     break;
                 case 'status':
                     $product->pro_active = $product->pro_active==1 ? 0 : 1;
                     $product->save();
-                    $messenge = "Cập nhật thành công";
+                    $message = "Cập nhật trạng thái thành công";
                     break;
                 case 'hot':
                     $product->pro_hot = $product->pro_hot==1 ? 0 : 1;
                     $product->save();
-                    $messenge = "Cập nhật thành công";
+                    $message = "Cập nhật sản phẩm hot thành công";
                     break;
             }
         }
-        return redirect()->back()->with('success',$messenge);
+        return redirect()->back()->with('success',$message);
     }
 }

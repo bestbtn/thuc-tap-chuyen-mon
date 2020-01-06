@@ -77,44 +77,44 @@
                             </svg>
                         </div>
                         <div class="block-features__content">
-                            <div class="block-features__title">Free Shipping</div>
-                            <div class="block-features__subtitle">For orders from $50</div>
+                            <div class="block-features__title">Miễn phí vận chuyển</div>
+                            <div class="block-features__subtitle">Cho đơn hàng từ 10.000.000đ</div>
                         </div>
                     </div>
                     <div class="block-features__divider"></div>
                     <div class="block-features__item">
                         <div class="block-features__icon">
                             <svg width="48px" height="48px">
-                                <use xlink:href="images/sprite.svg#fi-24-hours-48"></use>
+                                <use xlink:href="{{asset('images/sprite.svg#fi-24-hours-48')}}"></use>
                             </svg>
                         </div>
                         <div class="block-features__content">
-                            <div class="block-features__title">Support 24/7</div>
-                            <div class="block-features__subtitle">Call us anytime</div>
+                            <div class="block-features__title">Hỗ trợ 24/7</div>
+                            <div class="block-features__subtitle">Gọi chúng tôi bất cứ lúc nào</div>
                         </div>
                     </div>
                     <div class="block-features__divider"></div>
                     <div class="block-features__item">
                         <div class="block-features__icon">
                             <svg width="48px" height="48px">
-                                <use xlink:href="images/sprite.svg#fi-payment-security-48"></use>
+                                <use xlink:href="{{asset('images/sprite.svg#fi-payment-security-48')}}"></use>
                             </svg>
                         </div>
                         <div class="block-features__content">
-                            <div class="block-features__title">100% Safety</div>
-                            <div class="block-features__subtitle">Only secure payments</div>
+                            <div class="block-features__title">An toàn tuyệt đối</div>
+                            <div class="block-features__subtitle">Thanh toán khi nhận hàng</div>
                         </div>
                     </div>
                     <div class="block-features__divider"></div>
                     <div class="block-features__item">
                         <div class="block-features__icon">
                             <svg width="48px" height="48px">
-                                <use xlink:href="images/sprite.svg#fi-tag-48"></use>
+                                <use xlink:href="{{asset('images/sprite.svg#fi-tag-48')}}"></use>
                             </svg>
                         </div>
                         <div class="block-features__content">
-                            <div class="block-features__title">Hot Offers</div>
-                            <div class="block-features__subtitle">Discounts up to 90%</div>
+                            <div class="block-features__title">Nhiều khuyến mãi</div>
+                            <div class="block-features__subtitle">Lên đến 90%</div>
                         </div>
                     </div>
                 </div>
@@ -155,9 +155,15 @@
                                                         <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                                     </svg>
                                                     <span class="fake-svg-icon"></span></button>
+                                                @if($proHot->pro_number == 0)
                                                 <div class="product-card__badges-list">
-                                                    <div class="product-card__badge product-card__badge--hot">HOT</div>
+                                                    <div class="product-card__badge product-card__badge--out">Tạm hết hàng</div>
                                                 </div>
+                                                    @else
+                                                    <div class="product-card__badges-list">
+                                                        <div class="product-card__badge product-card__badge--hot">HOT</div>
+                                                    </div>
+                                                @endif
                                                 <div class="product-card__image">
                                                     <a href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}"><img
                                                             src="{{pare_url_file($proHot->pro_avatar)}}" alt=""></a>
@@ -279,9 +285,17 @@
                                                     <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                                 </svg>
                                                 <span class="fake-svg-icon"></span></button>
+                                            @if($proNew->pro_number == 0)
+                                                    <div class="product-card__badges-list">
+                                                        <div class="product-card__badge product-card__badge--out">Tạm hết hàng</div>
+                                                    </div>
+                                                @else
                                             <div class="product-card__badges-list">
                                                 <div class="product-card__badge product-card__badge--new">Mới</div>
                                             </div>
+                                            @endif
+
+
                                             <div class="product-card__image">
                                                 <a href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}"><img src="{{pare_url_file($proNew->pro_avatar)}}"
                                                                             alt=""></a>
