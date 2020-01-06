@@ -251,8 +251,10 @@
                             </div>
                         </div>
                         <div class="product-tabs__pane" id="tab-reviews">
+
                             <div class="reviews-view">
                                 <div class="reviews-view__list">
+
                                     <h3 class="reviews-view__header">Bình luận của khách hàng</h3>
                                     <div class="reviews-list">
                                         <ol class="reviews-list__content">

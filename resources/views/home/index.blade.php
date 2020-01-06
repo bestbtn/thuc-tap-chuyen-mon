@@ -131,12 +131,12 @@
                         <div class="block-header__arrows-list">
                             <button class="block-header__arrow block-header__arrow--left" type="button">
                                 <svg width="7px" height="11px">
-                                    <use xlink:href="images/sprite.svg#arrow-rounded-left-7x11"></use>
+                                    <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-left-7x11')}}"></use>
                                 </svg>
                             </button>
                             <button class="block-header__arrow block-header__arrow--right" type="button">
                                 <svg width="7px" height="11px">
-                                    <use xlink:href="images/sprite.svg#arrow-rounded-right-7x11"></use>
+                                    <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-right-7x11')}}"></use>
                                 </svg>
                             </button>
                         </div>
@@ -152,19 +152,19 @@
                                             <div class="product-card">
                                                 <button class="product-card__quickview" type="button">
                                                     <svg width="16px" height="16px">
-                                                        <use xlink:href="images/sprite.svg#quickview-16"></use>
+                                                        <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                                     </svg>
                                                     <span class="fake-svg-icon"></span></button>
                                                 <div class="product-card__badges-list">
                                                     <div class="product-card__badge product-card__badge--hot">HOT</div>
                                                 </div>
                                                 <div class="product-card__image">
-                                                    <a href="product.html"><img
+                                                    <a href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}"><img
                                                             src="{{pare_url_file($proHot->pro_avatar)}}" alt=""></a>
                                                 </div>
                                                 <div class="product-card__info">
                                                     <div class="product-card__name"><a
-                                                            href="product.html">{{$proHot->pro_name}}</a></div>
+                                                            href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}">{{$proHot->pro_name}}</a></div>
                                                     <div class="product-card__rating">
                                                         <div class="rating">
                                                             <div class="rating__body">
@@ -172,11 +172,11 @@
                                                                      width="13px" height="12px">
                                                                     <g class="rating__fill">
                                                                         <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
+                                                                            xlink:href="{{asset('images/sprite.svg#star-normal')}}"></use>
                                                                     </g>
                                                                     <g class="rating__stroke">
                                                                         <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
+                                                                            xlink:href="{{asset('images/sprite.svg#star-normal-stroke')}}"></use>
                                                                     </g>
                                                                 </svg>
                                                                 <div
@@ -188,86 +188,7 @@
                                                                         <div class="fake-svg-icon"></div>
                                                                     </div>
                                                                 </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
+
                                                             </div>
                                                         </div>
                                                         <div class="product-card__rating-legend">11 Reviews</div>
@@ -335,12 +256,12 @@
                     <div class="block-header__arrows-list">
                         <button class="block-header__arrow block-header__arrow--left" type="button">
                             <svg width="7px" height="11px">
-                                <use xlink:href="images/sprite.svg#arrow-rounded-left-7x11"></use>
+                                <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-left-7x11')}}"></use>
                             </svg>
                         </button>
                         <button class="block-header__arrow block-header__arrow--right" type="button">
                             <svg width="7px" height="11px">
-                                <use xlink:href="images/sprite.svg#arrow-rounded-right-7x11"></use>
+                                <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-right-7x11')}}"></use>
                             </svg>
                         </button>
                     </div>
@@ -355,19 +276,19 @@
                                         <div class="product-card">
                                             <button class="product-card__quickview" type="button">
                                                 <svg width="16px" height="16px">
-                                                    <use xlink:href="images/sprite.svg#quickview-16"></use>
+                                                    <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                                 </svg>
                                                 <span class="fake-svg-icon"></span></button>
                                             <div class="product-card__badges-list">
                                                 <div class="product-card__badge product-card__badge--new">Mới</div>
                                             </div>
                                             <div class="product-card__image">
-                                                <a href="product.html"><img src="{{pare_url_file($proNew->pro_avatar)}}"
+                                                <a href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}"><img src="{{pare_url_file($proNew->pro_avatar)}}"
                                                                             alt=""></a>
                                             </div>
                                             <div class="product-card__info">
                                                 <div class="product-card__name"><a
-                                                        href="product.html">{{$proNew->pro_name}}</a></div>
+                                                        href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}">{{$proNew->pro_name}}</a></div>
                                                 <div class="product-card__rating">
                                                     <div class="rating">
                                                         <div class="rating__body">
@@ -375,91 +296,11 @@
                                                                  height="12px">
                                                                 <g class="rating__fill">
                                                                     <use
-                                                                        xlink:href="images/sprite.svg#star-normal"></use>
+                                                                        xlink:href="{{asset('images/sprite.svg#star-normal')}}"></use>
                                                                 </g>
                                                                 <g class="rating__stroke">
                                                                     <use
-                                                                        xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                </g>
-                                                            </svg>
-                                                            <div
-                                                                class="rating__star rating__star--only-edge rating__star--active">
-                                                                <div class="rating__fill">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                                <div class="rating__stroke">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                            </div>
-                                                            <svg class="rating__star rating__star--active" width="13px"
-                                                                 height="12px">
-                                                                <g class="rating__fill">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal"></use>
-                                                                </g>
-                                                                <g class="rating__stroke">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                </g>
-                                                            </svg>
-                                                            <div
-                                                                class="rating__star rating__star--only-edge rating__star--active">
-                                                                <div class="rating__fill">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                                <div class="rating__stroke">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                            </div>
-                                                            <svg class="rating__star rating__star--active" width="13px"
-                                                                 height="12px">
-                                                                <g class="rating__fill">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal"></use>
-                                                                </g>
-                                                                <g class="rating__stroke">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                </g>
-                                                            </svg>
-                                                            <div
-                                                                class="rating__star rating__star--only-edge rating__star--active">
-                                                                <div class="rating__fill">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                                <div class="rating__stroke">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                            </div>
-                                                            <svg class="rating__star rating__star--active" width="13px"
-                                                                 height="12px">
-                                                                <g class="rating__fill">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal"></use>
-                                                                </g>
-                                                                <g class="rating__stroke">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                </g>
-                                                            </svg>
-                                                            <div
-                                                                class="rating__star rating__star--only-edge rating__star--active">
-                                                                <div class="rating__fill">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                                <div class="rating__stroke">
-                                                                    <div class="fake-svg-icon"></div>
-                                                                </div>
-                                                            </div>
-                                                            <svg class="rating__star rating__star--active" width="13px"
-                                                                 height="12px">
-                                                                <g class="rating__fill">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal"></use>
-                                                                </g>
-                                                                <g class="rating__stroke">
-                                                                    <use
-                                                                        xlink:href="images/sprite.svg#star-normal-stroke"></use>
+                                                                        xlink:href="{{asset('images/sprite.svg#star-normal-stroke')}}"></use>
                                                                 </g>
                                                             </svg>
                                                             <div

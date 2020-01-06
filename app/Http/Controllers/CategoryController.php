@@ -10,8 +10,9 @@ class CategoryController extends FrontendController
     public function getListProduct(Request $request){
         $url = $request->segment(2);
         $url = preg_split('/(-)/i',$url);
+
         if ($id = array_pop($url)){
-            $products = Product::where([
+            $products = Product::with('category')->where([
                 'pro_category_id' => $id,
                 'pro_active'=> Product::STATUS_PUBLIC
             ])->orderBy('id','DESC')->paginate(5);
@@ -26,6 +27,15 @@ class CategoryController extends FrontendController
             return view('product.index',$viewData);
         }
         return redirect()->back();
+    }
+    public function getListAllProduct(){
+        $count = Product::all()->count();
+        $products = Product::paginate(10);
+        $viewData = [
+          'count' => $count,
+          'products'=>$products
+        ];
+        return view('store.index',$viewData);
     }
 
 }

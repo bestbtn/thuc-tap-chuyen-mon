@@ -19,8 +19,10 @@
     <link type="text/css" href="{{asset('theme_admin/css/custom_css/panel.css')}}" rel="stylesheet" />
     <link type="text/css" href="{{asset('theme_admin/css/custom_css/admin_dashboard.css')}}" rel="stylesheet">
     <!-- end of page level css -->
-
+    <link href="{{ asset('theme_admin/css/theme.css') }}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -321,7 +323,7 @@
                 </div>
                 <ul class="navigation">
                     <li class="active" id="active">
-                        <a href="">
+                        <a href="{{route('admin.get.dashboard')}}">
                             <i class="text-primary menu-icon fa fa-fw fa-dashboard"></i>
                             <span class="mm-text ">Trang chủ</span>
                         </a>

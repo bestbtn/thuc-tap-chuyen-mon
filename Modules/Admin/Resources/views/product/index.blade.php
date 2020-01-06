@@ -5,15 +5,15 @@
         <h2>Course Schedule</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="index-2.html">
-                    <i class="fa fa-fw fa-home"></i> Dashboard
+                <a href="{{route('admin.get.dashboard')}}">
+                    <i class="fa fa-fw fa-home"></i> Trang chủ
                 </a>
             </li>
             <li>
-                <a href="#">Course Schedule</a>
+                <a href="{{route('admin.get.list.product')}}">Danh sách sản phẩm</a>
             </li>
             <li>
-                <a href="admin_courseschedule.html">Course Schedule</a>
+                <a href="#">Sản phẩm</a>
             </li>
         </ol>
     </section>
@@ -114,7 +114,7 @@
                                                     </td>
                                                     <td>
                                                         <a class="delete btn btn-danger mar-bm"
-                                                           href="{{route('admin.get.action.product',['delete',$product->id])}}">
+                                                           href="{{route('admin.get.action.product',['delete',$product->id])}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">
                                                             <i class="fa fa-trash-o"></i> Delete
                                                         </a>
                                                     </td>

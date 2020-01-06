@@ -1,353 +1,273 @@
 @extends('admin::layouts.master')
 @section('content')
-
-    <!-- Content Header (Page header) -->
-    <!--section ends-->
-    <div class="container-fluid">
-        <div class="row bg-color">
-            <div class="col-lg-4">
-                <div class="box-model">
-                    <h4>Quick Stats</h4>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-6 text-center">
-                            <p class="income">Monthly Income</p>
-                            <div id="myStat2" data-dimension="210" data-width="20" data-text="70%" data-fontsize="20" data-percent="70" data-fgcolor="#33a4d8" data-bgcolor="#f7f7f7"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="overview-wrap">
+                <h2 class="title-1">Trang tổng quan</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row m-t-25">
+        <div class="col-sm-6 col-lg-3">
+            <div class="overview-item overview-item--c1">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-account-o"></i>
                         </div>
-                        <div class="col-lg-6 col-xs-6 text-center">
-                            <p class="income">Yearly Income</p>
-                            <div id="myStat3" data-dimension="210" data-width="20" data-text="85%" data-fontsize="20" data-percent="85" data-fgcolor="#65a800" data-bgcolor="#f7f7f7"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-xs-12">
-                            <div class="amount">
-                                <p>Pending Amount <span class="pull-right">%</span><span id="pending_amount" class="pull-right">30</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-primary"></div>
-                                </div>
-                                <p>Pending Users <span class="pull-right">%</span><span id="fifty" class="pull-right">50</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-success"></div>
-                                </div>
-                            </div>
+                        <div class="text">
+                                <h2>{{$totalMember}}</h2>
+                            <span>Thành viên</span>
                         </div>
                     </div>
-                </div>
-                <div class="box-model">
-                    <h4>Recent Users</h4>
-                    <div class="newstick">
-                        <div class="recent">
-                            <div class="row">
-                                <img src="img/admin/user1.png" class="recent-user-img" alt="image not found">
-                                <h5>
-                                    <a href="admin_userprofile.html" class="text-primary">Adam B. Engles </a>
-                                </h5>
-                                <small>Yoga<span class="pull-right">
-                               25 / 08 / 2016</span></small>
-                            </div>
-                            <div class="row bg-default">
-                                <img src="img/admin/user2.png" class="recent-user-img" alt="image not found">
-                                <h5>
-                                    <a href="admin_userprofile.html" class="text-primary">Barbara A. Egan </a>
-                                </h5>
-                                <small>Aerobics<span class="pull-right">
-                                23 / 08 / 2016</span></small>
-                            </div>
-                            <div class="row">
-                                <img src="img/admin/user3.png" class="recent-user-img" alt="image not found">
-                                <h5>
-                                    <a href="admin_userprofile.html" class="text-primary">Caroline G. Turner </a>
-                                </h5>
-                                <small>Power Yoga<span class="pull-right">
-                                 19 / 08 / 2016</span></small>
-                            </div>
-                            <div class="row bg-default">
-                                <img src="img/admin/user4.png" class="recent-user-img" alt="image not found">
-                                <h5>
-                                    <a href="admin_userprofile.html" class="text-primary">Kevin S. McCabe </a>
-                                </h5>
-                                <small>Fitness<span class="pull-right">
-                                15 / 08 / 2016</span></small>
-                            </div>
-                            <div class="row">
-                                <img src="img/admin/user5.png" class="recent-user-img" alt="image not found">
-                                <h5>
-                                    <a href="admin_userprofile.html" class="text-primary">Richard S. Jensen </a>
-                                </h5>
-                                <small>Fitness<span class="pull-right">
-                                15 / 08 / 2016</span></small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-model">
-                    <h4>Users</h4>
-                    <div class="row">
-                        <div class=" col-lg-12 col-xs-12">
-                            <div class="registered bg-primary">
-                                <div class="row">
-                                    <div class="col-lg-8 col-xs-8">
-                                        <h5>REGISTERED USERS</h5>
-                                    </div>
-                                    <div class="col-lg-4 col-xs-4">
-                                        <h3 id="userscount"></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="registered bg-success">
-                                <div class="row">
-                                    <div class="col-lg-8 col-xs-8">
-                                        <h5>THIS MONTH</h5>
-                                    </div>
-                                    <div class="col-lg-4 col-xs-4">
-                                        <h3 id="myTargetElement4.2"></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="registered bg-warning">
-                                <div class="row">
-                                    <div class="col-lg-8 col-xs-8">
-                                        <h5>LAST MONTH</h5>
-                                    </div>
-                                    <div class="col-lg-4 col-xs-4">
-                                        <h3 id="myTargetElement4.1"></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-model">
-                    <div class="row">
-                        <div class=" col-lg-12 col-xs-12">
-                            <div class="example">
-                                <div class="example--label"></div>
-                                <div class="example-content">
-                                    <div class="list-inline">
-                                        <div>
-                                            <div id="custom-cells"></div>
-                                        </div>
-                                        <div class="calender-content-style" id="custom-cells-events"><strong class="text-primary"></strong>
-                                            <p class="light-color"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart1"></canvas>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="box-model">
-                            <h4>Growth Analytics</h4>
-                            <div id='chart'>
-                                <svg></svg>
-                            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="overview-item overview-item--c2">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-shopping-cart"></i>
+                        </div>
+                        <div class="text">
+                                <h2>{{$totalProduct}}</h2>
+                            <span>sản phẩm</span>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="box-model">
-                            <h4>User Growth</h4>
-                            <div id="chart2">
-                                <svg></svg>
-                            </div>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="overview-item overview-item--c3">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-calendar-note"></i>
+                        </div>
+                        <div class="text">
+                                <h2>{{$totalArticle}}</h2>
+                            <span>Bài viết</span>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="box-model">
-                            <h4>Trainers</h4>
-                            <div class="table-responsive">
-                                <table class="table table-bordered trainer">
-                                    <thead>
-                                    <tr class="bg-primary">
-                                        <th>Sl.No</th>
-                                        <th>Course</th>
-                                        <th>Personal Trainers</th>
-                                        <th>General Trainers</th>
-                                        <th>Total</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Yoga</td>
-                                        <td>09</td>
-                                        <td>08</td>
-                                        <td>17</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Aerobics</td>
-                                        <td>12</td>
-                                        <td>10</td>
-                                        <td>22</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Fitness</td>
-                                        <td>14</td>
-                                        <td>12</td>
-                                        <td>26</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Body Building</td>
-                                        <td>11</td>
-                                        <td>09</td>
-                                        <td>20</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Zumba</td>
-                                        <td>15</td>
-                                        <td>12</td>
-                                        <td>27</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Flexibility</td>
-                                        <td>07</td>
-                                        <td>05</td>
-                                        <td>12</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart3"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="overview-item overview-item--c4">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-money"></i>
+                        </div>
+                        <div class="text">
+                                <h2>{{$totalRating}}</h2>
+                            <span>Đánh giá</span>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="box-model event">
-                            <h4 class="">Events</h4>
-                            <div class="events_hover">
-                                <a href="event_item.html">
-                                    <div class="row">
-                                        <img src="img/admin/event1.png" class="recent-user-img" alt="image not found">
-                                        <h5>One Week Yoga Special Training </h5>
-                                        <small>03 / 09 / 2016 - 09 / 09 / 2016</small>
-                                        <span class="pull-right delete_event" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                        <span class="pull-right edit_event" title="Edit" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                    </div>
-                                </a>
-                                <a href="event_item.html">
-                                    <div class="row">
-                                        <img src="img/admin/event2.png" class="recent-user-img" alt="image not found">
-                                        <h5> Personal Training happy week</h5>
-                                        <small>03 / 09 / 2016 - 09 / 09 / 2016</small>
-                                        <span class="pull-right delete_event" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                        <span class="pull-right edit_event" title="Edit" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                    </div>
-                                </a>
-                                <a href="event_item.html">
-                                    <div class="row">
-                                        <img src="img/admin/event3.png" class="recent-user-img" alt="image not found">
-                                        <h5> 5k Marthon </h5>
-                                        <small>25 / 08 / 2016</small>
-                                        <span class="pull-right delete_event" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                        <span class="pull-right edit_event" title="Edit" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                    </div>
-                                </a>
-                                <a href="event_item.html">
-                                    <div class="row">
-                                        <img src="img/admin/event4.png" class="recent-user-img" alt="image not found">
-                                        <h5>Soul Searching</h5>
-                                        <small>18 / 08 / 2016 - 20 / 08 / 2016</small>
-                                        <span class="pull-right delete_event" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span><span class="pull-right edit_event" title="Edit" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                    </div>
-                                </a>
-                                <a href="event_item.html">
-                                    <div class="row">
-                                        <img src="img/admin/event5.png" class="recent-user-img" alt="image not found">
-                                        <h5>XT Series Championship</h5>
-                                        <small>15 / 07 / 2016- 17 / 07 / 2016</small>
-                                        <span class="pull-right delete_event" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span><span class="pull-right edit_event" title="Edit" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <button class="btn btn-block btn-success add_event" data-toggle="modal" data-target="#myModal">Add Event</button>
-                    </div>
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">
-                                        <i class="fa fa-plus"></i> Create Event</h4>
-                                </div>
-                                <form role="form" name="eventform" id="eventform">
-                                    <div class="modal-body">
-                                        <div class="input-group">
-                                            <label for="new-event" class="mar-top">Event Name</label>
-                                            <input type="text" id="new-event" class="form-control" placeholder="Event">
-                                        </div>
-                                        <label for="event_url" class="mar-top">Event URL</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control pull-right" id="event_url" placeholder="Enter The URL related to event" />
-                                        </div>
-                                        <label for="event_img" class="mar-top">Event Image URL</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control pull-right" id="event_img" placeholder="Enter The URL related to event image" />
-                                        </div>
-                                        <div class="input-group">
-                                            <label for="eventstartdate" class="mar-top">Date Range</label>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" id="eventstartdate" placeholder="Start Date">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" id="eventenddate" placeholder="End Date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /input-group -->
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="row">
-                                            <div class="col-md-3 col-md-offset-3">
-                                                <button type="button" class="btn btn-success btn-block pull-left" id="add-new-event">
-                                                    <i class="fa fa-plus"></i> Add
-                                                </button>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <button type="reset" class="btn btn-danger btn-block pull-right" id="close_calendar_event">
-                                                    Reset
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading text-center">
-                                <h2 class="panel-title social"><i class="fa fa-facebook"></i> Facebook</h2>
-                            </div>
-                            <div class="panel-body text-center">
-                                <h1 id="fb"></h1>
-                                <p>LIKES</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading text-center">
-                                <h2 class="panel-title social"><i class="fa fa-twitter"></i> Twitter</h2>
-                            </div>
-                            <div class="panel-body text-center">
-                                <h1 id="tw"></h1>
-                                <p>FOLLOWERS</p>
-                            </div>
-                        </div>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart4"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /#right -->
-    <!-- /.content -->
+    <div class="row bg-color" >
+        <div class="col-lg-4" style="margin-top: 2%">
+            <div class="box-model">
+                <h4><b>Thành viên mới đăng kí</b></h4>
+                <div class="newstick" >
+                    <div class="recent" >
+                        <hr>
+                        @if(isset($users))
+                            @foreach($users as $key => $user)
+                                @if($key % 2 == 0)
+                                    <div class="row" style="margin: 0px; display: block;">
+                                        <img
+                                            src="{{ isset($user->avatar) ? pare_url_file($user->avatar) : asset('none.jpg') }}"
+                                            class="recent-user-img" alt="image not found">
+                                        <h5>
+                                            <a href="#" class="text-primary">{{$user->name}}</a>
+                                        </h5>
+                                        <small>Đăng kí<span class="pull-right">{{date_format($user->created_at,'d-m-Y')}}</span></small>
+                                    </div>
+                                @else
+                                    <div class="row bg-default" style="margin: 0px; display: block;">
+                                        <img
+                                            src="{{ isset($user->avatar) ? pare_url_file($user->avatar) : asset('none.jpg') }}"
+                                            class="recent-user-img" alt="image not found">
+                                        <h5>
+                                            <a href="#" class="text-primary">{{$user->name}}</a>
+                                        </h5>
+                                        <small>Đăng kí<span class="pull-right">{{date_format($user->created_at,'d-m-Y')}}</span></small>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endif
 
+
+                    </div>
+                </div>
+            </div>
+            <div class="box-model">
+                <h4><b>Thành viên</b></h4>
+                <hr>
+                <div class="row">
+                    <div class=" col-lg-12 col-xs-12">
+                        <div class="registered bg-primary">
+                            <div class="row">
+                                <div class="col-lg-8 col-xs-8">
+                                    <h5><b>TỔNG THÀNH VIÊN</b></h5>
+                                </div>
+
+                                <div class="col-lg-4 col-xs-4">
+                                    <h3 id="userscount">{{$totalMember}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registered bg-success" style="background-color: #50a52c">
+                            <div class="row">
+                                <div class="col-lg-8 col-xs-8">
+                                    <h5> <b>TRONG THÁNG</b></h5>
+                                </div>
+
+                                <div class="col-lg-4 col-xs-4">
+                                    <i class="fa fa-level-up" style="font-size: 48px;"></i>
+                                    <h3 id="myTargetElement4.2">{{$memberThisMonth}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registered bg-warning" style="background-color: #d7c128d6">
+                            <div class="row">
+                                <div class="col-lg-8 col-xs-8">
+                                    <h5><b>TRONG NGÀY</b></h5>
+                                </div>
+                                <div class="col-lg-4 col-xs-4">
+                                    <i class="fa fa-level-up" style="font-size: 48px;"></i>
+                                    <h3 id="myTargetElement4.1">{{$memberThisDay}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div >
+        <div class="col-lg-8" >
+            <div class="col-lg-12" style="margin-top: 5%">
+                <div class="au-card-title">
+                    <div class="bg-overlay bg-overlay--blue"></div>
+                    <h3>
+                        <i class="zmdi zmdi-comment-text"></i>Danh sách đơn hàng</h3>
+                </div>
+                <!-- Basic charts strats here-->
+                <div class="panel panel-primary">
+                    <div class="panel-body table-responsive">
+                        <table class="table table-bordered text-center" id="fitness-table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th class="text-center">Tên khách hàng</th>
+                                <th class="text-center">Địa chỉ</th>
+                                <th class="text-center">Số điện thoại</th>
+
+                                <th class="text-center">Tổng tiền</th>
+                                <th class="text-center">Trạng thái</th>
+
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @if(isset($transactionNews))
+
+                                <?php $i = 1;?>
+                                @foreach($transactionNews as $transaction)
+
+                                    <tr>
+                                        <td>{{$i++}}</td>
+                                        <td>{{ $transaction->user['name']}}</td>
+                                        <td>{{ $transaction->tr_address}}</td>
+                                        <td>{{ $transaction->tr_phone}}</td>
+                                        <td>{{number_format($transaction->tr_total,0,',','.')}}VNĐ</td>
+                                        <td>
+                                            <a href="{{route('admin.get.action.transaction',['status',$transaction->id])}}"
+                                               class=" {{$transaction->getStatus($transaction->tr_status)['class'] }}">
+                                                {{$transaction->getStatus($transaction->tr_status)['name'] }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div >
+            <div class="col-lg-12" style="margin-top: 5%">
+                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                    <div class="au-card-title">
+                        <div class="bg-overlay bg-overlay--blue"></div>
+                        <h3>
+                            <i class="zmdi zmdi-comment-text"></i>Đánh giá mới nhất</h3>
+                    </div>
+                    <div class="au-inbox-wrap js-inbox-wrap">
+                        <div class="au-message js-list-load">
+                            <div class="au-message__noti">
+                                <p>Bạn có
+                                    <span>2</span>
+
+                                    đánh giá mới
+                                </p>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tên TV</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Nội dung</th>
+                                    <th>Rating</th>
+
+                                </tr>
+                                </thead>
+
+                                <tbody>
+
+                                <?php $i = 1 ?>
+                                @if(isset($ratings))
+                                    @foreach($ratings as $rating)
+                                        <tr>
+                                            <td>{{$i}}</td>
+                                            <td>{{$rating->user['name']}}</td>
+                                            <td>{{$rating->product['pro_name']}}</td>
+                                            <td>{{$rating->ra_content}}</td>
+                                            <td style="text-align: center">{{$rating->ra_number}} <i class="fa fa-star"
+                                                                                                     style="color: #e9e924f2;font-size: 15px"></i>
+                                            </td>
+                                        </tr>
+                                        <?php $i++ ?>
+                                    @endforeach
+
+                                @endif
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop

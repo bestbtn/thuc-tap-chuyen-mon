@@ -6,6 +6,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('danh-muc/{slug}-{id}','CategoryController@getListProduct')->name('get.list.product');
+Route::get('cua-hang','CategoryController@getListAllProduct')->name('get.list.all.product');
 Route::get('san-pham/{slug}-{id}','ProductDetailController@getDetailProduct')->name('get.detail.product');
 Route::post('san-pham/{slug}-{id}','ProductDetailController@saveRating')->middleware('CheckLogin');
 
