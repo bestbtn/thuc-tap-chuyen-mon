@@ -14,7 +14,7 @@
                     <div class="search search--location--mobile-header mobile-header__search">
                         <div class="search__body">
                             <form class="search__form" action="#">
-                                <input class="search__input" name="search" placeholder="Search over 10,000 products"
+                                <input class="search__input" name="search" placeholder="Tìm kiếm sản phẩm.."
                                        aria-label="Site search" type="text" autocomplete="off">
                                 <button class="search__button search__button--type--submit" type="submit">
                                     <svg width="20px" height="20px">
@@ -71,7 +71,7 @@
                 <div class="search search--location--header">
                     <div class="search__body">
                         <form class="search__form" action="#">
-                            <input class="search__input" name="search" placeholder="Search over 10,000 products"
+                            <input class="search__input" name="search" placeholder="Tìm kiếm sản phẩm.."
                                    aria-label="Site search" type="text" autocomplete="off">
                             <button class="search__button search__button--type--submit" type="submit">
                                 <svg width="20px" height="20px">
@@ -85,8 +85,8 @@
                 </div>
             </div>
             <div class="site-header__phone">
-                <div class="site-header__phone-title">Customer Service</div>
-                <div class="site-header__phone-number">(800) 060-0730</div>
+                <div class="site-header__phone-title">Dịch vụ chăm sóc khách hàng</div>
+                <div class="site-header__phone-number">(09) 1111-4444</div>
             </div>
         </div>
         <div class="site-header__nav-panel">
