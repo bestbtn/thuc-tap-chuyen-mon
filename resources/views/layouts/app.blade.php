@@ -45,12 +45,18 @@
             <strong>Cảnh báo!</strong> {{ Session::get('warning') }}
         </div>
     @endif
+    @if(Session::has('wrong'))
+        <div class="alert alert-danger" style="margin-right: 2%;position: absolute;right: 0;top: 25%;z-index: 25;">
+            <strong>Thông báo!</strong> {{ Session::get('wrong') }}
+        </div>
+    @endif
     @if(Session::has('success'))
         <div class="alert alert-success" style="margin-right: 2%;position: absolute;right: 0;top: 25%;z-index: 25;">
             <strong>Thành công!</strong> {{ Session::get('success') }}
         </div>
     @endif
     @yield('content')
+
     <!-- site__body / end -->
     <!-- site__footer -->
 @include('components.footer')
@@ -434,6 +440,7 @@
 <script>
     svg4everybody();
 </script>
+@yield('script')
 </body>
 <!-- Mirrored from stroyka.html.themeforest.scompiler.ru/themes/red-ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Dec 2019 01:53:38 GMT -->
 

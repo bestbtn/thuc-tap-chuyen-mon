@@ -5,8 +5,19 @@ use function foo\func;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/san-pham','CategoryController@getListProduct')->name('get.search.product');
+Route::get('cua-hang','CategoryController@getListProduct')->name('get.list.all.product');
 Route::get('danh-muc/{slug}-{id}','CategoryController@getListProduct')->name('get.list.product');
-Route::get('cua-hang','CategoryController@getListAllProduct')->name('get.list.all.product');
+
+Route::get('dieu-khoan-va-dieu-kien',function (){
+    return view('term');
+})->name('term.condition');
+Route::get('ve-chung-toi',function (){
+    return view('aboutUs');
+})->name('about.us');
+
+
+
 Route::get('san-pham/{slug}-{id}','ProductDetailController@getDetailProduct')->name('get.detail.product');
 Route::post('san-pham/{slug}-{id}','ProductDetailController@saveRating')->middleware('CheckLogin');
 

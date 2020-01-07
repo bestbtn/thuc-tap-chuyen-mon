@@ -47,7 +47,7 @@ class AdminTransactionController extends Controller
                 }
                 //tăng số lần mua sản phẩm
             }
-            User::where('id',$transaction->tr_user_id)->increment('total_pay');
+            User::where('id',$transaction->tr_user_id)->increment('total_number');
             switch ($action)
             {
                 case 'status':

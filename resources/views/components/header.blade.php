@@ -7,13 +7,13 @@
                 <div class="mobile-header__body">
                     <button class="mobile-header__menu-button">
                         <svg width="18px" height="14px">
-                            <use xlink:href="{{asset('images/sprite.svg#menu-18x14')}}images/sprite.svg#menu-18x14"></use>
+                            <use xlink:href="{{asset('images/sprite.svg#menu-18x14')}}"></use>
                         </svg>
                     </button>
 
                     <div class="search search--location--mobile-header mobile-header__search">
                         <div class="search__body">
-                            <form class="search__form" action="#">
+                            <form action="{{route('get.search.product')}}" method="get" class="search__form">
                                 <input class="search__input" name="search" placeholder="Tìm kiếm sản phẩm.."
                                        aria-label="Site search" type="text" autocomplete="off">
                                 <button class="search__button search__button--type--submit" type="submit">
@@ -21,12 +21,6 @@
                                         <use xlink:href="{{asset('images/sprite.svg#search-20')}}"></use>
                                     </svg>
                                 </button>
-                                <button class="search__button search__button--type--close" type="button">
-                                    <svg width="20px" height="20px">
-                                        <use xlink:href="{{asset('images/sprite.svg#cross-20')}}"></use>
-                                    </svg>
-                                </button>
-                                <div class="search__border"></div>
                             </form>
                             <div class="search__suggestions suggestions suggestions--location--mobile-header"></div>
                         </div>
@@ -70,8 +64,8 @@
             <div class="site-header__search">
                 <div class="search search--location--header">
                     <div class="search__body">
-                        <form class="search__form" action="#">
-                            <input class="search__input" name="search" placeholder="Tìm kiếm sản phẩm.."
+                        <form class="search__form"  method="get" action="{{route('get.search.product')}}">
+                            <input class="search__input"  name="search" placeholder="Tìm kiếm sản phẩm.."
                                    aria-label="Site search" type="text" autocomplete="off">
                             <button class="search__button search__button--type--submit" type="submit">
                                 <svg width="20px" height="20px">
@@ -152,9 +146,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-links__item nav-links__item--has-submenu">
-                                    <a class="nav-links__item-link" href="blog-classic.html">
+                                    <a class="nav-links__item-link" href="{{route('about.us')}}">
                                         <div class="nav-links__item-body">
-                                            About us
+                                            Về chúng tôi
                                         </div>
                                     </a>
                                 </li>
@@ -166,7 +160,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-links__item nav-links__item--has-submenu">
-                                    <a class="nav-links__item-link" href="blog-classic.html">
+                                    <a class="nav-links__item-link" href="{{route('term.condition')}}">
                                         <div class="nav-links__item-body">
                                             Điều khoản và điều kiện
                                         </div>

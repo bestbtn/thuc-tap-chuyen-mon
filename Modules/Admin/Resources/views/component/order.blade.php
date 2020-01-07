@@ -10,7 +10,7 @@
 
                 <th class="text-center">Số lượng</th>
                 <th class="text-center">Thành tiền</th>
-                <th class="text-center">Thao tác</th>
+
 
             </tr>
             </thead>
@@ -26,13 +26,6 @@
                     <td>{{ $order->product['pro_price']}}</td>
                     <td>{{ $order->or_qty}}</td>
                     <td>{{number_format($order->or_price,0,',','.')}}VNĐ</td>
-                    <td class="mot">
-                        <a class="delete btn btn-danger"
-                           href="{{route('admin.get.action.transaction',['delete',$order->id])}}"
-                           onclick="return confirm('Bạn có chắc chắn muốn xóa?')">
-                            <i class="fa fa-trash-o"></i> Xóa
-                        </a>
-                    </td>
                 </tr>
             @endforeach
 
