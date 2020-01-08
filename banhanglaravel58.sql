@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2020 at 04:52 PM
+-- Generation Time: Jan 08, 2020 at 03:22 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -139,8 +139,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2020_01_04_130620_create_transactions_table', 6),
 (9, '2020_01_04_130633_create_orders_table', 6),
 (10, '2020_01_04_131117_alter_conlumn_pro_pay_pro_number_in_table_products', 7),
-(11, '2020_01_05_085248_create_ratings_table', 8),
-(12, '2020_01_06_143853_alter_column_total_pay_in_table_user', 9);
+(14, '2020_01_05_085248_create_ratings_table', 8),
+(15, '2020_01_06_143853_alter_column_total_pay_in_table_user', 8),
+(16, '2020_01_08_024539_create_admins_table', 8),
+(17, '2020_01_08_074336_create_gallery_products_table', 9);
 
 -- --------------------------------------------------------
 
@@ -165,7 +167,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `or_transaction_id`, `or_product_id`, `or_qty`, `or_price`, `or_sale`, `created_at`, `updated_at`) VALUES
 (9, 39, 5, 2, 19800000, 1, NULL, NULL),
-(10, 39, 4, 1, 2200000, 0, NULL, NULL);
+(10, 39, 4, 1, 2200000, 0, NULL, NULL),
+(11, 40, 6, 1, 10834835, 12, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -215,9 +218,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `pro_name`, `pro_slug`, `pro_category_id`, `pro_price`, `pro_author_id`, `pro_sale`, `pro_active`, `pro_hot`, `pro_view`, `pro_description`, `pro_avatar`, `pro_description_seo`, `pro_keyword_seo`, `created_at`, `updated_at`, `pro_title_seo`, `pro_content`, `pro_number_pay`, `pro_number`, `pro_total_rating`, `pro_total_number_rating`) VALUES
-(4, 'Máy khoan pin vặn vít Bosch GSR 120-LI GEN II', 'may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii', 14, 2200000, 0, 0, 1, 1, 0, 'Máy khoan pin vặn vít Bosch GSR 120-LI GEN II ( Kèm bộ phụ kiện)', '2020-01-02__may-khoan-pin-van-vit.jpg', 'Máy khoan pin vặn', NULL, '2020-01-01 22:24:56', '2020-01-07 05:24:39', 'Máy khoan pin vặn', '<p>M&aacute;y khoan pin GSR 120-LI GEN II&nbsp;(k&egrave;m bộ phụ kiện) MỚI l&agrave; m&aacute;y khoan vặn v&iacute;t d&ugrave;ng pin của thương hiệu Bosch được l&agrave;m từ chất liệu cao cấp, cứng rất bền, sản xuất theo ti&ecirc;u chuẩn Ch&acirc;u &Acirc;u. M&aacute;y c&oacute; hai chế độ: khoan v&agrave; bắt v&iacute;t với 20 cấp trượt.</p>\r\n\r\n<p><img alt=\"Cấu tạo các bộ phận của bộ khoan pin Bosch GSR 120-LI\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/C%E1%BA%A5u%20t%E1%BA%A1o%20c%C3%A1c%20b%E1%BB%99%20ph%E1%BA%ADn%20c%E1%BB%A7a%20b%E1%BB%99%20khoan%20pin%20Bosch%20GSR%20120-LI\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh1.jpg\" title=\"Cấu tạo các bộ phận của bộ khoan pin Bosch GSR 120-LI\" /></p>\r\n\r\n<h2>ƯU ĐIỂM CỦA M&Aacute;Y KHOAN PIN BOSCH</h2>\r\n\r\n<ul>\r\n	<li>Vỏ&nbsp;m&aacute;y khoan&nbsp;c&oacute; thiết kế nhỏ gọn, bền bỉ v&agrave; tiện lợi.</li>\r\n	<li>T&ugrave;y chỉnh tốc độ: M&aacute;y c&oacute; tr&igrave;nh điều khiển vặn v&iacute;t, tốc độ v&agrave; phanh h&atilde;m động cơ gi&uacute;p người d&ugrave;ng c&oacute; thể t&ugrave;y chỉnh theo nhu cầu khoan.</li>\r\n	<li>Chế độ dừng th&ocirc;ng minh: Tự động dừng m&aacute;y trong trường hợp v&iacute;t đ&atilde; vặn hết v&agrave;o vật liệu, ngay cả khi vẫn giữ n&uacute;t khởi động gi&uacute;p bảo vệ vật liệu kh&ocirc;ng bị khoan qu&aacute; đ&agrave;.</li>\r\n	<li>Tay cầm được thiết kế khoa học: Vị tr&iacute; c&ocirc;ng tắc được bố tr&iacute; khoa học ph&ugrave; hợp cho cả người thuận tay tr&aacute;i v&agrave; tay phải. C&aacute;n cầm chống trượt, chắc chắn gi&uacute;p thao t&aacute;c dễ d&agrave;ng v&agrave; linh hoạt hơn.</li>\r\n	<li>T&iacute;nh đa năng:&nbsp;M&aacute;y khoan gia đ&igrave;nh&nbsp;c&oacute; khả năng khoan tr&ecirc;n c&aacute;c bề mặt gỗ, th&eacute;p, tường mỏng.</li>\r\n</ul>\r\n\r\n<p><img alt=\"Bosch GSR 120-LI có các thông số kỹ thuật được ghi trên thân máy\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Bosch%20GSR%20120-LI%20c%C3%B3%20c%C3%A1c%20th%C3%B4ng%20s%E1%BB%91%20k%E1%BB%B9%20thu%E1%BA%ADt%20%C4%91%C6%B0%E1%BB%A3c%20ghi%20tr%C3%AAn%20th%C3%A2n%20m%C3%A1y\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh2.jpg\" title=\"Bosch GSR 120-LI có các thông số kỹ thuật được ghi trên thân máy\" /></p>\r\n\r\n<h2>TH&Ocirc;NG SỐ KỸ THUẬT CỦA M&Aacute;Y KHOAN VẶN V&Iacute;T D&Ugrave;NG PIN&nbsp;GSR 120-LI</h2>\r\n\r\n<ul>\r\n	<li>Loại pin: Lithium-ion</li>\r\n	<li>Điện thế pin: 12V</li>\r\n	<li>Đường k&iacute;nh v&iacute;t tối đa: 7mm</li>\r\n	<li>Tốc độ kh&ocirc;ng tảiV&ograve;ng truyền lực thứ 1 (0 - 380 v&ograve;ng/ph&uacute;t); V&ograve;ng truyền lực thứ 2 (0 - 1.300 v&ograve;ng/ph&uacute;t)</li>\r\n	<li>Đường k&iacute;nh khoan gỗ: 20mm</li>\r\n	<li>Đường k&iacute;nh khoan th&eacute;p: 8mm</li>\r\n	<li>M&ocirc; men xoắn 30-13 Nm.</li>\r\n	<li>Phụ kiện đi k&egrave;m: pin 12 V 1.5 Ah Li-ion , 1 sạc GAL 1210 CV, bộ mũi khoan v&agrave; đầu v&iacute;t, vali đựng</li>\r\n	<li>Trọng lượng sản phẩm: 1,2kg</li>\r\n	<li>Thương hiệu: Bosch từ Đức</li>\r\n	<li>Phụ t&ugrave;ng số: 0 601 9F7 000</li>\r\n</ul>\r\n\r\n<p><img alt=\"Thân máy khoan bắt vít Bosch GSR 120 LI được làm từ chất liệu cao cấp\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Th%C3%A2n%20m%C3%A1y%20khoan%20b%E1%BA%AFt%20v%C3%ADt%20Bosch%20GSR%20120%20LI%20%C4%91%C6%B0%E1%BB%A3c%20l%C3%A0m%20t%E1%BB%AB%20ch%E1%BA%A5t%20li%E1%BB%87u%20cao%20c%E1%BA%A5p\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh3.jpg\" title=\"Thân máy khoan bắt vít Bosch GSR 120 LI được làm từ chất liệu cao cấp\" /></p>\r\n\r\n<p><img alt=\"Trọn bộ phụ kiện bộ khoan pin bắt vít Bosch GSR 120 LI\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Tr%E1%BB%8Dn%20b%E1%BB%99%20ph%E1%BB%A5%20ki%E1%BB%87n%20b%E1%BB%99%20khoan%20pin%20b%E1%BA%AFt%20v%C3%ADt%20Bosch%20GSR%20120%20LI\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh4.jpg\" title=\"Trọn bộ phụ kiện bộ khoan pin bắt vít Bosch GSR 120 LI\" /></p>\r\n\r\n<p><img alt=\"Đầu kẹp Auto Lock cung cấp cho người dùng khả năng tháo lắp mũi khoan nhanh chóng\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/%C4%90%E1%BA%A7u%20k%E1%BA%B9p%20Auto%20Lock%20cung%20c%E1%BA%A5p%20cho%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20kh%E1%BA%A3%20n%C4%83ng%20th%C3%A1o%20l%E1%BA%AFp%20m%C5%A9i%20khoan%20nhanh%20ch%C3%B3ng\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh5.jpg\" title=\"Đầu kẹp Auto Lock cung cấp cho người dùng khả năng tháo lắp mũi khoan nhanh chóng\" /></p>\r\n\r\n<p><img alt=\"Bosch GSR 120-LI GEN II được đi kèm hộp đựng tiện lợi\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Bosch%20GSR%20120-LI%20GEN%20II%20%C4%91%C6%B0%E1%BB%A3c%20%C4%91i%20k%C3%A8m%20h%E1%BB%99p%20%C4%91%E1%BB%B1ng%20ti%E1%BB%87n%20l%E1%BB%A3i\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh6.jpg\" title=\"Bosch GSR 120-LI GEN II được đi kèm hộp đựng tiện lợi\" /></p>', 2, 8, 3, 13),
-(5, 'Electric Planer Brandix KL370090G 300 Watts', 'electric-planer-brandix-kl370090g-300-watts', 14, 20000000, 0, 1, 1, 1, 0, 'Electric Planer Brandix KL370090G 300 Watts', '2020-01-02__product-1.jpg', 'Electric Planer Brandix KL370090G 300 Watts', NULL, '2020-01-01 22:30:01', '2020-01-07 05:24:39', 'Electric Planer Brandix KL370090G 300 Watts', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum, diam non iaculis finibus, ipsum arcu sollicitudin dolor, ut cursus sapien sem sed purus. Donec vitae fringilla tortor, sed fermentum nunc. Suspendisse sodales turpis dolor, at rutrum dolor tristique id. Quisque pellentesque ullamcorper felis, eget gravida mi elementum a. Maecenas consectetur volutpat ante, sit amet molestie urna luctus in. Nulla eget dolor semper urna malesuada dictum. Duis eleifend pellentesque dui et finibus. Pellentesque dapibus dignissim augue. Etiam odio est, sodales ac aliquam id, iaculis eget lacus. Aenean porta, ante vitae suscipit pulvinar, purus dui interdum tellus, sed dapibus mi mauris vitae tellus.</p>', 2, 6, 0, 0),
-(6, 'Mercedes Benz E-Class 12', 'mercedes-benz-e-class-12', 14, 12312312, 0, 12, 1, 1, 0, 'asd           Mercedes Benz E-Class 12', '2020-01-03__category-1.jpg', 'Mercedes Benz E-Class 12', NULL, '2020-01-03 04:37:10', '2020-01-06 07:19:42', 'Mercedes Benz E-Class 12', '<p>Mercedes Benz E-Class 12</p>', 0, 10, 2, 10),
+(4, 'Máy khoan pin vặn vít Bosch GSR 120-LI GEN II', 'may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii', 14, 2200000, 0, 0, 1, 1, 0, 'Máy khoan pin vặn vít Bosch GSR 120-LI GEN II ( Kèm bộ phụ kiện)', '2020-01-02__may-khoan-pin-van-vit.jpg', 'Máy khoan pin vặn', NULL, '2020-01-01 22:24:56', '2020-01-08 06:16:32', 'Máy khoan pin vặn', '<p>M&aacute;y khoan pin GSR 120-LI GEN II&nbsp;(k&egrave;m bộ phụ kiện) MỚI l&agrave; m&aacute;y khoan vặn v&iacute;t d&ugrave;ng pin của thương hiệu Bosch được l&agrave;m từ chất liệu cao cấp, cứng rất bền, sản xuất theo ti&ecirc;u chuẩn Ch&acirc;u &Acirc;u. M&aacute;y c&oacute; hai chế độ: khoan v&agrave; bắt v&iacute;t với 20 cấp trượt.</p>\r\n\r\n<p><img alt=\"Cấu tạo các bộ phận của bộ khoan pin Bosch GSR 120-LI\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/C%E1%BA%A5u%20t%E1%BA%A1o%20c%C3%A1c%20b%E1%BB%99%20ph%E1%BA%ADn%20c%E1%BB%A7a%20b%E1%BB%99%20khoan%20pin%20Bosch%20GSR%20120-LI\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh1.jpg\" title=\"Cấu tạo các bộ phận của bộ khoan pin Bosch GSR 120-LI\" /></p>\r\n\r\n<h2>ƯU ĐIỂM CỦA M&Aacute;Y KHOAN PIN BOSCH</h2>\r\n\r\n<ul>\r\n	<li>Vỏ&nbsp;m&aacute;y khoan&nbsp;c&oacute; thiết kế nhỏ gọn, bền bỉ v&agrave; tiện lợi.</li>\r\n	<li>T&ugrave;y chỉnh tốc độ: M&aacute;y c&oacute; tr&igrave;nh điều khiển vặn v&iacute;t, tốc độ v&agrave; phanh h&atilde;m động cơ gi&uacute;p người d&ugrave;ng c&oacute; thể t&ugrave;y chỉnh theo nhu cầu khoan.</li>\r\n	<li>Chế độ dừng th&ocirc;ng minh: Tự động dừng m&aacute;y trong trường hợp v&iacute;t đ&atilde; vặn hết v&agrave;o vật liệu, ngay cả khi vẫn giữ n&uacute;t khởi động gi&uacute;p bảo vệ vật liệu kh&ocirc;ng bị khoan qu&aacute; đ&agrave;.</li>\r\n	<li>Tay cầm được thiết kế khoa học: Vị tr&iacute; c&ocirc;ng tắc được bố tr&iacute; khoa học ph&ugrave; hợp cho cả người thuận tay tr&aacute;i v&agrave; tay phải. C&aacute;n cầm chống trượt, chắc chắn gi&uacute;p thao t&aacute;c dễ d&agrave;ng v&agrave; linh hoạt hơn.</li>\r\n	<li>T&iacute;nh đa năng:&nbsp;M&aacute;y khoan gia đ&igrave;nh&nbsp;c&oacute; khả năng khoan tr&ecirc;n c&aacute;c bề mặt gỗ, th&eacute;p, tường mỏng.</li>\r\n</ul>\r\n\r\n<p><img alt=\"Bosch GSR 120-LI có các thông số kỹ thuật được ghi trên thân máy\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Bosch%20GSR%20120-LI%20c%C3%B3%20c%C3%A1c%20th%C3%B4ng%20s%E1%BB%91%20k%E1%BB%B9%20thu%E1%BA%ADt%20%C4%91%C6%B0%E1%BB%A3c%20ghi%20tr%C3%AAn%20th%C3%A2n%20m%C3%A1y\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh2.jpg\" title=\"Bosch GSR 120-LI có các thông số kỹ thuật được ghi trên thân máy\" /></p>\r\n\r\n<h2>TH&Ocirc;NG SỐ KỸ THUẬT CỦA M&Aacute;Y KHOAN VẶN V&Iacute;T D&Ugrave;NG PIN&nbsp;GSR 120-LI</h2>\r\n\r\n<ul>\r\n	<li>Loại pin: Lithium-ion</li>\r\n	<li>Điện thế pin: 12V</li>\r\n	<li>Đường k&iacute;nh v&iacute;t tối đa: 7mm</li>\r\n	<li>Tốc độ kh&ocirc;ng tảiV&ograve;ng truyền lực thứ 1 (0 - 380 v&ograve;ng/ph&uacute;t); V&ograve;ng truyền lực thứ 2 (0 - 1.300 v&ograve;ng/ph&uacute;t)</li>\r\n	<li>Đường k&iacute;nh khoan gỗ: 20mm</li>\r\n	<li>Đường k&iacute;nh khoan th&eacute;p: 8mm</li>\r\n	<li>M&ocirc; men xoắn 30-13 Nm.</li>\r\n	<li>Phụ kiện đi k&egrave;m: pin 12 V 1.5 Ah Li-ion , 1 sạc GAL 1210 CV, bộ mũi khoan v&agrave; đầu v&iacute;t, vali đựng</li>\r\n	<li>Trọng lượng sản phẩm: 1,2kg</li>\r\n	<li>Thương hiệu: Bosch từ Đức</li>\r\n	<li>Phụ t&ugrave;ng số: 0 601 9F7 000</li>\r\n</ul>\r\n\r\n<p><img alt=\"Thân máy khoan bắt vít Bosch GSR 120 LI được làm từ chất liệu cao cấp\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Th%C3%A2n%20m%C3%A1y%20khoan%20b%E1%BA%AFt%20v%C3%ADt%20Bosch%20GSR%20120%20LI%20%C4%91%C6%B0%E1%BB%A3c%20l%C3%A0m%20t%E1%BB%AB%20ch%E1%BA%A5t%20li%E1%BB%87u%20cao%20c%E1%BA%A5p\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh3.jpg\" title=\"Thân máy khoan bắt vít Bosch GSR 120 LI được làm từ chất liệu cao cấp\" /></p>\r\n\r\n<p><img alt=\"Trọn bộ phụ kiện bộ khoan pin bắt vít Bosch GSR 120 LI\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Tr%E1%BB%8Dn%20b%E1%BB%99%20ph%E1%BB%A5%20ki%E1%BB%87n%20b%E1%BB%99%20khoan%20pin%20b%E1%BA%AFt%20v%C3%ADt%20Bosch%20GSR%20120%20LI\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh4.jpg\" title=\"Trọn bộ phụ kiện bộ khoan pin bắt vít Bosch GSR 120 LI\" /></p>\r\n\r\n<p><img alt=\"Đầu kẹp Auto Lock cung cấp cho người dùng khả năng tháo lắp mũi khoan nhanh chóng\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/%C4%90%E1%BA%A7u%20k%E1%BA%B9p%20Auto%20Lock%20cung%20c%E1%BA%A5p%20cho%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20kh%E1%BA%A3%20n%C4%83ng%20th%C3%A1o%20l%E1%BA%AFp%20m%C5%A9i%20khoan%20nhanh%20ch%C3%B3ng\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh5.jpg\" title=\"Đầu kẹp Auto Lock cung cấp cho người dùng khả năng tháo lắp mũi khoan nhanh chóng\" /></p>\r\n\r\n<p><img alt=\"Bosch GSR 120-LI GEN II được đi kèm hộp đựng tiện lợi\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Bosch%20GSR%20120-LI%20GEN%20II%20%C4%91%C6%B0%E1%BB%A3c%20%C4%91i%20k%C3%A8m%20h%E1%BB%99p%20%C4%91%E1%BB%B1ng%20ti%E1%BB%87n%20l%E1%BB%A3i\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh6.jpg\" title=\"Bosch GSR 120-LI GEN II được đi kèm hộp đựng tiện lợi\" /></p>', 4, 6, 3, 13),
+(5, 'Electric Planer Brandix KL370090G 300 Watts', 'electric-planer-brandix-kl370090g-300-watts', 14, 20000000, 0, 1, 1, 1, 0, 'Electric Planer Brandix KL370090G 300 Watts', '2020-01-02__product-1.jpg', 'Electric Planer Brandix KL370090G 300 Watts', NULL, '2020-01-01 22:30:01', '2020-01-08 06:16:32', 'Electric Planer Brandix KL370090G 300 Watts', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum, diam non iaculis finibus, ipsum arcu sollicitudin dolor, ut cursus sapien sem sed purus. Donec vitae fringilla tortor, sed fermentum nunc. Suspendisse sodales turpis dolor, at rutrum dolor tristique id. Quisque pellentesque ullamcorper felis, eget gravida mi elementum a. Maecenas consectetur volutpat ante, sit amet molestie urna luctus in. Nulla eget dolor semper urna malesuada dictum. Duis eleifend pellentesque dui et finibus. Pellentesque dapibus dignissim augue. Etiam odio est, sodales ac aliquam id, iaculis eget lacus. Aenean porta, ante vitae suscipit pulvinar, purus dui interdum tellus, sed dapibus mi mauris vitae tellus.</p>', 4, 2, 0, 0),
+(6, 'Mercedes Benz E-Class 12', 'mercedes-benz-e-class-12', 14, 12312312, 0, 12, 1, 1, 0, 'asd           Mercedes Benz E-Class 12', '2020-01-03__category-1.jpg', 'Mercedes Benz E-Class 12', NULL, '2020-01-03 04:37:10', '2020-01-07 23:21:29', 'Mercedes Benz E-Class 12', '<p>Mercedes Benz E-Class 12</p>', 1, 9, 2, 10),
 (12, 'e', 'e', 15, 12, 0, 12, 1, 0, 0, 'e', NULL, 'e', NULL, '2020-01-07 06:48:57', '2020-01-07 06:48:57', 'e', '<p>e</p>', 0, 12, 0, 0),
 (13, 'eeee', 'eeee', 15, 1, 0, 1, 1, 0, 0, 'eeee', NULL, NULL, NULL, '2020-01-07 06:49:13', '2020-01-07 06:49:13', 'eeee', '<p>eeeee</p>', 0, 12, 0, 0);
 
@@ -236,15 +239,6 @@ CREATE TABLE `ratings` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `ratings`
---
-
-INSERT INTO `ratings` (`id`, `ra_product_id`, `ra_number`, `ra_content`, `ra_user_id`, `created_at`, `updated_at`) VALUES
-(5, 4, 5, 'asdasdasasd', 1, '2020-01-05 19:55:47', '2020-01-05 19:55:47'),
-(6, 6, 5, 'sản phẩm tốt', 1, '2020-01-05 19:56:00', '2020-01-05 19:56:00'),
-(7, 4, 4, 'asdasdas', 1, '2020-01-07 03:09:08', '2020-01-07 03:09:08');
 
 -- --------------------------------------------------------
 
@@ -269,7 +263,8 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `tr_user_id`, `tr_total`, `tr_note`, `tr_address`, `tr_phone`, `tr_status`, `created_at`, `updated_at`) VALUES
-(39, 1, 41800000, 'ok nhanh', '114 nam chau', '0921249497', 1, NULL, '2020-01-07 05:24:39');
+(39, 1, 41800000, 'ok nhanh', '114 nam chau', '0921249497', 1, NULL, '2020-01-07 05:24:39'),
+(40, 1, 10834834, 'asd', 'asd', '0921249497', 1, NULL, '2020-01-07 23:21:29');
 
 -- --------------------------------------------------------
 
@@ -296,7 +291,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `avatar`, `active`, `password`, `remember_token`, `created_at`, `updated_at`, `total_number`) VALUES
-(1, 'Bùi Thiện Nhân', 'runhitbtn51@gmail.com', '0921249497', NULL, 1, '$2y$10$NH.Rg313qZ96PqP.iq9VF.FKww2/ToGcumwsCuIWFGpqrCR8jQ3V.', NULL, '2020-01-04 01:17:42', '2020-01-07 05:24:39', 1),
+(1, 'Bùi Thiện Nhân', 'runhitbtn51@gmail.com', '0921249497', NULL, 1, '$2y$10$NH.Rg313qZ96PqP.iq9VF.FKww2/ToGcumwsCuIWFGpqrCR8jQ3V.', NULL, '2020-01-04 01:17:42', '2020-01-08 07:03:36', 3),
 (2, 'su dung', '1651120111@sv.ut.edu.vn', '0921249497', NULL, 1, '$2y$10$cqib3blTXYSiASIKej6OoeHYYamY9BtMcppqOxSsdsTaDIDre1JF2', NULL, '2020-01-05 08:41:09', '2020-01-05 08:41:09', 0);
 
 --
@@ -408,13 +403,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -426,13 +421,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `users`
