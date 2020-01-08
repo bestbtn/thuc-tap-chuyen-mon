@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Admin;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+       \DB::table('admins')->insert
+       ([
+
+            'name' => 'Thiện Nhân',
+            'email'=>'runhitbtn2@gmail.com',
+            'password'=>bcrypt('123456789'),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
     }
 }

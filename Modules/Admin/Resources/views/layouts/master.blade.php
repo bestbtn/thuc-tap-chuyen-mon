@@ -19,10 +19,11 @@
     <link type="text/css" href="{{asset('theme_admin/css/custom_css/panel.css')}}" rel="stylesheet" />
     <link type="text/css" href="{{asset('theme_admin/css/custom_css/admin_dashboard.css')}}" rel="stylesheet">
     <!-- end of page level css -->
+    <link rel="stylesheet" type="text/css" href="{{asset('theme_admin/css/custom_css/user_profile.css')}}" />
     <link href="{{ asset('theme_admin/css/theme.css') }}" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -258,7 +259,7 @@
                         <img src="{{asset('theme_admin/img/authors/avatar1.jpg')}}" width="35" class="img-circle img-responsive pull-left" height="35" alt="User Image">
                         <div class="riot">
                             <div>
-                                Natali
+                                {{get_data_user('admins','name')}}
                                 <span>
                                         <i class="caret"></i>
                                     </span>
@@ -269,33 +270,21 @@
                         <!-- User image -->
                         <li class="user-header">
                             <img src="{{asset('theme_admin/img/authors/avatar1.jpg')}}" class="img-circle" alt="User Image">
-                            <p>Nataliapery</p>
+                            <p> {{get_data_user('admins','name')}}</p>
                         </li>
                         <!-- Menu Body -->
                         <li class="pad-3">
-                            <a href="#">
-                                <i class="fa fa-fw fa-user"></i> My Profile
+                            <a href="{{route('admin.get.profile')}}">
+                                <i class="fa fa-fw fa-user"></i> Profile
                             </a>
                         </li>
                         <li role="presentation"></li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-fw fa-gear"></i> Account Settings
-                            </a>
-                        </li>
                         <li role="presentation" class="divider"></li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="#">
-                                    <i class="fa fa-fw fa-lock"></i> Lock
+                                <a href="{{route('admin.get.logout')}}">
+                                    <i class="fa fa-fw fa-sign-out"></i> Đăng xuất
                                 </a>
-                            </div>
-                            <div class="pull-right">
-                                <a href="login.html">
-                                    <i class="fa fa-fw fa-sign-out"></i> Logout
-                                </a>
-                            </div>
                         </li>
                     </ul>
                 </li>
@@ -440,45 +429,7 @@
                                     <i class="text-success fa fa-fw fa-user"></i> User Profile
                                 </a>
                             </li>
-                            <li>
-                                <a href="add_users.html">
-                                    <i class="text-info fa fa-fw fas fa-plus-circle"></i> Thêm Users
-                                </a>
-                            </li>
-                            <li>
-                                <a href="admin_userpayment.html">
-                                    <i class="text-danger fa fa-fw fa-money"></i> Thanh toán
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
 
-                    <li>
-                        <a href="admin_login.html">
-                            <i class="text-danger menu-icon fa fa-sign-in"></i>
-                            <span class="mm-text">Login</span>
-                        </a>
-                    </li>
-
-
-
-                    <li class="menu-dropdown">
-                        <a href="#">
-                            <i class="text-success menu-icon fa fa-fw fa-question-circle"></i>
-                            <span class="mm-text">FAQ</span>
-                            <span class="fa fa-angle-down pull-right"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="faq.html">
-                                    <i class="text-primary fa fa-fw fa-question-circle"></i> FAQ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="add_faq.html">
-                                    <i class="text-success fa fa-fw fa-question"></i> Add Faq
-                                </a>
-                            </li>
                         </ul>
                     </li>
                 </ul>

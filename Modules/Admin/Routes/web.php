@@ -11,7 +11,12 @@
 |
 */
 
-Route::prefix('admin')->group(function() {
+Route::group(['prefix' => 'authenticate'],function (){
+    Route::get('/login','AdminAuthController@getLogin')->name('admin.get.login');
+    Route::post('/login','AdminAuthController@postLogin');
+
+});
+Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.get.dashboard');
     Route::group(['prefix' => 'category'],function (){
         Route::get('/','AdminCategoryController@index')->name('admin.get.list.category');
@@ -22,6 +27,9 @@ Route::prefix('admin')->group(function() {
         Route::get('/{action}/{id}','AdminCategoryController@action')->name('admin.get.action.category');
 
     });
+    Route::get('/logout','AdminAuthController@getLogout')->name('admin.get.logout');
+    Route::get('/profile','AdminAuthController@getProfile')->name('admin.get.profile');
+
     Route::group(['prefix' => 'product'],function (){
         Route::get('/','AdminProductController@index')->name('admin.get.list.product');
         Route::get('/create','AdminProductController@create')->name('admin.get.create.product');
