@@ -11,12 +11,12 @@
                                     <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-right-6x9')}}"></use>
                                 </svg>
                             </li>
-                            <li class="breadcrumb-item"><a href="#">Breadcrumb</a>
+                            <li class="breadcrumb-item"><a href="#">Sản phẩm</a>
                                 <svg class="breadcrumb-arrow" width="6px" height="9px">
                                     <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-right-6x9')}}"></use>
                                 </svg>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Brandix Screwdriver SCREW1500ACC</li>
+                            <li class="breadcrumb-item active" aria-current="page"></li>
                         </ol>
                     </nav>
                 </div>

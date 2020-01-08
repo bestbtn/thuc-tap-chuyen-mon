@@ -46,5 +46,13 @@ class ProductDetailController extends FrontendController
 
         return redirect()->back();
     }
+    public function viewProduct(Request $request,$id){
+        if($request->ajax()){
+            $productDetail = Product::find($id);
+            $html = view('quickview',compact('productDetail'))->render();
+            return \response()->json($html);
+        }
+
+    }
 
 }

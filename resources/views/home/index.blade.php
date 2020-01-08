@@ -149,11 +149,11 @@
                                     <div class="block-products-carousel__column">
                                         <div class="block-products-carousel__cell">
                                             <div class="product-card">
-                                                <button class="product-card__quickview" type="button">
+                                                <a href="{{ route('get.view.product',$proHot->id) }}" class="product-card__quickview js_product_detail" type="button" >
                                                     <svg width="16px" height="16px">
                                                         <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                                     </svg>
-                                                    <span class="fake-svg-icon"></span></button>
+                                                    <span class="fake-svg-icon"></span></a>
                                                 @if($proHot->pro_number == 0)
                                                 <div class="product-card__badges-list">
                                                     <div class="product-card__badge product-card__badge--out">Tạm hết hàng</div>
@@ -318,11 +318,11 @@
                                 <div class="block-products-carousel__column">
                                     <div class="block-products-carousel__cell">
                                         <div class="product-card">
-                                            <button class="product-card__quickview" type="button">
+                                            <a href="{{ route('get.view.product',$proNew->id) }}" class="product-card__quickview js_product_detail" type="button" >
                                                 <svg width="16px" height="16px">
                                                     <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                                 </svg>
-                                                <span class="fake-svg-icon"></span></button>
+                                                <span class="fake-svg-icon"></span></a>
                                             @if($proNew->pro_number == 0)
                                                     <div class="product-card__badges-list">
                                                         <div class="product-card__badge product-card__badge--out">Tạm hết hàng</div>
@@ -489,11 +489,11 @@
                             @foreach($bestsellers as $bestseller)
                         <div class="block-products__list-item">
                             <div class="product-card">
-                                <button class="product-card__quickview" type="button">
+                                <a href="{{ route('get.view.product',$bestseller->id) }}" class="product-card__quickview js_product_detail" type="button" >
                                     <svg width="16px" height="16px">
                                         <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
                                     </svg>
-                                    <span class="fake-svg-icon"></span></button>
+                                    <span class="fake-svg-icon"></span></a>
                                 <div class="product-card__badges-list">
                                     <div class="product-card__badge product-card__badge--hot">Bestseller</div>
                                 </div>
@@ -724,4 +724,29 @@
             <!-- .block-brands / end -->
 
     </div>
+
+
+    </div>
+
+@stop
+
+@section('script')
+    <script>
+        $( ".js_product_detail" ).click(function( event ) {
+            event.preventDefault();
+            let $this = $(this);
+            let url = $this.attr('href');
+            console.log(url);
+            $("#myModal").modal('show');
+            $.ajax({
+                url:url,
+            }).done(function (result) {
+                console.log(result);
+                $('.modal-content').html('').append(result);
+
+            })
+
+        });
+
+    </script>
 @stop

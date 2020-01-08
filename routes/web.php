@@ -9,16 +9,9 @@ Route::get('/san-pham','CategoryController@getListProduct')->name('get.search.pr
 Route::get('cua-hang','CategoryController@getListProduct')->name('get.list.all.product');
 Route::get('danh-muc/{slug}-{id}','CategoryController@getListProduct')->name('get.list.product');
 
-Route::get('dieu-khoan-va-dieu-kien',function (){
-    return view('term');
-})->name('term.condition');
-Route::get('ve-chung-toi',function (){
-    return view('aboutUs');
-})->name('about.us');
-
-
 
 Route::get('san-pham/{slug}-{id}','ProductDetailController@getDetailProduct')->name('get.detail.product');
+
 Route::post('san-pham/{slug}-{id}','ProductDetailController@saveRating')->middleware('CheckLogin');
 
 Route::get('tin-tuc','ArticleController@getListArticle')->name('get.list.article');
@@ -50,6 +43,13 @@ Route::group(['prefix'=> 'danh-gia','middleware' => 'CheckLoginUser'],function()
 
 });
 
+Route::get('/{id}','ProductDetailController@viewProduct')->name('get.view.product');
+Route::get('dieu-khoan-va-dieu-kien',function (){
+    return view('term');
+})->name('term.condition');
+Route::get('ve-chung-toi',function (){
+    return view('aboutUs');
+})->name('about.us');
 
 Route::get('lien-he','ContactController@getContact')->name('get.contact');
 Route::post('lien-he','ContactController@saveContact');
