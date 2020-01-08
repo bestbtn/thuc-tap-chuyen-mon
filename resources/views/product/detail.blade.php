@@ -30,7 +30,6 @@
                         <!-- .product__gallery -->
                         <div class="product__gallery">
                             <div class="product-gallery">
-                                {{-- ảnh bự --}}
                                 <div class="product-gallery__featured">
                                     <button class="product-gallery__zoom">
                                         <svg width="24px" height="24px">
@@ -39,72 +38,63 @@
                                     </button>
                                     <div class="owl-carousel owl-loaded owl-drag" id="product-image">
                                         <div class="owl-stage-outer">
-                                            <div class="owl-stage"
-                                                 style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2655px;">
-                                                <div class="owl-item active" style="width: 531px;">
-                                                    <a href="{{pare_url_file($productDetail->pro_avatar)}}" target="_blank"><img
-                                                            src="{{pare_url_file($productDetail->pro_avatar)}}" alt=""> </a>
+                                            <div class="owl-stage" style="transform: translate3d(-1062px, 0px, 0px); transition: all 0.3s ease 0s; width: 2655px;">
+                                                @if(isset($images))
+                                                    @foreach($images as $key => $image)
+                                                <div class="owl-item {{$key == 0 ? 'active' :' ' }} "
+                                                    style="width: 531px;">
+                                                    <a href="{{pare_url_file($image->image)}}" target="_blank"><img src="{{pare_url_file($image->image)}}" alt=""> </a>
                                                 </div>
+                                                    @endforeach
+                                                    @else
+                                                    <div class="owl-item active" style="width: 531px;">
+                                                        <a href="{{pare_url_file($productDetail->pro_avatar)}}" target="_blank">
+                                                            <img src="{{pare_url_file($productDetail->pro_avatar)}}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    @endif
+
+
                                             </div>
                                         </div>
                                         <div class="owl-nav disabled">
-                                            <button type="button" role="presentation" class="owl-prev"><span
-                                                    aria-label="Previous">‹</span></button>
-                                            <button type="button" role="presentation" class="owl-next"><span
-                                                    aria-label="Next">›</span></button>
+                                            <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+                                            <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
                                         </div>
                                         <div class="owl-dots disabled"></div>
                                     </div>
                                 </div>
-                                {{-- ảnh bự / end --}}
-                                {{-- ảnh nhỏ--}}
                                 <div class="product-gallery__carousel">
                                     <div class="owl-carousel owl-loaded owl-drag" id="product-carousel">
                                         <div class="owl-stage-outer">
-                                            <div class="owl-stage"
-                                                 style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 545px;">
+                                            <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 545px;">
+                                                @if(isset($images))
+                                                    @foreach($images as $key => $image)
                                                 <div class="owl-item active" style="width: 99px; margin-right: 10px;">
-                                                    <a href="{{asset('images/products/product-16.jpg')}}"
-                                                       class="product-gallery__carousel-item product-gallery__carousel-item--active"><img
-                                                            class="product-gallery__carousel-image"
-                                                            src="{{asset('images/products/product-16.jpg')}}" alt=""> </a>
+                                                    <a href="{{pare_url_file($image->image)}}"
+                                                       class="product-gallery__carousel-item {{ $key == 0 ?'product-gallery__carousel-item--active' : '' }} ">
+                                                        <img class="product-gallery__carousel-image" src="{{pare_url_file($image->image)}}" alt="">
+                                                    </a>
                                                 </div>
-                                                <div class="owl-item active" style="width: 99px; margin-right: 10px;">
-                                                    <a href="{{asset('images/products/product-16-1.jpg')}}"
-                                                       class="product-gallery__carousel-item"><img
-                                                            class="product-gallery__carousel-image"
-                                                            src="{{asset('images/products/product-16-1.jpg')}}" alt=""> </a>
-                                                </div>
-                                                <div class="owl-item active" style="width: 99px; margin-right: 10px;">
-                                                    <a href="{{asset('images/products/product-16-2.jpg')}}"
-                                                       class="product-gallery__carousel-item"><img
-                                                            class="product-gallery__carousel-image"
-                                                            src="{{asset('images/products/product-16-2.jpg')}}" alt=""> </a>
-                                                </div>
-                                                <div class="owl-item active" style="width: 99px; margin-right: 10px;">
-                                                    <a href="{{asset('images/products/product-16-3.jpg')}}"
-                                                       class="product-gallery__carousel-item"><img
-                                                            class="product-gallery__carousel-image"
-                                                            src="{{asset('images/products/product-16-3.jpg')}}" alt=""> </a>
-                                                </div>
-                                                <div class="owl-item active" style="width: 99px; margin-right: 10px;">
-                                                    <a href="{{asset('images/products/product-16-4.jpg')}}"
-                                                       class="product-gallery__carousel-item"><img
-                                                            class="product-gallery__carousel-image"
-                                                            src="{{asset('images/products/product-16-4.jpg')}}" alt=""></a>
-                                                </div>
+                                                    @endforeach
+                                                    @else
+                                                    @for($i=1;$i<=5;$i++)
+                                                    <div class="owl-item active" style="width: 99px;margin-right: 10px;">
+                                                        <a href="{{asset('none.jpg')}}" class="product-gallery__carousel-item"><img class="product-gallery__carousel-image" src="{{asset('none.jpg')}}" alt=""> </a>
+                                                    </div>
+                                                    @endfor
+
+                                                @endif
+
                                             </div>
                                         </div>
                                         <div class="owl-nav disabled">
-                                            <button type="button" role="presentation" class="owl-prev"><span
-                                                    aria-label="Previous">‹</span></button>
-                                            <button type="button" role="presentation" class="owl-next"><span
-                                                    aria-label="Next">›</span></button>
+                                            <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+                                            <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
                                         </div>
                                         <div class="owl-dots disabled"></div>
                                     </div>
                                 </div>
-                                {{-- ảnh nhỏ / end --}}
                             </div>
                         </div>
                         <!-- .product__gallery / end -->
@@ -393,7 +383,7 @@
             @endif
         </div>
         <!-- .Sản phẩm liên quan -->
-        <div class="block block-products-carousel" data-layout="grid-5">
+        <div class="block block-products-carousel" data-layout="grid-4">
             <div class="container">
                 <div class="block-header">
                     <h3 class="block-header__title">Sản phẩm liên quan</h3>
@@ -413,185 +403,148 @@
                 </div>
                 <div class="block-products-carousel__slider">
                     <div class="block-products-carousel__preloader"></div>
-                    <div class="owl-carousel owl-loaded owl-drag">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage"
-                                 style="transform: translate3d(-1792px, 0px, 0px); transition: all 0s ease 0s; width: 7170px; padding-left: 1px; padding-right: 1px;">
-                                <div class="owl-item cloned" style="width: 212px; margin-right: 12px;">
-                                    <div class="block-products-carousel__column">
-                                        <div class="block-products-carousel__cell">
-                                            <div class="product-card">
-                                                <button class="product-card__quickview" type="button">
-                                                    <svg width="16px" height="16px">
-                                                        <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
-                                                    </svg>
-                                                    <span class="fake-svg-icon"></span></button>
-                                                <div class="product-card__image">
-                                                    <a href="product.html"><img src="images/products/product-9.jpg"
-                                                                                alt=""></a>
+                    <div class="owl-carousel">
+                        @if(isset($productRelates))
+                            {{dd($productRelates->all())}}
+                            @foreach($productRelates as $proNew)
+                                <div class="block-products-carousel__column">
+                                    <div class="block-products-carousel__cell">
+                                        <div class="product-card">
+                                            <a href="{{ route('get.view.product',$proNew->id) }}" class="product-card__quickview js_product_detail" type="button" >
+                                                <svg width="16px" height="16px">
+                                                    <use xlink:href="{{asset('images/sprite.svg#quickview-16')}}"></use>
+                                                </svg>
+                                                <span class="fake-svg-icon"></span></a>
+                                            @if($proNew->pro_number == 0)
+                                                <div class="product-card__badges-list">
+                                                    <div class="product-card__badge product-card__badge--out">Tạm hết hàng</div>
                                                 </div>
-                                                <div class="product-card__info">
-                                                    <div class="product-card__name"><a href="product.html">Spanner
-                                                            Wrench</a></div>
-                                                    <div class="product-card__rating">
-                                                        <div class="rating">
-                                                            <div class="rating__body">
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
+                                            @else
+                                                <div class="product-card__badges-list">
+                                                    <div class="product-card__badge product-card__badge--new">Mới</div>
+                                                </div>
+                                            @endif
+
+
+                                            <div class="product-card__image">
+                                                <a href="{{route('get.detail.product',[$proNew->pro_slug,$proNew->id])}}"><img src="{{pare_url_file($proNew->pro_avatar)}}"
+                                                                                                                               alt=""></a>
+                                            </div>
+                                            <div class="product-card__info">
+                                                <div class="product-card__name"><a
+                                                        href="{{route('get.detail.product',[$proNew->pro_slug,$proNew->id])}}">{{$proNew->pro_name}}</a></div>
+                                                <div class="product-card__rating">
+                                                    <div class="rating">
+                                                        <div class="rating__body">
+                                                            @if($proNew->pro_total_rating > 0)
+                                                                <?php $rating = round($proNew->pro_total_number_rating / $proNew->pro_total_rating) ?>
+
+                                                                @for($i =1 ; $i <= $rating;$i++)
+                                                                    <svg class="rating__star rating__star--active" width="13px" height="12px">
+                                                                        <g class="rating__fill">
+                                                                            <use xlink:href="{{asset('images/sprite.svg#star-normal')}}"></use>
+                                                                        </g>
+                                                                        <g class="rating__stroke">
+                                                                            <use xlink:href="{{asset('images/sprite.svg#star-normal-stroke')}}"></use>
+                                                                        </g>
+                                                                    </svg>
+                                                                    <div class="rating__star rating__star--only-edge rating__star--active">
+                                                                        <div class="rating__fill">
+                                                                            <div class="fake-svg-icon"></div>
+                                                                        </div>
+                                                                        <div class="rating__stroke">
+                                                                            <div class="fake-svg-icon"></div>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
+                                                                @endfor
+                                                                @for($i = 1;$i <= (5- $rating);$i++)
+                                                                    <svg class="rating__star" width="13px" height="12px">
+                                                                        <g class="rating__fill">
+                                                                            <use xlink:href="{{asset('images/sprite.svg#star-normal')}}"></use>
+                                                                        </g>
+                                                                        <g class="rating__stroke">
+                                                                            <use xlink:href="{{asset('images/sprite.svg#star-normal-stroke')}}"></use>
+                                                                        </g>
+                                                                    </svg>
+                                                                    <div class="rating__star rating__star--only-edge">
+                                                                        <div class="rating__fill">
+                                                                            <div class="fake-svg-icon"></div>
+                                                                        </div>
+                                                                        <div class="rating__stroke">
+                                                                            <div class="fake-svg-icon"></div>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
+                                                                @endfor
+                                                            @else
+                                                                @for($i = 1;$i <= 5;$i++)
+                                                                    <svg class="rating__star" width="13px" height="12px">
+                                                                        <g class="rating__fill">
+                                                                            <use xlink:href="{{asset('images/sprite.svg#star-normal')}}"></use>
+                                                                        </g>
+                                                                        <g class="rating__stroke">
+                                                                            <use xlink:href="{{asset('images/sprite.svg#star-normal-stroke')}}"></use>
+                                                                        </g>
+                                                                    </svg>
+                                                                    <div class="rating__star rating__star--only-edge">
+                                                                        <div class="rating__fill">
+                                                                            <div class="fake-svg-icon"></div>
+                                                                        </div>
+                                                                        <div class="rating__stroke">
+                                                                            <div class="fake-svg-icon"></div>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <svg class="rating__star rating__star--active"
-                                                                     width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div
-                                                                    class="rating__star rating__star--only-edge rating__star--active">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <svg class="rating__star" width="13px" height="12px">
-                                                                    <g class="rating__fill">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal"></use>
-                                                                    </g>
-                                                                    <g class="rating__stroke">
-                                                                        <use
-                                                                            xlink:href="images/sprite.svg#star-normal-stroke"></use>
-                                                                    </g>
-                                                                </svg>
-                                                                <div class="rating__star rating__star--only-edge">
-                                                                    <div class="rating__fill">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                    <div class="rating__stroke">
-                                                                        <div class="fake-svg-icon"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                @endfor
+                                                            @endif
                                                         </div>
-                                                        <div class="product-card__rating-legend">9 Reviews</div>
                                                     </div>
-                                                    <ul class="product-card__features-list">
-                                                        <li>Speed: 750 RPM</li>
-                                                        <li>Power Source: Cordless-Electric</li>
-                                                        <li>Battery Cell Type: Lithium</li>
-                                                        <li>Voltage: 20 Volts</li>
-                                                        <li>Battery Capacity: 2 Ah</li>
-                                                    </ul>
+                                                    <div class="product-card__rating-legend">{{$proNew->pro_total_rating}} đánh giá</div>
                                                 </div>
-                                                <div class="product-card__actions">
-                                                    <div class="product-card__availability">Availability: <span
-                                                            class="text-success">In Stock</span></div>
-                                                    <div class="product-card__prices">$19.00</div>
-                                                    <div class="product-card__buttons">
+                                                <ul class="product-card__features-list">
+                                                    <li>Speed: 750 RPM</li>
+                                                    <li>Power Source: Cordless-Electric</li>
+                                                    <li>Battery Cell Type: Lithium</li>
+                                                    <li>Voltage: 20 Volts</li>
+                                                    <li>Battery Capacity: 2 Ah</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-card__actions">
+                                                <div class="product-card__availability">Availability: <span
+                                                        class="text-success">In Stock</span></div>
+                                                <div class="product-card__prices">$1,019.00</div>
+                                                <div class="product-card__buttons">
+                                                    <a href="{{route('add.shopping.product',$proNew->id)}}">
                                                         <button class="btn btn-primary product-card__addtocart"
                                                                 type="button">Add To Cart
                                                         </button>
-                                                        <button
-                                                            class="btn btn-secondary product-card__addtocart product-card__addtocart--list"
-                                                            type="button">Add To Cart
-                                                        </button>
-                                                        <button
-                                                            class="btn btn-light btn-svg-icon btn-svg-icon--fake-svg product-card__wishlist"
-                                                            type="button">
-                                                            <svg width="16px" height="16px">
-                                                                <use xlink:href="images/sprite.svg#wishlist-16"></use>
-                                                            </svg>
-                                                            <span
-                                                                class="fake-svg-icon fake-svg-icon--wishlist-16"></span>
-                                                        </button>
-                                                        <button
-                                                            class="btn btn-light btn-svg-icon btn-svg-icon--fake-svg product-card__compare"
-                                                            type="button">
-                                                            <svg width="16px" height="16px">
-                                                                <use xlink:href="images/sprite.svg#compare-16"></use>
-                                                            </svg>
-                                                            <span
-                                                                class="fake-svg-icon fake-svg-icon--compare-16"></span>
-                                                        </button>
-                                                    </div>
+                                                    </a>
+                                                    <button
+                                                        class="btn btn-secondary product-card__addtocart product-card__addtocart--list"
+                                                        type="button">Add To Cart
+                                                    </button>
+                                                    <button
+                                                        class="btn btn-light btn-svg-icon btn-svg-icon--fake-svg product-card__wishlist"
+                                                        type="button">
+                                                        <svg width="16px" height="16px">
+                                                            <use xlink:href="images/sprite.svg#wishlist-16"></use>
+                                                        </svg>
+                                                        <span class="fake-svg-icon fake-svg-icon--wishlist-16"></span>
+                                                    </button>
+                                                    <button
+                                                        class="btn btn-light btn-svg-icon btn-svg-icon--fake-svg product-card__compare"
+                                                        type="button">
+                                                        <svg width="16px" height="16px">
+                                                            <use xlink:href="images/sprite.svg#compare-16"></use>
+                                                        </svg>
+                                                        <span class="fake-svg-icon fake-svg-icon--compare-16"></span>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            @endforeach
+                        @endif
 
-                            </div>
-                        </div>
-                        <div class="owl-nav disabled">
-                            <button type="button" role="presentation" class="owl-prev"><span
-                                    aria-label="Previous">‹</span></button>
-                            <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span>
-                            </button>
-                        </div>
-                        <div class="owl-dots disabled"></div>
                     </div>
                 </div>
             </div>
