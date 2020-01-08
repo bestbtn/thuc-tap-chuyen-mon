@@ -39,8 +39,6 @@ Route::group(['prefix'=>'gio-hang','middleware' => 'CheckLogin'],function (){
 
 Route::group(['prefix'=> 'danh-gia','middleware' => 'CheckLoginUser'],function(){
     Route::get('danh-sach/{id}','RatingController@getRating')->name('get.list.rating.product');
-
-
 });
 
 Route::get('/{id}','ProductDetailController@viewProduct')->name('get.view.product');

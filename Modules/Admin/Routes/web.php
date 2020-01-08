@@ -16,8 +16,12 @@ Route::group(['prefix' => 'authenticate'],function (){
     Route::post('/login','AdminAuthController@postLogin');
 
 });
-Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function() {
-    Route::get('/', 'AdminController@index')->name('admin.get.dashboard');
+
+
+Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
+
+    Route::get('/index', 'AdminController@index')->name('admin.get.dashboard');
+
     Route::group(['prefix' => 'category'],function (){
         Route::get('/','AdminCategoryController@index')->name('admin.get.list.category');
         Route::get('/create','AdminCategoryController@create')->name('admin.get.create.category');
@@ -34,9 +38,13 @@ Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function() {
         Route::get('/','AdminProductController@index')->name('admin.get.list.product');
         Route::get('/create','AdminProductController@create')->name('admin.get.create.product');
         Route::post('/create','AdminProductController@store');
+        Route::get('/create-image','AdminProductController@createImage')->name('admin.get.create.image');
+        Route::post('/create-image','AdminProductController@postCreateImage');
+
         Route::get('/update/{id}','AdminProductController@edit')->name('admin.get.edit.product');
         Route::post('/update/{id}','AdminProductController@update');
         Route::get('/{action}/{id}','AdminProductController@action')->name('admin.get.action.product');
+
 
     });
     //Quản lí đánh giá

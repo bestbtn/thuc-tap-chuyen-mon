@@ -4,6 +4,7 @@ namespace Modules\Admin\Http\Controllers;
 
 use App\Http\Requests\RequestProduct;
 use App\Models\Category;
+use App\Models\gallery;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -100,5 +101,39 @@ class AdminProductController extends Controller
             }
         }
         return redirect()->back()->with('success',$message);
+    }
+    public function createImage(){
+        $products = Product::select('id','pro_name')->take(10)->get();
+        $viewData = [
+          'products'  =>$products
+        ];
+        return view('admin::product.image',$viewData);
+    }
+    public function postCreateImage(Request $request){
+        if($request->hasFile('avatar')){
+            foreach ($request->avatar as $key=>$file){
+                //Lấy full đường dận + public_path() là địa chỉ tuyệt đối của laravel đang dùng
+                //Kiểm tra $_FILES xem cấu trúc
+                $baseFilename = public_path() . '/uploads/' . $_FILES['avatar']['name'][$key];
+                // lấy extension bằng pathinfo
+                $path = pathinfo($baseFilename);
+                $ext = $path['extension'];
+                //lấy tên ảnh không có extension
+                $nameFile = trim(str_replace('.'.$ext,'',strtolower($_FILES['avatar']['name'][$key])));
+                $filename = date('Y-m-d__').str_slug($nameFile) . '.' . $ext;
+
+                //thư mục upload
+                $path = public_path().'/uploads/'.date('Y/m/d/');
+                // di chuyen file vao thu muc uploads
+                move_uploaded_file($_FILES['avatar']['tmp_name'][$key], $path. $filename);
+
+                $gallery = new gallery();
+                $gallery ->image_product_id = $request->image_product_id;
+                $gallery->image = $filename;
+                $gallery->save();
+            }
+            return redirect()->back()->with('success',"Bạn đã lưu thành công");
+        }
+        return redirect()->back()->with('wrong',"Thất bại");
     }
 }

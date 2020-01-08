@@ -355,6 +355,11 @@
                                     <i class="text-danger fa fa-fw fas fa-plus-circle"></i> Thêm sản phẩm
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{route('admin.get.create.image')}}">
+                                    <i class="text-danger fa fa-fw fas fa-plus-circle"></i> Thêm ảnh theo sản phẩm
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     {{-- đánh giá --}}
@@ -482,6 +487,7 @@
     $("#input_img").change(function() {
         readURL(this);
     });
+
 </script>
 <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 @yield('script')

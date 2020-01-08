@@ -10,7 +10,9 @@ if (!function_exists('upload_image'))
     {
         $code = 1;
 // lay duong dan anh
+        //$_FILES là avatar[thuộc tính bên trong]
         $baseFilename = public_path() . '/uploads/' . $_FILES[$file]['name'];
+
 // thong tin file
         $info = new SplFileInfo($baseFilename);
 // duoi file

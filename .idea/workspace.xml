@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bbd5428-e5df-4d25-a828-d1244729cdf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/quickview.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/product/image.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_08_074336_create_gallery_products_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getMessage()" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guest(route('admin.login'))" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guest(route('login'))" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json([" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__05-vigh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__162602-44112889-2185355595053804-1946505772984696832-n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__cap11.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductDetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckLoginAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLoginAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -201,7 +216,8 @@
       <workItem from="1578279232654" duration="10879000" />
       <workItem from="1578314587047" duration="11287000" />
       <workItem from="1578380806340" duration="30094000" />
-      <workItem from="1578451128454" duration="13677000" />
+      <workItem from="1578451128454" duration="13923000" />
+      <workItem from="1578469135882" duration="12705000" />
     </task>
     <servers />
   </component>
