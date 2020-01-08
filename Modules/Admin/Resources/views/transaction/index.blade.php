@@ -74,12 +74,12 @@
                                     </tr>
                                 @endforeach
                             @endif
-
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+            {{$transactions->links()}}
         </div>
     </div>
 

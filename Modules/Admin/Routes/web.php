@@ -20,7 +20,7 @@ Route::group(['prefix' => 'authenticate'],function (){
 
 Route::prefix('admin')->middleware('CheckLoginAdmin')->group(function () {
 
-    Route::get('/index', 'AdminController@index')->name('admin.get.dashboard');
+    Route::get('/dashboard', 'AdminController@index')->name('admin.get.dashboard');
 
     Route::group(['prefix' => 'category'],function (){
         Route::get('/','AdminCategoryController@index')->name('admin.get.list.category');

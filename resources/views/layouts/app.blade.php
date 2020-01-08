@@ -48,6 +48,9 @@
     @if(Session::has('wrong'))
         <div class="alert alert-danger" style="margin-right: 2%;position: absolute;right: 0;top: 25%;z-index: 25;">
             <strong>Thông báo!</strong> {{ Session::get('wrong') }}
+            @if(Session::has('wrong1'))
+                <br>{{ Session::get('wrong1') }}
+                @endif
         </div>
     @endif
     @if(Session::has('success'))

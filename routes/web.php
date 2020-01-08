@@ -37,10 +37,19 @@ Route::group(['prefix'=>'gio-hang','middleware' => 'CheckLogin'],function (){
     Route::post('/thanh-toan','ShoppingCartController@saveInfoShoppingCart');
 });
 
-Route::group(['prefix'=> 'danh-gia','middleware' => 'CheckLoginUser'],function(){
+Route::group(['prefix'=> 'danh-gia','middleware' => 'CheckLogin'],function(){
     Route::get('danh-sach/{id}','RatingController@getRating')->name('get.list.rating.product');
 });
+Route::group(['prefix'=> 'user','middleware' => 'CheckLogin'],function(){
+    Route::get('/','UserController@index')->name('get.user.dashboard');
+    Route::get('/update/{id}','UserController@edit')->name('get.edit.user');
+    Route::post('/update/{id}','UserController@update');
+    Route::get('/change/{id}','UserController@change')->name('get.change.password');
+    Route::post('/change/{id}','UserController@saveChange')->name('get.change.password');
 
+
+
+});
 Route::get('/{id}','ProductDetailController@viewProduct')->name('get.view.product');
 Route::get('dieu-khoan-va-dieu-kien',function (){
     return view('term');

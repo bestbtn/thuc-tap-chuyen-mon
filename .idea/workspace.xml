@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bbd5428-e5df-4d25-a828-d1244729cdf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__product-16-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__product-16-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__product-16-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__product-16-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/08/2020-01-08__product-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/password.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductDetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Resources/views/transaction/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Resources/views/transaction/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,14 +152,15 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\ttcm\banhang\resources\views" />
-      <recent name="D:\xampp\htdocs\ttcm\banhang\Modules\Admin\Resources\views\product" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\ttcm\banhang\app\Http\Middleware" />
       <recent name="D:\xampp\htdocs\ttcm\banhang\Modules\Admin\Resources\views\article" />
       <recent name="D:\xampp\htdocs\ttcm\banhang\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\ttcm\banhang\resources\views\user" />
+      <recent name="D:\xampp\htdocs\ttcm\banhang\resources\views" />
+      <recent name="D:\xampp\htdocs\ttcm\banhang\Modules\Admin\Resources\views\product" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -203,7 +209,7 @@
       <workItem from="1578314587047" duration="11287000" />
       <workItem from="1578380806340" duration="30094000" />
       <workItem from="1578451128454" duration="13923000" />
-      <workItem from="1578469135882" duration="16954000" />
+      <workItem from="1578469135882" duration="23867000" />
     </task>
     <servers />
   </component>

@@ -22,6 +22,7 @@ class LoginController extends FrontendController
             // Authentication passed...
             return redirect()->route('home');
         }
+        return redirect()->back();
     }
     public function getLogout(){
         Auth::logout();

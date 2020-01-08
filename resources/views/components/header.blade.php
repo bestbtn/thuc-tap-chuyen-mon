@@ -235,13 +235,20 @@
                                     <div class="account-menu">
                                         @if(Auth::check())
                                             <div class="account-menu__divider"></div>
-                                            <a href="account-dashboard.html" class="account-menu__user">
+                                            <a href="{{route('get.user.dashboard')}}" class="account-menu__user">
                                                 <div class="account-menu__user-avatar"><img
                                                         src="images/avatars/avatar-3.jpg" alt=""></div>
                                                 <div class="account-menu__user-info">
                                                     <div class="account-menu__user-name">{{get_data_user('web','name')}}</div>
                                                     <div class="account-menu__user-email">{{get_data_user('web','email')}}</div>
                                                 </div>
+
+                                            </a>
+                                            <a href="{{route('get.user.dashboard')}}" title="Quản lí tổng quan " class="account-menu__user">
+                                                <div class="account-menu__user-info">
+                                                    <div class="account-menu__user-name">Quản lí</div>
+                                                </div>
+
                                             </a>
                                             <div class="account-menu__divider"></div>
                                             <div class="account-menu__divider"></div>
