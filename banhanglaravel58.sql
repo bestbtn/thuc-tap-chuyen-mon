@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2020 at 03:22 PM
+-- Generation Time: Jan 09, 2020 at 04:17 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -21,6 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `banhanglaravel58`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` char(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `active` tinyint(4) NOT NULL DEFAULT 1,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `name`, `email`, `phone`, `avatar`, `active`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Thiện Nhân', 'runhitbtn2@gmail.com', NULL, NULL, 1, '$2y$10$LSeOVOEyKkXCx92xLDLI..S0NKPGAFeC5f2NvNBbWBGKZRr1jAMQK', NULL, '2020-01-07 21:57:38', '2020-01-07 21:57:38');
 
 -- --------------------------------------------------------
 
@@ -111,6 +137,31 @@ INSERT INTO `contacts` (`id`, `c_name`, `c_email`, `c_title`, `c_content`, `c_st
 (1, 'nhan', 'runhitbtn51@gmail.com', 'asd', 'asd', 0, '2020-01-04 04:44:08', '2020-01-04 04:44:08'),
 (2, 'nhan', '1651120111@sv.ut.edu.vn', 'asd', 'asd', 0, '2020-01-04 04:44:38', '2020-01-04 04:44:38'),
 (3, 'su dung', '1651120111@sv.ut.edu.vn', 'asd', NULL, 0, '2020-01-04 04:48:25', '2020-01-04 04:48:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery_products`
+--
+
+CREATE TABLE `gallery_products` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `image_product_id` int(11) NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gallery_products`
+--
+
+INSERT INTO `gallery_products` (`id`, `image_product_id`, `image`, `created_at`, `updated_at`) VALUES
+(8, 5, '2020-01-08__product-16.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
+(9, 5, '2020-01-08__product-16-1.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
+(10, 5, '2020-01-08__product-16-2.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
+(11, 5, '2020-01-08__product-16-3.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
+(12, 5, '2020-01-08__product-16-4.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37');
 
 -- --------------------------------------------------------
 
@@ -299,6 +350,14 @@ INSERT INTO `users` (`id`, `name`, `email`, `phone`, `avatar`, `active`, `passwo
 --
 
 --
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `admins_email_unique` (`email`),
+  ADD KEY `admins_active_index` (`active`);
+
+--
 -- Indexes for table `article`
 --
 ALTER TABLE `article`
@@ -321,6 +380,12 @@ ALTER TABLE `categories`
 -- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery_products`
+--
+ALTER TABLE `gallery_products`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -382,6 +447,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
@@ -398,6 +469,12 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `contacts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `gallery_products`
+--
+ALTER TABLE `gallery_products`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `migrations`
