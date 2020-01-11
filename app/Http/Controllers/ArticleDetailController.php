@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
-class ArticleDetailController extends Controller
+class ArticleDetailController extends FrontendController
 {
     public function getDetailArticle(Request $request){
         $url = $request->segment(2);

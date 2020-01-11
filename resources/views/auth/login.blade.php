@@ -59,10 +59,8 @@
                                     {{ __('Đăng nhập') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Quên mật khẩu?') }}
-                                    </a>
+                                @if (Route::has('get.form.reset.password'))
+                                    <a class="btn btn-link"  href="{{route('get.form.reset.password')}}">Quên mật khâu</a>
                                 @endif
                             </div>
                         </div>

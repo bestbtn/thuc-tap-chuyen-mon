@@ -21,11 +21,14 @@ class ShoppingCartController extends FrontendController
         if ($product->pro_number==0){
             return redirect()->back()->with('wrong',"Sản phẩm đã hết hàng");
         }
-
+        $quantity = 1;
+        if ($request->quantity){
+            $quantity = $request->quantity;
+        }
         \Cart::add([
             'id' => $id,
             'name' => $product->pro_name,
-            'qty' => 1,
+            'qty' => $quantity,
             'price' => $price,
             'options' => [
                 'avatar' => $product->pro_avatar,
@@ -76,5 +79,16 @@ class ShoppingCartController extends FrontendController
         }
         \Cart::destroy();
         return redirect()->route('home');
+    }
+    public function getUpdateShoppingCart(Request $request){
+
+        foreach ($request->quantity as $key => $item)
+
+        Cart::update($key,$item);
+        return redirect()->back()->with("success","Cập nhật giỏ hàng thành công");
+    }
+    public  function getDestroy(){
+        \Cart::destroy();
+        return redirect()->back()->with("success","Bạn hủy bỏ tất cả sản phẩm trong giỏ hàng thành công");
     }
 }

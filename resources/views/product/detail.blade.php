@@ -211,7 +211,7 @@
                             </div>
                             <div class="product__prices">{{number_format($productDetail->pro_price,0,',','.')}} Vnđ</div>
                             <!-- .product__options -->
-                            <form class="product__options">
+                            <form class="product__options" method="get" action="{{route('add.shopping.product',$productDetail->id)}}">
                                 <div class="form-group product__option">
                                     <label class="product__option-label" for="product-quantity">Số lượng</label>
                                     <div class="product__actions">
@@ -219,13 +219,15 @@
                                             <div class="input-number product__quantity">
                                                 <input id="product-quantity"
                                                        class="input-number__input form-control form-control-lg"
-                                                       type="number" min="1" value="1">
+                                                       type="number" min="1" value="1" name="quantity">
                                                 <div class="input-number__add"></div>
                                                 <div class="input-number__sub"></div>
                                             </div>
                                         </div>
                                         <div class="product__actions-item product__actions-item--addtocart">
-                                            <button class="btn btn-primary btn-lg">Thêm vào giỏ hàng</button>
+                                                <button class="btn btn-primary product-card__addtocart"
+                                                        type="submit">Thêm vào giỏ hàng
+                                                </button>
                                         </div>
 
                                     </div>
@@ -405,7 +407,6 @@
                     <div class="block-products-carousel__preloader"></div>
                     <div class="owl-carousel">
                         @if(isset($productRelates))
-                            {{dd($productRelates->all())}}
                             @foreach($productRelates as $proNew)
                                 <div class="block-products-carousel__column">
                                     <div class="block-products-carousel__cell">

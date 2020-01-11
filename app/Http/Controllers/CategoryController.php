@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -75,13 +76,15 @@ class CategoryController extends FrontendController
                     break;
             }
         }
+
         $products = $products->paginate(3);
+        $productCart = \Cart::content();
         $viewData = [
             'products' => $products,
             'cateProduct'=>$cateProduct,
             'query'=>$request->query(),
-            'orderBy'=>$orderBy
-
+            'orderBy'=>$orderBy,
+            'productCart'=>$productCart
         ];
         return view('product.index',$viewData);
     }

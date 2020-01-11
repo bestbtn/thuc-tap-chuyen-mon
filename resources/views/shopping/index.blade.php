@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
     <div class="site__body">
         <div class="page-header">
             <div class="page-header__container container">
@@ -21,11 +22,19 @@
                     </nav>
                 </div>
                 <div class="page-header__title">
-                    <h1>Giỏ hàng của bạn</h1></div>
+                    <h1>Giỏ hàng của bạn</h1>
+                </div>
+                <div class="pull-right " style="float: right;margin: 1%">
+                    <a class="cart__coupon-form pull-right" href="{{route('get.destroy.shopping')}}">
+                        <button type="button" class="btn btn-warning">Hủy hết sản phẩm</button>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="cart block">
             <div class="container">
+                <form action="{{route('get.update.list.shopping')}}" method="get">
                 <table class="cart__table cart-table">
                     <thead class="cart-table__head">
                     <tr class="cart-table__row">
@@ -38,6 +47,7 @@
                         <th class="cart-table__column cart-table__column--remove"></th>
                     </tr>
                     </thead>
+
                     <tbody class="cart-table__body">
                     <?php $i = 1 ?>
                     @foreach($products as $key=>$product)
@@ -52,11 +62,10 @@
                         <td class="cart-table__column cart-table__column--image">
                             <a href="#"><img src="{{pare_url_file($product->options['avatar'])}}" alt=""></a>
                         </td>
-
                         <td class="cart-table__column cart-table__column--price" data-title="Price">{{number_format($product->price,0,',','.')}}</td>
                         <td class="cart-table__column cart-table__column--quantity" data-title="Quantity">
                             <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="{{$product->qty}}">
+                                <input class="form-control input-number__input" id="upCart{{$product->id}}" type="number" min="1" value="{{$product->qty}}" name="quantity[{{$key}}]">
                                 <div class="input-number__add"></div>
                                 <div class="input-number__sub"></div>
                             </div>
@@ -78,13 +87,15 @@
                     </tbody>
                 </table>
                 <div class="cart__actions">
-                    <form class="cart__coupon-form">
+                    <a class="cart__coupon-form">
                         <input type="text" class="form-control" id="input-coupon-code" placeholder="Mã khuyến mãi">
                         <button type="submit" class="btn btn-primary">Thêm</button>
-                    </form>
-                    <div class="cart__buttons"><a href="index.html" class="btn btn-light">Tiếp tục mua</a> <a
-                            href="#" class="btn btn-primary cart__update-button">Cập nhật giỏ hàng</a></div>
+                    </a>
+
+                    <div class="cart__buttons"><a href="{{route('get.list.all.product')}}" class="btn btn-secondary">Tiếp tục mua</a>
+                        <button type="submit" href="" class="btn btn-primary cart__update-button">Cập nhật giỏ hàng</button></div>
                 </div>
+                </form>
                 <div class="row justify-content-end pt-5">
                     <div class="col-12 col-md-7 col-lg-6 col-xl-5">
                         <div class="card">

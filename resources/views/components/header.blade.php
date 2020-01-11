@@ -222,9 +222,52 @@
                                     <!-- .dropcart / end -->
                                 </div>
                                     @endif
+                                @if(isset($productCart))
+                                <div class="indicator__dropdown">
+                                    <!-- .dropcart -->
+                                    <div class="dropcart dropcart--style--dropdown">
+                                        <div class="dropcart__body">
+                                            <div class="dropcart__products-list">
+                                                @foreach($productCart as $product)
+                                                    <div class="dropcart__product">
+                                                        <div class="dropcart__product-image">
+                                                            <a href="product.html"><img src="{{pare_url_file($product->options['avatar'])}}" alt=""></a>
+                                                        </div>
+                                                        <div class="dropcart__product-info">
+                                                            <div class="dropcart__product-name"><a href="product.html">{{$product->name}}</a></div>
+                                                            <div class="dropcart__product-meta"><span
+                                                                    class="dropcart__product-quantity">{{$product->qty}}</span> × <span
+                                                                    class="dropcart__product-price">{{number_format($product->price,0,',',',')}}đ</span></div>
+                                                        </div>
+                                                        <button type="button"
+                                                                class="dropcart__product-remove btn btn-light btn-sm btn-svg-icon">
+                                                            <svg width="10px" height="10px">
+                                                                <use
+                                                                    xlink:href="{{asset('images/sprite.svg#cross-10')}}"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                            <div class="dropcart__totals">
+                                                <table>
+                                                    <tr>
+                                                        <th>Tổng tiền</th>
+                                                        <td>{{Cart::subtotal(0,0)}} VNĐ</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="dropcart__buttons"><a class="btn btn-secondary"
+                                                                              href="{{route('get.list.shopping')}}">Xem giỏ hàng</a> <a
+                                                    class="btn btn-primary" href="{{route('get.form.pay')}}">Thanh toán</a></div>
+                                        </div>
+                                    </div>
+                                    <!-- .dropcart / end -->
+                                </div>
+                                @endif
                             </div>
                             <div class="indicator indicator--trigger--click">
-                                <a href="account-login.html" class="indicator__button">
+                                <a href="#" class="indicator__button">
                                     <span class="indicator__area">
                                         <svg width="20px" height="20px">
                                             <use xlink:href="{{asset('images/sprite.svg#person-20')}}"></use>

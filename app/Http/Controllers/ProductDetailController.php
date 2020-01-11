@@ -23,7 +23,7 @@ class ProductDetailController extends FrontendController
             //lấy ảnh nhỏ ra
 
             $images = gallery::where('image_product_id',$id)->get();
-
+            $products = \Cart::content();
             //sản phẩm liên quan
             $id_category = Product::select('pro_category_id')->find($id);
             $productRelates = Product::whereRaw('pro_category_id ='.$id_category['pro_category_id'])->take(5)->get();
@@ -31,7 +31,8 @@ class ProductDetailController extends FrontendController
                 'productDetail' => $productDetail,
                 'ratings' => $ratings,
                 'images' => $images,
-                'productRelates'=>$productRelates
+                'productRelates'=>$productRelates,
+                'products'=>$products
             ];
             return view('product.detail',$viewData);
         }

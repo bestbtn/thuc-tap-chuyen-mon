@@ -25,12 +25,19 @@ Route::group(['namespace'=>'Auth'],function (){
     Route::post('dang-nhap','LoginController@postLogin');
 
     Route::get('dang-xuat','LoginController@getLogout')->name('get.logout.user');
+    Route::get('lay-lai-mat-khau','ForgotPasswordController@getFormResetPassword')->name('get.form.reset.password');
+    Route::post('lay-lai-mat-khau','ForgotPasswordController@sendCodeResetPassword');
+    Route::get('password/reset','ForgotPasswordController@resetPassword')->name('get.link.reset.password');
+    Route::post('password/reset','ForgotPasswordController@saveResetPassword');
 
 });
 Route::group(['prefix'=>'shopping'],function (){
+    Route::get('/danh-sach','ShoppingCartController@getListShoppingCart')->name('get.list.shopping');
+    Route::get('/cap-nhat','ShoppingCartController@getUpdateShoppingCart')->name('get.update.list.shopping');
+    Route::get('/huy-tat-ca','ShoppingCartController@getDestroy')->name('get.destroy.shopping');
     Route::get('/add/{id}','ShoppingCartController@addProduct')->name('add.shopping.product');
     Route::get('/delete/{id}','ShoppingCartController@deleteProduct')->name('delete.shopping.product');
-    Route::get('/danh-sach','ShoppingCartController@getListShoppingCart')->name('get.list.shopping');
+
 });
 Route::group(['prefix'=>'gio-hang','middleware' => 'CheckLogin'],function (){
     Route::get('/thanh-toan','ShoppingCartController@getFormPay')->name('get.form.pay');
@@ -46,9 +53,6 @@ Route::group(['prefix'=> 'user','middleware' => 'CheckLogin'],function(){
     Route::post('/update/{id}','UserController@update');
     Route::get('/change/{id}','UserController@change')->name('get.change.password');
     Route::post('/change/{id}','UserController@saveChange')->name('get.change.password');
-
-
-
 });
 Route::get('/{id}','ProductDetailController@viewProduct')->name('get.view.product');
 Route::get('dieu-khoan-va-dieu-kien',function (){
