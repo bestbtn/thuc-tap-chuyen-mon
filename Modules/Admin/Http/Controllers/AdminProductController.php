@@ -124,6 +124,10 @@ class AdminProductController extends Controller
 
                 //thư mục upload
                 $path = public_path().'/uploads/'.date('Y/m/d/');
+                if ( !\File::exists($path))
+                {
+                    mkdir($path,0777,true);
+                }
                 // di chuyen file vao thu muc uploads
                 move_uploaded_file($_FILES['avatar']['tmp_name'][$key], $path. $filename);
 

@@ -248,7 +248,7 @@
                                                 <div class="product-card__actions">
                                                     <div class="product-card__availability">Availability: <span
                                                             class="text-success">In Stock</span></div>
-                                                    <div class="product-card__prices">$1,019.00</div>
+                                                    <div class="product-card__prices">{{number_format($proHot->pro_price,0,',','.')}}đ</div>
                                                     <div class="product-card__buttons">
                                                         <a href="{{route('add.shopping.product',$proHot->id)}}">
                                                             <button class="btn btn-primary product-card__addtocart"
@@ -420,7 +420,7 @@
                                             <div class="product-card__actions">
                                                 <div class="product-card__availability">Availability: <span
                                                         class="text-success">In Stock</span></div>
-                                                <div class="product-card__prices">$1,019.00</div>
+                                                <div class="product-card__prices">{{number_format($proNew->pro_price,0,',','.')}}đ</div>
                                                 <div class="product-card__buttons">
                                                     <a href="{{route('add.shopping.product',$proNew->id)}}">
                                                         <button class="btn btn-primary product-card__addtocart"
@@ -591,7 +591,7 @@
                                 <div class="product-card__actions">
                                     <div class="product-card__availability">Availability: <span class="text-success">In Stock</span>
                                     </div>
-                                    <div class="product-card__prices">$1,019.00</div>
+                                    <div class="product-card__prices">{{number_format($bestseller->pro_price,0,',','.')}}đ</div>
                                     <div class="product-card__buttons">
                                         <button class="btn btn-primary product-card__addtocart" type="button">Add To
                                             Cart

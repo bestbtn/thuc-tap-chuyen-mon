@@ -2,24 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bbd5428-e5df-4d25-a828-d1244729cdf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Products_favorite.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_12_003718_alter_column_code_active_users_in_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_12_153027_create_products_favorite_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/email/verify_account.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/wishlist/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__0cf507b241fabb8797f9ca28007d6c83-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__0cf507b241fabb8797f9ca28007d6c83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__1eeabde929584e7bf435e26985550c3a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__32dec445113d216612b433cb7f0a1922.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__38c823df3708fdd73f1e60c08f81aae9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__4e474cac5a67f90d5dbe5ba50269281f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__4e4953f1bc8d1147de6fb3809b6ef140.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__57c8fce6dfe50b8a06395760d38b5122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__6f00f059d73bf09743652c35334cb2dc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__78389ec4886ff79e2fec70d33c3caebc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__8459b9300471e3a68358a6f0038b2f0c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__9253a15008ad2168ea90f40e602abbea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__9e2e10193e0c2a1a76bf55393d082447.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__ad618f2f6eff63264953929bb5bd8093.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__b3c1f872f9bf03161cb648f5b67f99e4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__c0683750fbbcb8c937efe67f9276487c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__c2007c924d2e10977ab525cc22e9c85a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__e0ff727f4232c5f04a10b3431602093c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/01/12/2020-01-12__may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-hinh1-200-200-95-c1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Admin/Http/Controllers/AdminProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +228,7 @@
       <workItem from="1578627505517" duration="1047000" />
       <workItem from="1578728139732" duration="18189000" />
       <workItem from="1578814460506" duration="4889000" />
-      <workItem from="1578823540907" duration="8088000" />
+      <workItem from="1578823540907" duration="10766000" />
     </task>
     <servers />
   </component>
