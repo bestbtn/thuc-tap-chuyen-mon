@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2020 at 04:17 PM
+-- Generation Time: Jan 12, 2020 at 02:06 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -161,7 +161,31 @@ INSERT INTO `gallery_products` (`id`, `image_product_id`, `image`, `created_at`,
 (9, 5, '2020-01-08__product-16-1.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
 (10, 5, '2020-01-08__product-16-2.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
 (11, 5, '2020-01-08__product-16-3.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
-(12, 5, '2020-01-08__product-16-4.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37');
+(12, 5, '2020-01-08__product-16-4.jpg', '2020-01-08 04:14:37', '2020-01-08 04:14:37'),
+(13, 4, '2020-01-12__4e474cac5a67f90d5dbe5ba50269281f.jpg', '2020-01-12 12:42:04', '2020-01-12 12:42:04'),
+(14, 4, '2020-01-12__4e4953f1bc8d1147de6fb3809b6ef140.jpg', '2020-01-12 12:42:04', '2020-01-12 12:42:04'),
+(15, 4, '2020-01-12__78389ec4886ff79e2fec70d33c3caebc.jpg', '2020-01-12 12:42:04', '2020-01-12 12:42:04'),
+(16, 4, '2020-01-12__c2007c924d2e10977ab525cc22e9c85a.jpg', '2020-01-12 12:42:04', '2020-01-12 12:42:04'),
+(17, 4, '2020-01-12__may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-hinh1-200-200-95-c1.jpg', '2020-01-12 12:42:05', '2020-01-12 12:42:05'),
+(18, 14, '2020-01-12__1.jpg', '2020-01-12 12:50:30', '2020-01-12 12:50:30'),
+(19, 14, '2020-01-12__3.jpg', '2020-01-12 12:50:30', '2020-01-12 12:50:30'),
+(20, 14, '2020-01-12__4.jpg', '2020-01-12 12:50:31', '2020-01-12 12:50:31'),
+(21, 14, '2020-01-12__5.jpg', '2020-01-12 12:50:31', '2020-01-12 12:50:31'),
+(22, 14, '2020-01-12__6.jpg', '2020-01-12 12:50:31', '2020-01-12 12:50:31'),
+(23, 15, '2020-01-12__0cf507b241fabb8797f9ca28007d6c83-1.jpg', '2020-01-12 12:52:49', '2020-01-12 12:52:49'),
+(24, 15, '2020-01-12__0cf507b241fabb8797f9ca28007d6c83.jpg', '2020-01-12 12:52:49', '2020-01-12 12:52:49'),
+(25, 15, '2020-01-12__6f00f059d73bf09743652c35334cb2dc.jpg', '2020-01-12 12:52:49', '2020-01-12 12:52:49'),
+(26, 15, '2020-01-12__57c8fce6dfe50b8a06395760d38b5122.jpg', '2020-01-12 12:52:49', '2020-01-12 12:52:49'),
+(27, 16, '2020-01-12__9e2e10193e0c2a1a76bf55393d082447.jpg', '2020-01-12 12:54:10', '2020-01-12 12:54:10'),
+(28, 16, '2020-01-12__32dec445113d216612b433cb7f0a1922.jpg', '2020-01-12 12:54:11', '2020-01-12 12:54:11'),
+(29, 16, '2020-01-12__38c823df3708fdd73f1e60c08f81aae9.png', '2020-01-12 12:54:11', '2020-01-12 12:54:11'),
+(30, 16, '2020-01-12__9253a15008ad2168ea90f40e602abbea.jpg', '2020-01-12 12:54:11', '2020-01-12 12:54:11'),
+(31, 16, '2020-01-12__e0ff727f4232c5f04a10b3431602093c.jpg', '2020-01-12 12:54:11', '2020-01-12 12:54:11'),
+(32, 17, '2020-01-12__1eeabde929584e7bf435e26985550c3a.jpg', '2020-01-12 12:57:47', '2020-01-12 12:57:47'),
+(33, 17, '2020-01-12__8459b9300471e3a68358a6f0038b2f0c.jpg', '2020-01-12 12:57:47', '2020-01-12 12:57:47'),
+(34, 17, '2020-01-12__ad618f2f6eff63264953929bb5bd8093.jpg', '2020-01-12 12:57:48', '2020-01-12 12:57:48'),
+(35, 17, '2020-01-12__b3c1f872f9bf03161cb648f5b67f99e4.jpg', '2020-01-12 12:57:48', '2020-01-12 12:57:48'),
+(36, 17, '2020-01-12__c0683750fbbcb8c937efe67f9276487c.jpg', '2020-01-12 12:57:48', '2020-01-12 12:57:48');
 
 -- --------------------------------------------------------
 
@@ -193,7 +217,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (14, '2020_01_05_085248_create_ratings_table', 8),
 (15, '2020_01_06_143853_alter_column_total_pay_in_table_user', 8),
 (16, '2020_01_08_024539_create_admins_table', 8),
-(17, '2020_01_08_074336_create_gallery_products_table', 9);
+(17, '2020_01_08_074336_create_gallery_products_table', 9),
+(18, '2020_01_11_162336_alter_column_code_and_time_code_in_table_users', 10),
+(19, '2020_01_12_003718_alter_column_code_active_users_in_users', 11),
+(20, '2020_01_12_153027_create_products_favorite_table', 12);
 
 -- --------------------------------------------------------
 
@@ -219,7 +246,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `or_transaction_id`, `or_product_id`, `or_qty`, `or_price`, `or_sale`, `created_at`, `updated_at`) VALUES
 (9, 39, 5, 2, 19800000, 1, NULL, NULL),
 (10, 39, 4, 1, 2200000, 0, NULL, NULL),
-(11, 40, 6, 1, 10834835, 12, NULL, NULL);
+(11, 40, 6, 1, 10834835, 12, NULL, NULL),
+(12, 41, 15, 1, 6174000, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -270,10 +298,30 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `pro_name`, `pro_slug`, `pro_category_id`, `pro_price`, `pro_author_id`, `pro_sale`, `pro_active`, `pro_hot`, `pro_view`, `pro_description`, `pro_avatar`, `pro_description_seo`, `pro_keyword_seo`, `created_at`, `updated_at`, `pro_title_seo`, `pro_content`, `pro_number_pay`, `pro_number`, `pro_total_rating`, `pro_total_number_rating`) VALUES
 (4, 'Máy khoan pin vặn vít Bosch GSR 120-LI GEN II', 'may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii', 14, 2200000, 0, 0, 1, 1, 0, 'Máy khoan pin vặn vít Bosch GSR 120-LI GEN II ( Kèm bộ phụ kiện)', '2020-01-02__may-khoan-pin-van-vit.jpg', 'Máy khoan pin vặn', NULL, '2020-01-01 22:24:56', '2020-01-08 06:16:32', 'Máy khoan pin vặn', '<p>M&aacute;y khoan pin GSR 120-LI GEN II&nbsp;(k&egrave;m bộ phụ kiện) MỚI l&agrave; m&aacute;y khoan vặn v&iacute;t d&ugrave;ng pin của thương hiệu Bosch được l&agrave;m từ chất liệu cao cấp, cứng rất bền, sản xuất theo ti&ecirc;u chuẩn Ch&acirc;u &Acirc;u. M&aacute;y c&oacute; hai chế độ: khoan v&agrave; bắt v&iacute;t với 20 cấp trượt.</p>\r\n\r\n<p><img alt=\"Cấu tạo các bộ phận của bộ khoan pin Bosch GSR 120-LI\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/C%E1%BA%A5u%20t%E1%BA%A1o%20c%C3%A1c%20b%E1%BB%99%20ph%E1%BA%ADn%20c%E1%BB%A7a%20b%E1%BB%99%20khoan%20pin%20Bosch%20GSR%20120-LI\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh1.jpg\" title=\"Cấu tạo các bộ phận của bộ khoan pin Bosch GSR 120-LI\" /></p>\r\n\r\n<h2>ƯU ĐIỂM CỦA M&Aacute;Y KHOAN PIN BOSCH</h2>\r\n\r\n<ul>\r\n	<li>Vỏ&nbsp;m&aacute;y khoan&nbsp;c&oacute; thiết kế nhỏ gọn, bền bỉ v&agrave; tiện lợi.</li>\r\n	<li>T&ugrave;y chỉnh tốc độ: M&aacute;y c&oacute; tr&igrave;nh điều khiển vặn v&iacute;t, tốc độ v&agrave; phanh h&atilde;m động cơ gi&uacute;p người d&ugrave;ng c&oacute; thể t&ugrave;y chỉnh theo nhu cầu khoan.</li>\r\n	<li>Chế độ dừng th&ocirc;ng minh: Tự động dừng m&aacute;y trong trường hợp v&iacute;t đ&atilde; vặn hết v&agrave;o vật liệu, ngay cả khi vẫn giữ n&uacute;t khởi động gi&uacute;p bảo vệ vật liệu kh&ocirc;ng bị khoan qu&aacute; đ&agrave;.</li>\r\n	<li>Tay cầm được thiết kế khoa học: Vị tr&iacute; c&ocirc;ng tắc được bố tr&iacute; khoa học ph&ugrave; hợp cho cả người thuận tay tr&aacute;i v&agrave; tay phải. C&aacute;n cầm chống trượt, chắc chắn gi&uacute;p thao t&aacute;c dễ d&agrave;ng v&agrave; linh hoạt hơn.</li>\r\n	<li>T&iacute;nh đa năng:&nbsp;M&aacute;y khoan gia đ&igrave;nh&nbsp;c&oacute; khả năng khoan tr&ecirc;n c&aacute;c bề mặt gỗ, th&eacute;p, tường mỏng.</li>\r\n</ul>\r\n\r\n<p><img alt=\"Bosch GSR 120-LI có các thông số kỹ thuật được ghi trên thân máy\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Bosch%20GSR%20120-LI%20c%C3%B3%20c%C3%A1c%20th%C3%B4ng%20s%E1%BB%91%20k%E1%BB%B9%20thu%E1%BA%ADt%20%C4%91%C6%B0%E1%BB%A3c%20ghi%20tr%C3%AAn%20th%C3%A2n%20m%C3%A1y\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh2.jpg\" title=\"Bosch GSR 120-LI có các thông số kỹ thuật được ghi trên thân máy\" /></p>\r\n\r\n<h2>TH&Ocirc;NG SỐ KỸ THUẬT CỦA M&Aacute;Y KHOAN VẶN V&Iacute;T D&Ugrave;NG PIN&nbsp;GSR 120-LI</h2>\r\n\r\n<ul>\r\n	<li>Loại pin: Lithium-ion</li>\r\n	<li>Điện thế pin: 12V</li>\r\n	<li>Đường k&iacute;nh v&iacute;t tối đa: 7mm</li>\r\n	<li>Tốc độ kh&ocirc;ng tảiV&ograve;ng truyền lực thứ 1 (0 - 380 v&ograve;ng/ph&uacute;t); V&ograve;ng truyền lực thứ 2 (0 - 1.300 v&ograve;ng/ph&uacute;t)</li>\r\n	<li>Đường k&iacute;nh khoan gỗ: 20mm</li>\r\n	<li>Đường k&iacute;nh khoan th&eacute;p: 8mm</li>\r\n	<li>M&ocirc; men xoắn 30-13 Nm.</li>\r\n	<li>Phụ kiện đi k&egrave;m: pin 12 V 1.5 Ah Li-ion , 1 sạc GAL 1210 CV, bộ mũi khoan v&agrave; đầu v&iacute;t, vali đựng</li>\r\n	<li>Trọng lượng sản phẩm: 1,2kg</li>\r\n	<li>Thương hiệu: Bosch từ Đức</li>\r\n	<li>Phụ t&ugrave;ng số: 0 601 9F7 000</li>\r\n</ul>\r\n\r\n<p><img alt=\"Thân máy khoan bắt vít Bosch GSR 120 LI được làm từ chất liệu cao cấp\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Th%C3%A2n%20m%C3%A1y%20khoan%20b%E1%BA%AFt%20v%C3%ADt%20Bosch%20GSR%20120%20LI%20%C4%91%C6%B0%E1%BB%A3c%20l%C3%A0m%20t%E1%BB%AB%20ch%E1%BA%A5t%20li%E1%BB%87u%20cao%20c%E1%BA%A5p\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh3.jpg\" title=\"Thân máy khoan bắt vít Bosch GSR 120 LI được làm từ chất liệu cao cấp\" /></p>\r\n\r\n<p><img alt=\"Trọn bộ phụ kiện bộ khoan pin bắt vít Bosch GSR 120 LI\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Tr%E1%BB%8Dn%20b%E1%BB%99%20ph%E1%BB%A5%20ki%E1%BB%87n%20b%E1%BB%99%20khoan%20pin%20b%E1%BA%AFt%20v%C3%ADt%20Bosch%20GSR%20120%20LI\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh4.jpg\" title=\"Trọn bộ phụ kiện bộ khoan pin bắt vít Bosch GSR 120 LI\" /></p>\r\n\r\n<p><img alt=\"Đầu kẹp Auto Lock cung cấp cho người dùng khả năng tháo lắp mũi khoan nhanh chóng\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/%C4%90%E1%BA%A7u%20k%E1%BA%B9p%20Auto%20Lock%20cung%20c%E1%BA%A5p%20cho%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20kh%E1%BA%A3%20n%C4%83ng%20th%C3%A1o%20l%E1%BA%AFp%20m%C5%A9i%20khoan%20nhanh%20ch%C3%B3ng\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh5.jpg\" title=\"Đầu kẹp Auto Lock cung cấp cho người dùng khả năng tháo lắp mũi khoan nhanh chóng\" /></p>\r\n\r\n<p><img alt=\"Bosch GSR 120-LI GEN II được đi kèm hộp đựng tiện lợi\" longdesc=\"https://maydochuyendung.com/dung-cu-dien/Bosch%20GSR%20120-LI%20GEN%20II%20%C4%91%C6%B0%E1%BB%A3c%20%C4%91i%20k%C3%A8m%20h%E1%BB%99p%20%C4%91%E1%BB%B1ng%20ti%E1%BB%87n%20l%E1%BB%A3i\" src=\"https://maydochuyendung.com/uploads/sanpham/may-khoan-pin-van-vit-bosch-gsr-120-li-gen-ii-anh6.jpg\" title=\"Bosch GSR 120-LI GEN II được đi kèm hộp đựng tiện lợi\" /></p>', 4, 6, 3, 13),
-(5, 'Electric Planer Brandix KL370090G 300 Watts', 'electric-planer-brandix-kl370090g-300-watts', 14, 20000000, 0, 1, 1, 1, 0, 'Electric Planer Brandix KL370090G 300 Watts', '2020-01-02__product-1.jpg', 'Electric Planer Brandix KL370090G 300 Watts', NULL, '2020-01-01 22:30:01', '2020-01-08 06:16:32', 'Electric Planer Brandix KL370090G 300 Watts', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum, diam non iaculis finibus, ipsum arcu sollicitudin dolor, ut cursus sapien sem sed purus. Donec vitae fringilla tortor, sed fermentum nunc. Suspendisse sodales turpis dolor, at rutrum dolor tristique id. Quisque pellentesque ullamcorper felis, eget gravida mi elementum a. Maecenas consectetur volutpat ante, sit amet molestie urna luctus in. Nulla eget dolor semper urna malesuada dictum. Duis eleifend pellentesque dui et finibus. Pellentesque dapibus dignissim augue. Etiam odio est, sodales ac aliquam id, iaculis eget lacus. Aenean porta, ante vitae suscipit pulvinar, purus dui interdum tellus, sed dapibus mi mauris vitae tellus.</p>', 4, 2, 0, 0),
-(6, 'Mercedes Benz E-Class 12', 'mercedes-benz-e-class-12', 14, 12312312, 0, 12, 1, 1, 0, 'asd           Mercedes Benz E-Class 12', '2020-01-03__category-1.jpg', 'Mercedes Benz E-Class 12', NULL, '2020-01-03 04:37:10', '2020-01-07 23:21:29', 'Mercedes Benz E-Class 12', '<p>Mercedes Benz E-Class 12</p>', 1, 9, 2, 10),
-(12, 'e', 'e', 15, 12, 0, 12, 1, 0, 0, 'e', NULL, 'e', NULL, '2020-01-07 06:48:57', '2020-01-07 06:48:57', 'e', '<p>e</p>', 0, 12, 0, 0),
-(13, 'eeee', 'eeee', 15, 1, 0, 1, 1, 0, 0, 'eeee', NULL, NULL, NULL, '2020-01-07 06:49:13', '2020-01-07 06:49:13', 'eeee', '<p>eeeee</p>', 0, 12, 0, 0);
+(14, 'Máy Khoan Pin Tolsen 79023 12V', 'may-khoan-pin-tolsen-79023-12v', 14, 793000, 0, 2, 1, 1, 0, 'Chất liệu cao cấp\r\n\r\nĐộ bền cao\r\n\r\nAn toàn khi sử dụng\r\n\r\nTiêu chuẩn Châu Âu\r\n\r\nSản phẩm được sử dụng rộng rãi', '2020-01-12__1.jpg', 'Máy Khoan Pin Tolsen 79023 12V', NULL, '2020-01-12 12:50:11', '2020-01-12 12:50:51', 'Máy Khoan Pin Tolsen 79023 12V', '<h5>Kiểu d&aacute;ng h&igrave;nh khẩu s&uacute;ng tiện dụng</h5>\r\n\r\n<p><strong>M&aacute;y Khoan Pin Tolsen 79023 12V</strong>&nbsp;c&oacute; kiểu d&aacute;ng h&igrave;nh khẩu s&uacute;ng tiện dụng với tay cầm lớn, cho bạn thoải m&aacute;i cầm nắm v&agrave; thao t&aacute;c khi lắp đặt, sửa chữa đồ đạc trong gia đ&igrave;nh. Phần th&acirc;n m&aacute;y c&oacute; c&aacute;c đường v&acirc;n nổi, gi&uacute;p hạn chế khả năng trơn trượt, giảm thiểu nguy hiểm trong qu&aacute; tr&igrave;nh sử dụng.</p>\r\n\r\n<p>M&aacute;y sử dụng c&aacute;c mối nối kim loại chắc chắn bằng th&eacute;p kh&ocirc;ng gỉ, bảo đảm độ bền, cho d&ugrave; bạn c&oacute; thường xuy&ecirc;n sử dụng sản phẩm ở những nơi ẩm ướt như đường ống nước, dưới bồn rửa mặt, trong nh&agrave; vệ sinh.</p>\r\n\r\n<h5>Thiết kế lực m&ocirc;-men xoắn lớn</h5>\r\n\r\n<p>Thiết kế lực m&ocirc;-men xoắn lớn, cho gia tốc vận h&agrave;nh được đẩy l&ecirc;n tối đa, sản phẩm gi&uacute;p việc vặn một chiếc đinh, v&iacute;t v&agrave;o tường trở n&ecirc;n dễ d&agrave;ng, nhanh ch&oacute;ng lại kh&ocirc;ng tốn c&ocirc;ng sức.</p>\r\n\r\n<h5>Sử dụng nguồn năng lượng Li-ion 12V 1500mAh</h5>\r\n\r\n<p>M&aacute;y sử dụng nguồn năng lượng Li-ion 12V 1500mAh c&oacute; khả năng sạc điện nhanh ch&oacute;ng, trọng lượng nhẹ, kh&ocirc;ng c&oacute; d&acirc;y điện g&acirc;y vướng v&iacute;u, kh&ocirc;ng g&acirc;y trở ngại khi vận h&agrave;nh.</p>\r\n\r\n<h5>Th&ocirc;ng số kỹ thuật</h5>\r\n\r\n<ul>\r\n	<li>Điện &aacute;p: DC 12V</li>\r\n	<li>Nguồn điện: Li-ion, 1 * 1500mAh</li>\r\n	<li>Tốc độ kh&ocirc;ng tải: 0-400rpm / 0-1400rpm/Ly hợp: v&ograve;ng c&agrave;i đặt 18 + 1</li>\r\n	<li>M&ocirc;-men xoắn cực đại: &ge;28Nm</li>\r\n	<li>Chuck: chuck keyless 10 mm</li>\r\n	<li>Chuyển đổi: chuyển tiếp v&agrave; đảo ngược</li>\r\n	<li>Bộ sạc: AC 100-240V, Europlug</li>\r\n	<li>Thời gian sạc: 1h sạc nhanh</li>\r\n	<li>Đ&egrave;n b&aacute;o pin 3 đ&ograve;n bẩy v&agrave; một đ&egrave;n nguồn</li>\r\n</ul>\r\n\r\n<p>* Gi&aacute; sản phẩm tr&ecirc;n Tiki đ&atilde; bao gồm thuế theo luật hiện h&agrave;nh. Tuy nhi&ecirc;n tuỳ v&agrave;o từng loại sản phẩm hoặc phương thức, địa chỉ giao h&agrave;ng m&agrave; c&oacute; thể ph&aacute;t sinh th&ecirc;m chi ph&iacute; kh&aacute;c như ph&iacute; vận chuyển, phụ ph&iacute; h&agrave;ng cồng kềnh</p>', 0, 10, 0, 0),
+(15, 'Máy Phát Điện Chạy Xăng 3KW Mitsuyama 4900', 'may-phat-dien-chay-xang-3kw-mitsuyama-4900', 18, 6300000, 0, 2, 1, 1, 0, 'Máy phát điện chạy xăng 3KW Misuyama 4900', '2020-01-12__6f00f059d73bf09743652c35334cb2dc.jpg', NULL, NULL, '2020-01-12 12:52:25', '2020-01-12 13:03:34', 'Máy Phát Điện Chạy Xăng 3KW Mitsuyama 4900', '<ul>\r\n	<li>M&aacute;y ph&aacute;t điện chạy xăng 3KW Misuyama 4900</li>\r\n	<li>M&aacute;y ph&aacute;t điện chạy xăng 4900 với c&ocirc;ng suất 3KW c&oacute; thể cung cấp điện cho hầu hết c&aacute;c thiết bị sử dụng trong gia đ&igrave;nh như đ&egrave;n chiếu s&aacute;ng, quạt gi&oacute;, nồi cơm, tivi, tủ lạnh, điều h&ograve;a.</li>\r\n	<li>M&aacute;y ph&aacute;t điện chạy xăng Misuyama được thiết kế với khung chịu lực chắc chắn, ch&acirc;n đệm cao su giảm tối đa rung lắc trong qu&aacute; tr&igrave;nh vận h&agrave;nh.</li>\r\n	<li>M&aacute;y được thiết kế hệ thống bugi đ&aacute;nh lửa hiện đại, hệ thống tự động điều chỉnh điện &aacute;p AVR với chức năng đảm bảo điện &aacute;p ra lu&ocirc;n ổn định v&agrave; an to&agrave;n cho c&aacute;c thiết bị được cấp điện.</li>\r\n	<li>Cấu h&igrave;nh m&aacute;y ph&aacute;t điện chạy xăng Misuyama 4900</li>\r\n	<li>Với dung t&iacute;ch xi lanh 235cc v&agrave; c&ocirc;ng suất 3KW, m&aacute;y chạy ổn định với d&ograve;ng điện 220V, tần suất 50Hz ph&ugrave; hợp với c&aacute;c thiết bị điện được sử dụng trong nước.</li>\r\n	<li>Dung t&iacute;ch b&igrave;nh nhi&ecirc;n liệu 16L v&agrave; mức ti&ecirc;u hao nhi&ecirc;n liệu khoảng 400g/kwh, khi đổ đầy b&igrave;nh nhi&ecirc;n liệu c&oacute; thể đủ cho 10 giờ hoạt động của m&aacute;y trước khi phải tiếp th&ecirc;m nhi&ecirc;n liệu.</li>\r\n	<li>Bộ phận khởi động giật nổ chỉ với một c&uacute; giật l&agrave; c&oacute; thể khởi động.</li>\r\n	<li>Sản xuất đồng bộ theo d&acirc;y chuyền v&agrave; c&ocirc;ng nghệ ti&ecirc;n tiến gi&uacute;p tiết kiệm nhi&ecirc;n liệu v&agrave; vận h&agrave;nh ổn định.</li>\r\n	<li>N&uacute;t điều chỉnh v&agrave; nơi gắn d&acirc;y điện thuận tiện trong vận h&agrave;nh v&agrave; dễ d&agrave;ng thao t&aacute;c.</li>\r\n</ul>', 1, 9, 0, 0),
+(16, 'Mũ Bảo Hộ Lao Động Dây Cài Màu Vàng', 'mu-bao-ho-lao-dong-day-cai-mau-vang', 16, 70000, 0, 0, 1, 1, 0, 'Mũ Bảo Hộ Lao Động Dây Cài Màu Vàng', '2020-01-12__9253a15008ad2168ea90f40e602abbea.jpg', NULL, NULL, '2020-01-12 12:53:56', '2020-01-12 12:57:59', 'Mũ Bảo Hộ Lao Động Dây Cài Màu Vàng', '<h1>-Mũ bảo hộ lao động Việt Nam l&agrave; một trong những trang bị bảo vệ cần thiết h&agrave;ng đầu cho người lao động.</h1>\r\n\r\n<h1><em>Mũ bảo hộ lao động</em></h1>\r\n\r\n<ul>\r\n	<li><em>Mũ bảo hộ lao động Việt Nam&nbsp;</em>được sản xuất từ chất liệu nhựa tổng hợp c&oacute; độ bền cao v&agrave; khả năng chịu va đập t&ocirc;t, th&acirc;n thiện với m&ocirc;i trường.</li>\r\n	<li>Mũ c&oacute; quai đeo điều chỉnh theo k&iacute;ch cỡ đầu rất linh hoạt.</li>\r\n	<li><em>Mũ bảo hộ lao động Việt Nam&nbsp;</em>thiết kế nhỏ gọn,đẹp mắt, trang nh&atilde;, lịch sự, nhiều m&agrave;u sắc lựa chọn&gt; t&iacute;nh năng bảo vệ đầu tối ưu, kh&ocirc;ng g&acirc;y cảm gi&aacute;c kh&oacute; chịu.</li>\r\n	<li>Th&ocirc;ng tho&aacute;ng kh&iacute; v&ograve;m đầu, thoải m&aacute;i khi sử dụng, mang hiệu quả an to&agrave;n cho người d&ugrave;ng.</li>\r\n	<li>Chắc chắn, bền bỉ ( Độ b&ecirc;n l&ecirc;n đến 1 năm khi sử dụng đ&uacute;ng c&aacute;ch )</li>\r\n</ul>\r\n\r\n<p><em>&nbsp;</em>Mũ bảo hộ lao động&nbsp;được d&ugrave;ng trong BHLĐ c&aacute;c c&ocirc;ng tr&igrave;nh x&acirc;y dựng , hầm mỏ .</p>\r\n\r\n<p>- Mũ bảo hộ lao động c&oacute; t&aacute;c dụng bảo vệ phần đầu cho kĩ sư, c&ocirc;ng nh&acirc;n trong qu&aacute; tr&igrave;nh thi c&ocirc;ng c&ocirc;ng tr&igrave;nh x&acirc;y dựng hay hoạt động sản xuất khỏi những t&aacute;c động xấu b&ecirc;n ngo&agrave;i, giảm nguy cơ g&acirc;y nguy hiểm cho n&atilde;o bộ.</p>\r\n\r\n<p>- Ngo&agrave;i ra&nbsp;<em>mũ bảo hộ lao động Việt Nam</em>&nbsp;c&ograve;n c&oacute; t&aacute;c dụng kh&aacute;c l&agrave; che nắng che mưa, tạo t&aacute;c phong chuy&ecirc;n nghiệp cho c&aacute;c ai l&agrave;m trong lĩnh vực x&acirc;y dựng, sản xuất.</p>', 0, 10, 0, 0),
+(17, 'Thước kẹp cơ khí 150mm', 'thuoc-kep-co-khi-150mm', 17, 114000, 0, 0, 1, 1, 0, 'Thước kẹp cơ khí 150mm', '2020-01-12__b3c1f872f9bf03161cb648f5b67f99e4.jpg', NULL, NULL, '2020-01-12 12:57:23', '2020-01-12 12:57:57', 'Thước kẹp cơ khí 150mm', '<ul>\r\n	<li>Thước kẹp cơ kh&iacute; 150mm:</li>\r\n	<li>Thước Kẹp&nbsp;hay&nbsp;Thước Cặp&nbsp;l&agrave; một loại dụng cụ đo kh&aacute; ch&iacute;nh x&aacute;c, được sử dụng nhiều trong những ng&agrave;nh sản xuất như: cơ kh&iacute;, đồ gỗ, đồ nhựa, nh&ocirc;m k&iacute;nh ...&nbsp;Thước Kẹp d&ugrave;ng để đo k&iacute;ch thước như chiều d&agrave;i, rộng của chi tiết h&igrave;nh trụ, vu&ocirc;ng hay đo đường k&iacute;nh trong, đường k&iacute;nh ngo&agrave;i, chiều s&acirc;u với độ ch&iacute;nh x&aacute;c tương đối cao.</li>\r\n	<li>Thước cặp cơ kh&iacute; :&nbsp;Hiển thị kết quả tr&ecirc;n vạch cơ kh&iacute;.</li>\r\n	<li>Đ&oacute; l&agrave; ph&acirc;n loại theo đặc điểm của thước. C&ograve;n về độ ch&iacute;nh x&aacute;c ta c&oacute; c&aacute;c loại thước cặp c&oacute; độ ch&iacute;nh x&aacute;c kh&aacute;c nhau như: 0.1 mm , 0.05 mm , 0.02 mm .</li>\r\n	<li>Đối với thước kẹp đồng hồ v&agrave; điện tử th&igrave; kết quả đo đ&atilde; được hiển thị dưới dạng con số tr&ecirc;n đồng hồ rồi, v&igrave; vậy bạn c&oacute; thể dễ d&agrave;ng đọc kết quả của n&oacute;. C&ograve;n đối với thứơc kẹp cơ kh&iacute; bạn phải t&igrave;m số thứ tự của vạch tr&ugrave;ng tr&ecirc;n du x&iacute;ch v&agrave; nh&acirc;n n&oacute; với trị số l&agrave; 0.1, 0.05, hoặc 0.02 tuỳ thuộc v&agrave;o độ ch&iacute;nh x&aacute;c của thước l&agrave; bao nhi&ecirc;u.&nbsp;</li>\r\n</ul>', 0, 10, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products_favorite`
+--
+
+CREATE TABLE `products_favorite` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `pf_product_id` int(11) NOT NULL DEFAULT 0,
+  `pf_user_id` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products_favorite`
+--
+
+INSERT INTO `products_favorite` (`id`, `pf_product_id`, `pf_user_id`) VALUES
+(12, 4, 16),
+(13, 5, 16);
 
 -- --------------------------------------------------------
 
@@ -315,7 +363,8 @@ CREATE TABLE `transactions` (
 
 INSERT INTO `transactions` (`id`, `tr_user_id`, `tr_total`, `tr_note`, `tr_address`, `tr_phone`, `tr_status`, `created_at`, `updated_at`) VALUES
 (39, 1, 41800000, 'ok nhanh', '114 nam chau', '0921249497', 1, NULL, '2020-01-07 05:24:39'),
-(40, 1, 10834834, 'asd', 'asd', '0921249497', 1, NULL, '2020-01-07 23:21:29');
+(40, 1, 10834834, 'asd', 'asd', '0921249497', 1, NULL, '2020-01-07 23:21:29'),
+(41, 16, 6174000, 'asdas', '114 nam chau', '123123123', 1, NULL, '2020-01-12 13:03:34');
 
 -- --------------------------------------------------------
 
@@ -334,16 +383,22 @@ CREATE TABLE `users` (
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `total_number` int(11) NOT NULL DEFAULT 0
+  `total_number` int(11) NOT NULL DEFAULT 0,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `time_code` timestamp NULL DEFAULT NULL,
+  `code_active` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `time_active` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `phone`, `avatar`, `active`, `password`, `remember_token`, `created_at`, `updated_at`, `total_number`) VALUES
-(1, 'Bùi Thiện Nhân', 'runhitbtn51@gmail.com', '0921249497', NULL, 1, '$2y$10$NH.Rg313qZ96PqP.iq9VF.FKww2/ToGcumwsCuIWFGpqrCR8jQ3V.', NULL, '2020-01-04 01:17:42', '2020-01-08 07:03:36', 3),
-(2, 'su dung', '1651120111@sv.ut.edu.vn', '0921249497', NULL, 1, '$2y$10$cqib3blTXYSiASIKej6OoeHYYamY9BtMcppqOxSsdsTaDIDre1JF2', NULL, '2020-01-05 08:41:09', '2020-01-05 08:41:09', 0);
+INSERT INTO `users` (`id`, `name`, `email`, `phone`, `avatar`, `active`, `password`, `remember_token`, `created_at`, `updated_at`, `total_number`, `code`, `time_code`, `code_active`, `time_active`) VALUES
+(1, 'Bùi Thiện Nhân', 'runhitbtn51@gmail.com', '0921249497', NULL, 1, '$2y$10$2SrIYDiZdFZsUw1aJiGkUONoHbUiGSgHddqQjCEivgFtUraatlSUm', NULL, '2020-01-04 01:17:42', '2020-01-11 17:32:11', 3, '$2y$10$Y0pEUl7WTuysnVAMoiLauumjRjOyUJYk3Y6XeLr4l3cbXqtWzJ9ny', '2020-01-11 17:22:36', NULL, NULL),
+(2, 'su dung', '1651120111@sv.ut.edu.vn', '0921249497', NULL, 1, '$2y$10$cqib3blTXYSiASIKej6OoeHYYamY9BtMcppqOxSsdsTaDIDre1JF2', NULL, '2020-01-05 08:41:09', '2020-01-05 08:41:09', 0, NULL, NULL, NULL, NULL),
+(8, 'gpk74429', 'gpk74429@bcaoo.com', '123123123', NULL, 1, '$2y$10$B.uSfxr8YoEP8zgFuqqGd.sMaMt/L/ixNSl7itBkNN7Jbah4jTUru', NULL, '2020-01-12 07:59:54', '2020-01-12 07:59:54', 0, NULL, NULL, '$2y$10$5vJiix/mE0B/Uye86rT9VeMGWbqYxqQWw0xpspaPaz3GkwMJnM80e', '2020-01-12 07:59:54'),
+(16, 'nhan', 'thiennhan677@gmail.com', '123123123', NULL, 2, '$2y$10$pzKTUuBhOUVRAZrrwD2ueumqthEyq/8Ekc6iSb0zc.eXlujy9c6G2', NULL, '2020-01-12 08:20:43', '2020-01-12 13:03:34', 1, '$2y$10$1RLCv2TcnPiA8cF4Eu56i.BcMxKLpRdv0zeDG1HC1ykDZ2tKvS6ce', NULL, '$2y$10$1RLCv2TcnPiA8cF4Eu56i.BcMxKLpRdv0zeDG1HC1ykDZ2tKvS6ce', '2020-01-12 08:20:43');
 
 --
 -- Indexes for dumped tables
@@ -419,6 +474,14 @@ ALTER TABLE `products`
   ADD KEY `products_pro_active_index` (`pro_active`);
 
 --
+-- Indexes for table `products_favorite`
+--
+ALTER TABLE `products_favorite`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `products_favorite_pf_product_id_index` (`pf_product_id`),
+  ADD KEY `products_favorite_pf_user_id_index` (`pf_user_id`);
+
+--
 -- Indexes for table `ratings`
 --
 ALTER TABLE `ratings`
@@ -440,7 +503,9 @@ ALTER TABLE `transactions`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`),
-  ADD KEY `users_active_index` (`active`);
+  ADD KEY `users_active_index` (`active`),
+  ADD KEY `users_code_index` (`code`),
+  ADD KEY `users_code_active_index` (`code_active`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -474,24 +539,30 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `gallery_products`
 --
 ALTER TABLE `gallery_products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `products_favorite`
+--
+ALTER TABLE `products_favorite`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
@@ -504,13 +575,13 @@ ALTER TABLE `ratings`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
