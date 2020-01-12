@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Product;
+use App\Models\Products_favorite;
 use Illuminate\Http\Request;
 
 class HomeController extends FrontendController
@@ -15,6 +16,7 @@ class HomeController extends FrontendController
 
     public function index()
     {
+
         $productHot = Product::where([
             'pro_hot' => Product::HOT_ON,
             'pro_active'=> Product::STATUS_PUBLIC
@@ -28,7 +30,7 @@ class HomeController extends FrontendController
             'productNew' => $productNew,
             'articles'  => $articles,
             'products' =>  $products,
-            'bestsellers'=>$bestsellers
+            'bestsellers'=>$bestsellers,
         ];
         return view('home.index',$viewData);
     }

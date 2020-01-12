@@ -31,7 +31,7 @@
                                                                                                  height="20px"><use
                                             xlink:href="{{asset('images/sprite.svg#search-20')}}"></use></svg></span></button>
                         </div>
-                        <div class="indicator indicator--mobile d-sm-flex d-none"><a href="wishlist.html"
+                        <div class="indicator indicator--mobile d-sm-flex d-none"><a href="{{route('get.list.favorite.products')}}"
                                                                                      class="indicator__button"><span
                                     class="indicator__area"><svg width="20px" height="20px"><use
                                             xlink:href="{{asset('images/sprite.svg#heart-20')}}"></use></svg> <span
@@ -170,10 +170,10 @@
                         </div>
                         <!-- .nav-links / end -->
                         <div class="nav-panel__indicators">
-                            <div class="indicator"><a href="wishlist.html" class="indicator__button"><span
+                            <div class="indicator"><a href="{{route('get.list.favorite.products')}}" class="indicator__button"><span
                                         class="indicator__area"><svg width="20px" height="20px"><use
                                                 xlink:href="{{asset('images/sprite.svg#heart-20')}}"></use></svg> <span
-                                            class="indicator__value">0</span></span></a></div>
+                                            class="indicator__value">{{$userWishList}}</span></span></a></div>
                             <div class="indicator indicator--trigger--click"><a href="cart.html"
                                                                                 class="indicator__button"><span
                                         class="indicator__area"><svg width="20px" height="20px"><use
@@ -287,9 +287,15 @@
                                                 </div>
 
                                             </a>
-                                            <a href="{{route('get.user.dashboard')}}" title="Quản lí tổng quan " class="account-menu__user">
+                                            <a href="{{route('get.user.dashboard')}}" title="Quản lí người dùng " class="account-menu__user">
                                                 <div class="account-menu__user-info">
-                                                    <div class="account-menu__user-name">Quản lí</div>
+                                                    <div class="account-menu__user-name">Quản lí người dùng</div>
+                                                </div>
+
+                                            </a>
+                                            <a href="{{route('get.list.favorite.products')}}" title="Danh sách yêu thích " class="account-menu__user">
+                                                <div class="account-menu__user-info">
+                                                    <div class="account-menu__user-name">Danh sách yêu thích </div>
                                                 </div>
 
                                             </a>

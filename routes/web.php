@@ -20,6 +20,8 @@ Route::get('bai-viet/{slug}-{id}','ArticleDetailController@getDetailArticle')->n
 Route::group(['namespace'=>'Auth'],function (){
     Route::get('dang-ki','RegisterController@getRegister')->name('get.register');
     Route::post('dang-ki','RegisterController@postRegister');
+    Route::get('xac-nhan-tai-khoan','RegisterController@verifyAccount')->name('user.verify.account');
+
 
     Route::get('dang-nhap','LoginController@getLogin')->name('get.login');
     Route::post('dang-nhap','LoginController@postLogin');
@@ -49,6 +51,15 @@ Route::group(['prefix'=> 'danh-gia','middleware' => 'CheckLogin'],function(){
 });
 Route::group(['prefix'=> 'user','middleware' => 'CheckLogin'],function(){
     Route::get('/','UserController@index')->name('get.user.dashboard');
+
+    Route::group(['prefix'=>'favorite'],function(){
+        Route::get('/danh-sach','UserController@getListFavorite')->name('get.list.favorite.products');
+        Route::get('add/{id}','UserController@addFavorite')->name('user.favorite.add');
+        Route::get('delete/{id}','UserController@deleteFavorite')->name('user.favorite.remove');
+
+
+    });
+
     Route::get('/update/{id}','UserController@edit')->name('get.edit.user');
     Route::post('/update/{id}','UserController@update');
     Route::get('/change/{id}','UserController@change')->name('get.change.password');
