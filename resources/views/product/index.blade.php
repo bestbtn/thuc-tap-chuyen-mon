@@ -243,7 +243,7 @@
                                                     <div class="product-card__image">
                                                         <a href="{{route('get.detail.product',[$product->pro_slug,$product->id])}}"><img
                                                                 src="{{asset(pare_url_file($product->pro_avatar))}}"
-                                                                alt=""></a>
+                                                                alt="{{$product->pro_name}}"></a>
                                                     </div>
                                                     <div class="product-card__info">
                                                         <div class="product-card__name"><a

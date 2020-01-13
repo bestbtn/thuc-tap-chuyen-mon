@@ -24,7 +24,7 @@
                                                  style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2655px;">
                                                 <div class="owl-item active" style="width: 531px;">
                                                     <a href="{{pare_url_file($productDetail->pro_avatar)}}" target="_blank"><img
-                                                            src="{{pare_url_file($productDetail->pro_avatar)}}" style="width: 80% !important;" alt=""> </a>
+                                                            src="{{pare_url_file($productDetail->pro_avatar)}}" style="width: 80% !important;" alt="{{$productDetail->pro_name}}"> </a>
                                                 </div>
                                             </div>
                                         </div>

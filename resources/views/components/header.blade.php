@@ -173,7 +173,7 @@
                             <div class="indicator"><a href="{{route('get.list.favorite.products')}}" class="indicator__button"><span
                                         class="indicator__area"><svg width="20px" height="20px"><use
                                                 xlink:href="{{asset('images/sprite.svg#heart-20')}}"></use></svg> <span
-                                            class="indicator__value">{{$userWishList}}</span></span></a></div>
+                                            class="indicator__value">@if(isset($userWishList)){{$userWishList}}@endif</span></span></a></div>
                             <div class="indicator indicator--trigger--click"><a href="cart.html"
                                                                                 class="indicator__button"><span
                                         class="indicator__area"><svg width="20px" height="20px"><use
@@ -188,10 +188,10 @@
                                                 @foreach($products as $product)
                                                 <div class="dropcart__product">
                                                     <div class="dropcart__product-image">
-                                                        <a href="product.html"><img src="{{pare_url_file($product->options['avatar'])}}" alt=""></a>
+                                                        <a href="product.html"><img src="{{pare_url_file($product->options['avatar'])}}" alt="{{$product->pro_name}}"></a>
                                                     </div>
                                                     <div class="dropcart__product-info">
-                                                        <div class="dropcart__product-name"><a href="product.html">{{$product->name}}</a></div>
+                                                        <div class="dropcart__product-name"><a href="#">{{$product->name}}</a></div>
                                                         <div class="dropcart__product-meta"><span
                                                                 class="dropcart__product-quantity">{{$product->qty}}</span> × <span
                                                                 class="dropcart__product-price">{{number_format($product->price,0,',',',')}}đ</span></div>
@@ -231,10 +231,10 @@
                                                 @foreach($productCart as $product)
                                                     <div class="dropcart__product">
                                                         <div class="dropcart__product-image">
-                                                            <a href="product.html"><img src="{{pare_url_file($product->options['avatar'])}}" alt=""></a>
+                                                            <a href="product.html"><img src="{{pare_url_file($product->options['avatar'])}}" alt="{{$product->pro_avatar}}"></a>
                                                         </div>
                                                         <div class="dropcart__product-info">
-                                                            <div class="dropcart__product-name"><a href="product.html">{{$product->name}}</a></div>
+                                                            <div class="dropcart__product-name"><a href="#">{{$product->name}}</a></div>
                                                             <div class="dropcart__product-meta"><span
                                                                     class="dropcart__product-quantity">{{$product->qty}}</span> × <span
                                                                     class="dropcart__product-price">{{number_format($product->price,0,',',',')}}đ</span></div>
@@ -280,7 +280,7 @@
                                             <div class="account-menu__divider"></div>
                                             <a href="{{route('get.user.dashboard')}}" class="account-menu__user">
                                                 <div class="account-menu__user-avatar"><img
-                                                        src="images/avatars/avatar-3.jpg" alt=""></div>
+                                                        src="{{asset('images/avatars/avatar-3.jpg')}}" alt=""></div>
                                                 <div class="account-menu__user-info">
                                                     <div class="account-menu__user-name">{{get_data_user('web','name')}}</div>
                                                     <div class="account-menu__user-email">{{get_data_user('web','email')}}</div>

@@ -165,7 +165,7 @@
                                                 @endif
                                                 <div class="product-card__image">
                                                     <a href="{{route('get.detail.product',[$proHot->pro_slug,$proHot->id])}}"><img
-                                                            src="{{pare_url_file($proHot->pro_avatar)}}" alt=""></a>
+                                                            src="{{pare_url_file($proHot->pro_avatar)}}" alt="{{$proHot->pro_name}}"></a>
                                                 </div>
                                                 <div class="product-card__info">
                                                     <div class="product-card__name"><a
@@ -338,7 +338,7 @@
 
                                             <div class="product-card__image">
                                                 <a href="{{route('get.detail.product',[$proNew->pro_slug,$proNew->id])}}"><img src="{{pare_url_file($proNew->pro_avatar)}}"
-                                                                            alt=""></a>
+                                                                            alt="{{$proNew->pro_name}}"></a>
                                             </div>
                                             <div class="product-card__info">
                                                 <div class="product-card__name"><a
@@ -505,7 +505,7 @@
                                 </div>
                                 <div class="product-card__image">
                                     <a href="{{route('get.detail.product',[$bestseller->pro_slug,$bestseller->id])}}">
-                                        <img src="{{pare_url_file($bestseller->pro_avatar)}}" alt="{{$bestseller->pro_avatar}}">
+                                        <img src="{{pare_url_file($bestseller->pro_avatar)}}" alt="{{$bestseller->pro_name}}">
                                     </a>
                                 </div>
                                 <div class="product-card__info">
@@ -640,7 +640,7 @@
                             <div class="block-categories__item category-card category-card--layout--compact">
                                 <div class="category-card__body">
                                     <div class="category-card__image">
-                                        <a href="#"><img src="{{asset(pare_url_file($cate->c_avatar))}}" alt=""></a>
+                                        <a href="#"><img src="{{asset(pare_url_file($cate->c_avatar))}}" alt="{{$cate->c_name}}"></a>
                                     </div>
                                     <div class="category-card__content">
                                         <div class="category-card__name"><a href="#">{{$cate->c_name}}</a></div>
@@ -705,25 +705,25 @@
                     <div class="block-brands__slider">
                         <div class="owl-carousel">
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-1.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-1.png')}}" alt="đối tác"></a>
                             </div>
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-2.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-2.png')}}" alt="đối tác"></a>
                             </div>
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-3.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-3.png')}}" alt="đối tác"></a>
                             </div>
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-4.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-4.png')}}" alt="đối tác"></a>
                             </div>
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-5.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-5.png')}}" alt="đối tác"></a>
                             </div>
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-6.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-6.png')}}" alt="đối tác"></a>
                             </div>
                             <div class="block-brands__item">
-                                <a href="#"><img src="images/logos/logo-7.png" alt=""></a>
+                                <a href="#"><img src="{{asset('images/logos/logo-7.png')}}" alt="đối tác"></a>
                             </div>
                         </div>
                     </div>

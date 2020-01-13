@@ -6,9 +6,9 @@
                 <div class="page-header__breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Trang chủ</a>
                                 <svg class="breadcrumb-arrow" width="6px" height="9px">
-                                    <use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use>
+                                    <use xlink:href="{{asset('images/sprite.svg#arrow-rounded-right-6x9')}}"></use>
                                 </svg>
                             </li>
                             <li class="breadcrumb-item">
@@ -33,7 +33,7 @@
                                             <div class="posts-list__item">
                                                 <div class="post-card post-card--layout--list post-card--size--nl">
                                                     <div class="post-card__image">
-                                                        <a href="{{route('get.detail.article',[$ar->a_slug,$ar->id])}}"><img src="{{pare_url_file($ar->a_avatar)}}" alt=""></a>
+                                                        <a href="{{route('get.detail.article',[$ar->a_slug,$ar->id])}}"><img src="{{pare_url_file($ar->a_avatar)}}" alt="{{$ar->a_name}}"></a>
                                                     </div>
                                                     <div class="post-card__info">
                                                         <div class="post-card__category"><a href="#">Tin mới nhất</a>
@@ -64,7 +64,7 @@
                                                autocomplete="off" spellcheck="false">
                                         <button class="widget-search__button" type="submit">
                                             <svg width="20px" height="20px">
-                                                <use xlink:href="images/sprite.svg#search-20"></use>
+                                                <use xlink:href="{{asset('images/sprite.svg#search-20')}}"></use>
                                             </svg>
                                         </button>
                                     </form>
@@ -77,7 +77,7 @@
                                         @foreach($article as $ar)
                                         <div class="widget-posts__item">
                                             <div class="widget-posts__image">
-                                                <a href="{{route('get.detail.article',[$ar->a_slug,$ar->id])}}"><img src="{{pare_url_file($ar->a_avatar)}}" alt=""></a>
+                                                <a href="{{route('get.detail.article',[$ar->a_slug,$ar->id])}}"><img src="{{pare_url_file($ar->a_avatar)}}" alt="{{$ar->a_name}}"></a>
                                             </div>
                                             <div class="widget-posts__info">
                                                 <div class="widget-posts__name"><a href="{{route('get.detail.article',[$ar->a_slug,$ar->id])}}">{{$ar->a_name}}</a></div>

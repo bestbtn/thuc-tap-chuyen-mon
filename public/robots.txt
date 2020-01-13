@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /images/
+Disallow: */dang-nhap
+Disallow: */dang-ky
+Disallow: */*?search
+Allow: /
+Sitemap: thuctapchuyenmon.tk/sitemap.xml

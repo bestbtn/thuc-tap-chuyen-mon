@@ -60,7 +60,7 @@
                             </a>
                         </td>
                         <td class="cart-table__column cart-table__column--image">
-                            <a href="#"><img src="{{pare_url_file($product->options['avatar'])}}" alt=""></a>
+                            <a href="#"><img src="{{pare_url_file($product->options['avatar'])}}" alt="{{$product->pro_name}}"></a>
                         </td>
                         <td class="cart-table__column cart-table__column--price" data-title="Price">{{number_format($product->price,0,',','.')}}</td>
                         <td class="cart-table__column cart-table__column--quantity" data-title="Quantity">

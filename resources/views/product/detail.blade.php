@@ -55,7 +55,7 @@
                                                             <a href="{{pare_url_file($productDetail->pro_avatar)}}"
                                                                target="_blank">
                                                                 <img src="{{pare_url_file($productDetail->pro_avatar)}}"
-                                                                     alt="">
+                                                                     alt="{{$productDetail->pro_name}}">
                                                             </a>
                                                         </div>
                                                     @endif
@@ -486,7 +486,7 @@
                                             <div class="product-card__image">
                                                 <a href="{{route('get.detail.product',[$proNew->pro_slug,$proNew->id])}}"><img
                                                         src="{{pare_url_file($proNew->pro_avatar)}}"
-                                                        alt=""></a>
+                                                        alt="{{$proNew->pro_name}}"></a>
                                             </div>
                                             <div class="product-card__info">
                                                 <div class="product-card__name"><a

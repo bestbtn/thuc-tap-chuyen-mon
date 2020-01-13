@@ -1,12 +1,30 @@
+<?php
+function getCurrentPageURL() {
+    global $_SERVER;
+    $pageURL = 'http';
+    if(isset($_SERVER["HTTPS"]))
+    if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+    $pageURL .= "://";
+    if ($_SERVER["SERVER_PORT"] != "80") {
+        $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+    } else {
+        $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+    }
+    $pageURL = explode("/page/", $pageURL);
+    return $pageURL[0];
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<!-- Mirrored from stroyka.html.themeforest.scompiler.ru/themes/red-ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Dec 2019 01:53:25 GMT -->
-
 <head>
+<h1 style="display:none">Stroyka - chuyên cung cấp thiết bị công nghiệp</h1>
+<h2 style="display:none">Stroyka - chuyên cung cấp thiết bị công nghiệp</h2>
+    <link rel="alternate" hreflang="x-default" href="<?php echo getCurrentPageURL();?>" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>Stroyka</title>
+    <meta name = "description" content = "Stroyka - chuyên cung cấp thiết bị công nghiệp"/>
     <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
     <!-- fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
@@ -23,15 +41,25 @@
     <link rel="stylesheet" href="{{asset('fonts/stroyka/stroyka.css')}}">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97489509-6"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="kcPSEERC6-McNnBoelugc-r5qrPzJBvwRsvnGXTzjVw" />
+    <!-- End | Google Search Console -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156136461-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-97489509-6');
-    </script>
+  gtag('config', 'UA-156136461-1');
+</script>
+<!-- END Global site tag -->
+<!-- Meta Geo Location -->
+<meta name="geo.region" content="VN" />
+<meta name="geo.placename" content="Phường 11" />
+<meta name="geo.position" content="10.79125;106.64988" />
+<meta name="ICBM" content="10.79125, 106.64988" />
+<!-- End| Meta Geo Location -->
 </head>
 
 <body>

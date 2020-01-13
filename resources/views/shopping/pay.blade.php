@@ -82,7 +82,7 @@
                                             @foreach($products as $pro)
                                                 <tr>
                                                     <td><img width="50px" height="50px"
-                                                             src="{{pare_url_file($pro->options['avatar'])}}" alt="">
+                                                             src="{{pare_url_file($pro->options['avatar'])}}" alt="{{$pro->pro_name}}">
                                                     </td>
                                                     <td>{{$pro->name. " x " .$pro->qty}}</td>
                                                     <td>{{number_format($pro->price*$pro->qty,0,',','.')}}đ</td>
